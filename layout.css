@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;900&display=swap');/*font-family: 'Noto Sans TC',*/
+*{margin:0;padding:0;} 
+body ul, body li{padding:0;margin:0;list-style:none;}
+body a{text-decoration:none;}
+input:focus{outline:none}
+select::-ms-expand{display:none;}
+::-webkit-scrollbar {width: 0px;background:#ffffff;height:8px;}
+::-webkit-scrollbar-thumb {background: rgba(255, 255, 255, 0.16);}   
+body{margin:0 auto;padding:0;width:100%;font-family:'Noto Sans TC','微軟正黑',sans-serif;position:relative;}
+/*header*/
+header{background: url(../img/index/banner.png) no-repeat center;background-size: cover;
+  max-width:1920px;width:100%;height:145px;padding:46px 70px;box-sizing: border-box;display: flex;justify-content: space-between;align-items: center;}
+
+header .btnWP{display: flex;justify-content: center;align-items: center;}
+header .btn{display: flex;justify-content: center;align-items: center;
+;background-color: #4F5D75;color:#fff;padding:5px 8px;border-radius:33px;width:144px;box-sizing: border-box;height:54px;margin:0 20px;font-size:0.9rem;cursor: pointer;}
+header .btn img{margin-right: 21px;}
+
+/*footer*/
+footer{text-align: center;}
+footer p{color: #BFC0C0;font-size:0.9rem;}
