@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/date/jquery-ui-timepicker-addon.js"></script>
+  <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <title>開口契約履約管理</title>
+</head>
+<style>
+  #main .content>.row.flex:nth-child(4):after{content: '';}
+  .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 55px;}
+  .btnWP .btn.add{margin-right:100px;}
+  section{margin-top: 53px;padding: 39px 35px;}
+  .dataNo{margin-bottom: 36px;}
+  .dataNo span{color:#2D3142;}
+  .dataNo select{margin:0 19px;width:157px;height:36px;border-radius:5px;border:1px solid #BFC0C0;color: #BFC0C0;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <ul class="side"></ul>
+    <div class="content">
+      <div class="title">開口契約擬稿登錄</div>
+      <div class="row flex">
+        <div class="left">
+          <p>採購年度</p>
+          <select name="year" id="year">
+            <option value="">請選擇</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+          </select>
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>案號</p>
+          <input type="text">
+        </div>
+        <div class="right">
+            <p>案名</p>
+            <input type="text">
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>採購單位</p>
+          <select name="purchase" id="purchase">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>標的類型</p>
+          <select name="type" id="type">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+        <div class="right">
+          <p>招標方式</p>
+          <select name="way" id="way">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+      </div>
+      <div class="btnWP">
+        <div class="btn add"><a href="contractEdit.html">新增</a></div>
+        <div class="btn search">查詢</div>
+      </div>
+      <section>
+        <div class="dataNo">
+          <span>每頁顯示：</span>
+          <select name="" id="">
+            <option value="">請選擇</option>
+          </select>
+          <span>筆</span>
+        </div>
+        <table>
+          <tr>
+            <th>項次</th>
+            <th>標案案號</th>
+            <th>標案名稱</th>
+            <th>預算金額(元)</th>
+            <th>採購單位</th>
+            <th>採購人員</th>
+            <th>狀態</th>
+            <th>編輯/刪除</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>1100809</td>
+            <td>標案名稱</td>
+            <td>5,000</td>
+            <td>電機館</td>
+            <td>OOO</td>
+            <td>標案履約作業</td>
+            <td>
+              <a href="contractEdit.html"><img src="img/contractEdit/edit.svg" alt="" class="edit"></a>
+              <img src="img/contractEdit/delete.svg" alt="" class="delete">
+            </td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </div>
+  <footer></footer>
+</body>
+</html>

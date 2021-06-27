@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/date/jquery-ui-timepicker-addon.js"></script>
+  <script src="js/contract.js"></script>
+  <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <title>開口契約擬稿登錄</title>
+</head>
+<body>
+  <header></header>
+  <div id="main">
+    <ul class="side"></ul>
+    <div class="content">
+      <div class="title">開口契約擬稿登錄</div>
+      <div class="row flex">
+        <div class="left">
+          <p>採購年度</p>
+          <select name="year" id="year">
+            <option value="">請選擇</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+          </select>
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>案號</p>
+          <input type="text">
+        </div>
+        <div class="right">
+            <p>案名</p>
+            <input type="text">
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>採購單位</p>
+          <select name="purchase" id="purchase">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+        <div class="right">
+          <p>採購人員</p>
+        <input type="text">
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>標的類型</p>
+          <select name="type" id="type">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+        <div class="right">
+          <p>招標方式</p>
+          <select name="way" id="way">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>開口契約類型</p>
+          <select name="type" id="type">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+        <div class="right">
+          <p>採購金額(核定預算書)</p>
+          <input type="text">
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>採購金額種類</p>
+          <select name="type" id="type">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <div class="labelWP"><label for="date1">預算核准日</label></div>
+          <div class="dateWP"><input type="text" class='datepicker' id='date1' autocomplete="off" placeholder="" required /></div>
+        </div>
+        <div class="right">
+          <div class="labelWP"><label for="date2">招標文件審查日期</label></div>
+          <div class="dateWP"><input type="text" class='datepicker' id='date2' autocomplete="off" placeholder="" required /></div>
+        </div>
+      </div>
+      <div class="row blue">公告日</div>
+      <section>
+        <div class="btn add">新增</div>
+        <div class="row">
+          <p>第1次：</p>
+          <div class="dateWP"><input type="text" class='datepicker' id='date3' autocomplete="off" placeholder="" required /></div>
+          <div class="btn delete">刪除</div>
+        </div>
+        <div class="row">
+          <p>第2次：</p>
+          <div class="dateWP"><input type="text" class='datepicker' id='date4' autocomplete="off" placeholder="" required /></div>
+          <div class="btn delete">刪除</div>
+        </div>
+      </section>
+      <div class="row blue">開標日期</div>
+      <section>
+        <div class="btn add">新增</div>
+        <div class="row">
+          <p>第1次：</p>
+          <div class="dateWP"><input type="text" class='datepicker' id='date5' autocomplete="off" placeholder="" required /></div>
+          <div class="btn delete">刪除</div>
+        </div>
+      </section>
+      <div class="row flex">
+        <div class="left">
+          <p>押標金(元)</p>
+          <input type="text">
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="row blue">投標廠商</div>
+      <section>
+        <div class="btn addVendor">新增廠商</div>
+        <table>
+          <tr>
+            <th>序號</th>
+            <th>統一編號</th>
+            <th>廠商名稱</th>
+            <th>負責人</th>
+            <th>組織型態</th>
+            <th>廠商資格</th>
+            <th>編輯/刪除</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>12345678</td>
+            <td>鴻星數位科技股份有限公司</td>
+            <td>OOO</td>
+            <td>組織型態</td>
+            <td>廠商資格</td>
+            <td>
+              <img src="img/contractEdit/edit.svg" alt="">
+              <img src="img/contractEdit/delete.svg" alt="">
+            </td>
+          </tr>
+        </table>
+      </section>
+      <div class="bottomBtn">
+        <div class="btn cancel"><a href="contractList.html">取消</a></div>
+        <div class="right">
+          <div class="btn management"><a href="contractManagement.html">標案履約管理</a></div>
+          <div class="btn confirm">確認</div>
+        </div>
+      </div>
+    </div>
+    <div class="popUpWP">
+      <div class="popUp">
+          <p>投標廠商資料檢視編輯</p>
+          <div class="row flex">
+            <p>序號</p>
+            <input type="text" placeholder="01">
+          </div>
+          <div class="row flex">
+            <p>統一編號</p>
+            <input type="text" placeholder="12345678">
+          </div>
+          <div class="row flex">
+            <p>廠商名稱</p>
+            <input type="text" placeholder="鴻星數位科技股份有限公司">
+          </div>
+          <div class="row flex">
+            <p>負責人</p>
+            <input type="text" placeholder="OOO">
+          </div>
+          <div class="row flex">
+            <p>組織型態</p>
+            <input type="text" placeholder="組織型態">
+          </div>
+          <div class="row flex">
+            <p>廠商資格</p>
+            <input type="text" placeholder="廠商資格">
+          </div>
+          <div class="row flex">
+            <p>電話</p>
+            <input type="text" placeholder="04-22656513">
+          </div>
+          <div class="row flex">
+            <p>登記地址</p>
+            <input type="text" placeholder="台中市南區忠明南路787號">
+          </div>
+          <div class="row flex">
+            <p>通訊地址</p>
+            <input type="text" placeholder="台中市南區忠明南路787號">
+          </div>
+          <div class="btnWP">
+            <div class="btn back">返回</div>
+            <div class="btn save">儲存</div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <footer></footer>
+</body>
+</html>

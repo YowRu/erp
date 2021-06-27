@@ -1,0 +1,65 @@
+#main .content{width: 82%;padding:79px 58px 0;box-sizing: border-box;}
+#main .content .title{color: #4973BB;font-size:1.5rem;padding-bottom: 8px;border-bottom: 4px solid #4973BB;margin-bottom: 34.5px;}
+#main .content .row.flex{display: flex;justify-content: center;align-items: center;margin-bottom: 12px;}
+#main .content .row.flex p,#main .content .row.flex .labelWP,
+#main .content .row.flex input,
+#main .content .row.flex select{background-color:#8196BB;height:36px;line-height: 24px;font-size: 1rem;border: 0;cursor: pointer;
+color: #fff;border-radius:5px;width:49%;padding:6px 26px;box-sizing: border-box; display:inline-block;}
+#main .content .row.flex input,
+#main .content .row.flex select,#main .content .row.flex .dateWP{background-color: #fff;color: #BFC0C0;}
+#main .content .row.flex .dateWP{width: 49%;border-radius: 5px;}
+#main .content .row.flex .dateWP input{padding-left: 22px;background: transparent; }
+#main .content>.row.flex:nth-child(3),
+#main .content>.row.flex:nth-child(4),
+#main .content>.row.flex:nth-child(5){position: relative;padding-bottom: 24px;}
+#main .content>.row.flex:nth-child(3):after{content: '※限填40個中文字';color:#E85110;font-size:0.9rem;
+position: absolute;right: 0;top: 40px;}
+#main .content>.row.flex:nth-child(4):after{content: '※採購單位清單';color:#4973BB;font-size:0.9rem;
+position: absolute;right: 0;top: 40px;}
+#main .content>.row.flex:nth-child(5):after{content: '※招標方式清單';color:#4973BB;font-size:0.9rem;
+position: absolute;right: 0;top: 40px;}
+#main .content .row.flex .left,#main .content .row.flex .right{width: 49%;height:36px;display: flex;justify-content:flex-start;align-items: center;}
+#main .content .row.flex .left{margin-right:26px;}
+#main .content .row.flex .left p,#main .content .row.flex .right p,.content .row.flex .labelWP{margin-right:22px;}
+.datepicker{cursor: pointer;}
+.dateWP{position: relative;}
+.dateWP:after{content: '';background: url('../img/contractEdit/date.svg') no-repeat center;background-size: contain;width: 25px;height:35px;
+position: absolute;right:8px;top:0;cursor: pointer;}
+.row.blue{background-color: #8196BB;color:#fff;height: 36px;line-height: 24px;padding: 6px 26px;
+  box-sizing: border-box;display: inline-block;width: 100%;
+  font-size: 1rem;border: 0;border-radius: 5px;margin-bottom: 9px;}
+section{padding:17px 26px;background-color: #fff;border-radius: 5px;margin-bottom: 19px;}
+section .btn.add,section .btn.delete,.btn{color: #4973BB;font-size: 1rem;border:1px solid #4973BB;margin-bottom: 16px;
+width: 109px;height: 36px;line-height: 36px;border-radius: 5px;text-align: center;cursor: pointer;}
+section .row {display: flex;height:36px;margin-bottom: 12px;}
+section .row input{height:36px;line-height: 24px;font-size: 1rem;border: 1px solid #2D3142;border-radius:5px;width:345px;margin:0 24px;
+color: #6D6D6D;padding:6px 26px;box-sizing: border-box;}
+section .row p{color:#6D6D6D;font-size: 1rem;}
+section .btn.delete,.btnWP .btn.add{background-color: #EF8354;color: #fff;border:1px solid #EF8354;}
+.btnWP .btn.add a{color: #fff;}
+section .dateWP:after{right:33px;}
+section table{width:100%;border:1px solid #BFC0C0;border-collapse:collapse;}
+table th,table td{background-color: #BCD5FF;color: #14213D;font-size:1rem;border:1px solid #BFC0C0;font-weight: 400;text-align: center;height:45px;}
+table th{border: 1px solid #4973BB;}
+table td{background-color: #fff;}
+.ui-datepicker th,.ui-datepicker td{background-color: transparent;height: auto;}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight{background-color:#4973BB;border:1px solid #4973BB;color: #fff;}
+.bottomBtn{margin-top: 37px;display: flex;justify-content: space-between;align-items: center;}
+.bottomBtn .right{display: flex;justify-content: center;align-items: center;}
+.btn.cancel,.btn.back{background-color:#BFC0C0;border: 0;color: #fff;}
+.btn.cancel a{color: #fff;display: inline-block;width: 100%;}
+.btn.management{background-color: #FC8711;border: 0;color: #fff;margin-right:24px;}
+.btn.management a{color:#fff;}
+.btn.confirm,.btn.save,.btnWP .btn.search{background-color: #2E5AA5;border: 0;color: #fff;}
+.popUpWP{display: flex;justify-content: center;align-items: center;position:fixed;top: 0;left: 0;width: 100%;
+  height: 100vh;background-color: #9d9d9dd2;display: none;}
+.popUp{max-width:1086px;padding:48px 74px 69px;background-color: #fff;border-radius: 5px;}
+.popUp>p{color:#4973BB;font-size:1.2rem;font-weight: bold;text-align: center;margin-bottom: 34px;}
+.popUp .row.flex{display: flex;justify-content: center;align-items: center;margin-bottom: 12px;}
+.popUp .row.flex p{background-color:#8196BB;border-radius:5px;width:306px;padding:8px 23px;box-sizing: border-box;color:#fff;
+}
+.popUp .row.flex input{width: 612px;height:36px;margin-left:19px;color:#BFC0C0;border-radius:5px;border:1px solid #BFC0C0;padding:8px 23px;box-sizing: border-box;}
+.popUp .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 56px;}
+.popUp .btnWP .btn{margin:0 50px;}

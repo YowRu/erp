@@ -7,355 +7,307 @@
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/date/jquery-ui-timepicker-addon.js"></script>
-    <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="js/date/jquery-ui-timepicker-addon.js"></script>
+  <script src="js/contract.js"></script>
+  <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/layout.css" type="text/css">
-  <title>開口契約擬稿登錄</title>
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <title>開口契約履約管理</title>
 </head>
 <style>
-  #main{display: flex;justify-content: center;align-items: flex-start;background-color: #F6F6F6;margin-top: -7px;position: relative;}
-  .side{width: 18%;min-height:934px;padding:70px 0 0;box-sizing: border-box;background-color: #fff;}
-  .side>li.border{border-top: 1px solid #2D3142;}
-  .side>li .two li{padding:5px 0px;}
-  .side li{color:#2D3142;padding:5px 38px;box-sizing: border-box;}
-  .side>li>a::after{content: '';width:22px;height:22px;background:url('img/index/plus.png') no-repeat center;background-size: contain;
-  position: absolute;right: 0;top:9px;}
-  .side>li>a.symbol::after{content: '';width:22px;height:22px;background:url('img/index/minus.png') no-repeat center;background-size: contain;
-  position: absolute;right: 0;top:9px;}
-  .side>li a{font-size:1.3rem;color: #2D3142;position: relative;width: 100%;display: inline-block;padding:5px 0;}
-  .side>li .two{background-color: #4973BB;padding:19px 0;box-sizing: border-box;display: none;}
-  .side>li .two li{width: 100%;padding:5px 24px;box-sizing: border-box;}
-  .side>li .two>li a{color: #A7C5F9;font-size: 1rem;padding: 5px 0;}
-  .side>li .two li.current{background-color:#163589;}
-  .side>li .two li.current a,.side>li .two li a:hover{color:#fff;}
-  #main .content{width: 82%;padding:79px 58px 0;box-sizing: border-box;}
-  #main .content .title{color: #4973BB;font-size:1.5rem;padding-bottom: 8px;border-bottom: 4px solid #4973BB;margin-bottom: 34.5px;}
-  #main .content .row.flex{display: flex;justify-content: center;align-items: center;margin-bottom: 12px;}
-  #main .content .row.flex p,#main .content .row.flex .labelWP,
-  #main .content .row.flex input,
-  #main .content .row.flex select{background-color:#8196BB;height:36px;line-height: 24px;font-size: 1rem;border: 0;cursor: pointer;
-  color: #fff;border-radius:5px;width:345px;padding:6px 26px;box-sizing: border-box; display:inline-block;}
-  #main .content .row.flex input,
-  #main .content .row.flex select,#main .content .row.flex .dateWP{background-color: #fff;color: #BFC0C0;}
-  #main .content .row.flex .dateWP{width: 277px;margin-left: 26px;border-radius: 5px;}
-  #main .content .row.flex .dateWP input{padding-left: 22px;background: transparent; }
-  #main .content>.row.flex:nth-child(3),
-  #main .content>.row.flex:nth-child(4),
-  #main .content>.row.flex:nth-child(5){position: relative;padding-bottom: 24px;}
-  #main .content>.row.flex:nth-child(3):after{content: '※限填40個中文字';color:#E85110;font-size:0.9rem;
-  position: absolute;right: 0;top: 40px;}
-  #main .content>.row.flex:nth-child(4):after{content: '※採購單位清單';color:#4973BB;font-size:0.9rem;
-  position: absolute;right: 0;top: 40px;}
-  #main .content>.row.flex:nth-child(5):after{content: '※招標方式清單';color:#4973BB;font-size:0.9rem;
-  position: absolute;right: 0;top: 40px;}
-  #main .content .row.flex .left,#main .content .row.flex .right{width: 49%;height:36px;display: flex;justify-content: center;align-items: center;}
-  #main .content .row.flex .left{margin-right:26px;}
-  #main .content .row.flex .left p,#main .content .row.flex .right p{margin-right:22px;}
-  .datepicker{cursor: pointer;}
-  .dateWP{position: relative;}
-  .dateWP:after{content: '';background: url('img/contractManagement/date.svg') no-repeat center;background-size: contain;width: 25px;height:35px;
-  position: absolute;right:8px;top:0;}
-  .row.blue{background-color: #8196BB;color:#fff;height: 36px;line-height: 24px;padding: 6px 26px;
-    box-sizing: border-box;display: inline-block;width: 100%;
-    font-size: 1rem;border: 0;border-radius: 5px;margin-bottom: 9px;}
-  section{padding:17px 26px;background-color: #fff;border-radius: 5px;margin-bottom: 19px;}
-  section .btn.add,section .btn.delete,.btn{color: #4973BB;font-size: 1rem;border:1px solid #4973BB;margin-bottom: 16px;
-  width: 109px;height: 36px;line-height: 36px;border-radius: 5px;text-align: center;cursor: pointer;}
-  section .row {display: flex;height:36px;margin-bottom: 12px;}
-  section .row input{height:36px;line-height: 24px;font-size: 1rem;border: 1px solid #2D3142;border-radius:5px;width:345px;margin:0 24px;
-  color: #6D6D6D;padding:6px 26px;box-sizing: border-box;}
- section .row p{color:#6D6D6D;font-size: 1rem;}
- section .btn.delete{background-color: #EF8354;color: #fff;border:1px solid #EF8354;}
- section .dateWP:after{right:33px;}
- section table{width:100%;border:1px solid #BFC0C0;border-collapse:collapse;}
- table th,table td{background-color: #BCD5FF;color: #14213D;font-size:1rem;border:1px solid #BFC0C0;font-weight: 400;text-align: center;}
- table td{background-color: #fff;}
-.bottomBtn{margin-top: 37px;display: flex;justify-content: space-between;align-items: center;}
-.bottomBtn .right{display: flex;justify-content: center;align-items: center;}
-.btn.cancel,.btn.back{background-color:#BFC0C0;border: 0;color: #fff;}
-.btn.management{background-color: #FC8711;border: 0;color: #fff;margin-right:24px;}
-.btn.management a{color:#fff;}
-.btn.confirm,.btn.save{background-color: #2E5AA5;border: 0;color: #fff;}
-.popUpWP{display: flex;justify-content: center;align-items: center;position:fixed;top: 0;left: 0;width: 100%;
-    height: 100vh;background-color: #9d9d9dd2;display: none;}
-.popUp{max-width:1086px;padding:48px 74px 69px;background-color: #fff;border-radius: 5px;}
-.popUp>p{color:#4973BB;font-size:1.2rem;font-weight: bold;text-align: center;margin-bottom: 34px;}
-.popUp .row.flex{display: flex;justify-content: center;align-items: center;margin-bottom: 12px;}
-.popUp .row.flex p{background-color:#8196BB;border-radius:5px;width:306px;padding:8px 23px;box-sizing: border-box;color:#fff;
-}
-.popUp .row.flex input{width: 612px;height:36px;margin-left:19px;color:#BFC0C0;border-radius:5px;border:1px solid #BFC0C0;padding:8px 23px;box-sizing: border-box;}
-.popUp .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 56px;}
-.popUp .btnWP .btn{margin:0 50px;}
+  #main .content .row.flex.top .dateWP{margin-left: 22px;}
+#main .content>.row.flex:nth-child(2) .right p
+,#main .content>.row.flex:nth-child(3) .right p,
+#main .content>.row.flex:nth-child(4) .right p{margin-right: 0;}
+#main .content>.row.flex:nth-child(3),
+#main .content>.row.flex:nth-child(4),
+#main .content>.row.flex:nth-child(5){position: relative;padding-bottom: 0;}
+#main .content>.row.flex:nth-child(3):after,
+#main .content>.row.flex:nth-child(4):after,
+#main .content>.row.flex:nth-child(5):after{content: '';}
+#main .content .row.flex:nth-child(3) .left p{margin-right: 0;}
+#main .content .row.flex input.dollar{width: 150px;margin:0 8px;}
+#main .content .row.flex span.dollar{width: 108px;margin-left: 15px;}
+#main .content .row.flex .right span.dollar{margin-left:38px;}
+table input,table input.bgGary{background-color: #fff;border:1px solid #BFC0C0;height: 36px;
+    padding: 2px 8px;box-sizing: border-box;border-radius: 5px;width: 80%;}
+    table input.bgGary{background-color: #F6F6F6;border:0;width: 191px;}
+.row.blue.deep,#main .content .row.flex p.deep{background-color: #4973BB;}
+.btn.add.long{width: 224px;}
+.btn.download{width: 137px;display: block;border-color: #E85110;color: #E85110;}
+.section.flex{display: flex;justify-content: flex-start;align-items: center;}
+.section.flex .btn.btn.download{margin-left:20px;}
+section .dateWP{width:80%;margin:0 auto;}
+section .dateWP:after{right:8px;width:24px;position:absolute;content:'';}
+section .dateWP input{width:100%;}
+table td select{border: 0;}
+section input{height: 36px;border:1px solid #BFC0C0;border-radius: 5px;}
 </style>
 <body>
   <header></header>
   <div id="main">
-    <ul class="side">
-      <li>
-        <a href="javascript:;" class="one">開口契約管理</a>
-        <ul class="two">
-            <li class="current"><a href="contractManagement.html" class="last">開口契約資料登錄管理</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="javascript:;" class="one">倉庫管理</a>
-        <ul class="two">
-          <li><a href="">物料類別查詢</a></li>
-          <li>
-            <a href="javascript:;" class="three">物料品項維護</a>
-            <ul class="four">
-              <li><a href="">- 新增倉庫物料品項</a></li>
-              <li><a href="">- 設定開口契約物料品項</a></li>
-            </ul>
-          </li>
-          <li><a href="">物料調撥管理</a></li>
-          <li><a href="" class="last">物料退回管理</a></li>
-        </ul>
-      </li>
-      <li><a href="javascript:;" class="one">請購管理</a>
-          <ul class="two">
-              <li><a href=" ">請購單需求申請</a></li>
-              <li><a href=" ">請購單核准</a></li>
-          </ul>
-      </li>
-      <li><a href="javascript:;" class="one">進貨驗收管理</a>
-          <ul class="two">
-              <li><a href="" class="last">物料入庫驗收</a></li>
-          </ul>
-      </li>
-      <li><a href="javascript:;" class="one">物料領用發放管理</a>
-        <ul class="two">
-            <li><a href="">物料線上申請單</a></li>
-            <li><a href="">部門人員審核</a></li>
-            <li><a href="">主管人員審核</a></li>
-            <li><a href="">倉管人員審核</a></li>
-            <li><a href="" class="last">物料領用發放</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="javascript:;" class="one">系統設定管理</a>
-        <ul class="two">
-            <li><a href="">科室部門單位設定</a></li>
-            <li><a href="">使用者管理設定</a></li>
-            <li><a href="">使用者權限設定</a></li>
-            <li><a href="">倉庫單位設定</a></li>
-            <li><a href="">倉庫權限設定</a></li>
-            <li><a href="">系統LOG紀錄</a></li>
-            <li><a href="" class="last">公告功能</a></li>
-        </ul>
-      </li>
-  </ul>
+    <ul class="side"></ul>
     <div class="content">
-      <div class="title">開口契約擬稿登錄</div>
-      <div class="row flex">
+      <div class="title">開口契約履約管理</div>
+      <div class="row flex top">
         <div class="left">
-          <p>採購年度</p>
-          <select name="year" id="year">
-            <option value="">請選擇</option>
-            <option value="2021">2021</option>
-            <option value="2020">2020</option>
-            <option value="2019">2019</option>
-          </select>
-        </div>
-        <div class="right"></div>
-      </div>
-      <div class="row flex">
-        <div class="left">
-          <p>案號</p>
-          <input type="text">
+          <p>得標廠商</p>
+          <input type="text" placeholder="鴻星數位科技股份有限公司">
         </div>
         <div class="right">
-            <p>案名</p>
-            <input type="text">
-        </div>
-      </div>
-      <div class="row flex">
-        <div class="left">
-          <p>採購單位</p>
-          <select name="purchase" id="purchase">
-            <option value="">請選擇</option>
-          </select>
-        </div>
-        <div class="right">
-          <p>採購人員</p>
-        <input type="text">
-        </div>
-      </div>
-      <div class="row flex">
-        <div class="left">
-          <p>標的類型</p>
-          <select name="type" id="type">
-            <option value="">請選擇</option>
-          </select>
-        </div>
-        <div class="right">
-          <p>招標方式</p>
-          <select name="way" id="way">
-            <option value="">請選擇</option>
-          </select>
-        </div>
-      </div>
-      <div class="row flex">
-        <div class="left">
-          <p>開口契約類型</p>
-          <select name="type" id="type">
-            <option value="">請選擇</option>
-          </select>
-        </div>
-        <div class="right">
-          <p>採購金額(核定預算書)</p>
-          <input type="text">
-        </div>
-      </div>
-      <div class="row flex">
-        <div class="left">
-          <p>採購金額種類</p>
-          <select name="type" id="type">
-            <option value="">請選擇</option>
-          </select>
-        </div>
-        <div class="right"></div>
-      </div>
-      <div class="row flex">
-        <div class="left">
-          <div class="labelWP"><label for="date1">預算核准日</label></div>
+          <p>決標日期</p>
           <div class="dateWP"><input type="text" class='datepicker' id='date1' autocomplete="off" placeholder="" required /></div>
         </div>
-        <div class="right">
-          <div class="labelWP"><label for="date2">招標文件審查日期</label></div>
+      </div>
+      <div class="row flex top">
+        <div class="left">
+          <p>履約期限日期</p>
           <div class="dateWP"><input type="text" class='datepicker' id='date2' autocomplete="off" placeholder="" required /></div>
         </div>
+        <div class="right">
+            <p>交貨日期</p>
+            <div class="dateWP"><input type="text" class='datepicker' id='date3' autocomplete="off" placeholder="" required /></div>
+        </div>
       </div>
-      <div class="row blue">公告日</div>
-      <section>
-        <div class="btn add">新增</div>
-        <div class="row">
-          <p>第1次：</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date3' autocomplete="off" placeholder="" required /></div>
-          <div class="btn delete">刪除</div>
-        </div>
-        <div class="row">
-          <p>第2次：</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date4' autocomplete="off" placeholder="" required /></div>
-          <div class="btn delete">刪除</div>
-        </div>
-      </section>
-      <div class="row blue">開標日期</div>
-      <section>
-        <div class="btn add">新增</div>
-        <div class="row">
-          <p>第1次：</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date5' autocomplete="off" placeholder="" required /></div>
-          <div class="btn delete">刪除</div>
-        </div>
-      </section>
-      <div class="row flex">
+      <div class="row flex top">
         <div class="left">
-          <p>押標金(元)</p>
-          <input type="text">
+          <p>決標金額</p>
+          <span class="dollar">總決標金額</span><input type="text" class="dollar"><span>元</span>
         </div>
-        <div class="right"></div>
+        <div class="right">
+          <p>預算金額</p>
+          <span class="dollar">預算金額</span><input type="text" class="dollar"><span>元</span>
+        </div>
       </div>
-      <div class="row blue">投標廠商</div>
+      <div class="row blue">分批履約期限</div>
       <section>
-        <div class="btn addVendor">新增廠商</div>
-        <table>
+        <div class="btn add">新增</div>
+        <table id="table1">
           <tr>
             <th>序號</th>
-            <th>統一編號</th>
-            <th>廠商名稱</th>
-            <th>負責人</th>
-            <th>組織型態</th>
-            <th>廠商資格</th>
-            <th>編輯/刪除</th>
+            <th>分批履約項目</th>
+            <th>交貨日期</th>
+            <th>交貨期限</th>
+            <th>實際履約完成日</th>
+            <th>編輯 刪除</th>
           </tr>
           <tr>
             <td>01</td>
             <td>12345678</td>
-            <td>鴻星數位科技股份有限公司</td>
-            <td>OOO</td>
-            <td>組織型態</td>
-            <td>廠商資格</td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='date4' autocomplete="off" placeholder="" required /></div></td>
+            <td><input type="text" class=' bgGary' /></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='date5' autocomplete="off" placeholder="" required /></div></td>
             <td>
-              <img src="img/contractManagement/edit.svg" alt="">
-              <img src="img/contractManagement/delete.svg" alt="">
+              <img src="img/contractEdit/edit.svg" alt="">
+              <img src="img/contractEdit/delete.svg" alt="">
+            </td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>12345678</td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='date6' autocomplete="off" placeholder="" required /></div></td>
+            <td><input type="text" class=' bgGary' /></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='date7' autocomplete="off" placeholder="" required /></div></td>
+            <td>
+              <img src="img/contractEdit/edit.svg" alt="">
+              <img src="img/contractEdit/delete.svg" alt="">
             </td>
           </tr>
         </table>
       </section>
-      <div class="bottomBtn">
-        <div class="btn cancel">取消</div>
+      <div class="row flex">
+        <div class="left">
+          <p>履約保證金(元)</p>
+          <input type="text">
+        </div>
         <div class="right">
-          <div class="btn management"><a href="">標案履約管理</a></div>
+          <p>差額保證金(元)</p>
+          <input type="text">
+        </div>
+      </div>
+      <div class="row blue">契約變更</div>
+      <section>
+        <div class="btn add long">新增原決標預算來源</div>
+        <table id="table2">
+          <tr>
+            <th>序號</th>
+            <th>年度</th>
+            <th>預算來源</th>
+            <th>計畫名稱</th>
+            <th>計畫科目</th>
+            <th>變更後金額</th>
+            <th>保存 刪除</th>
+          </tr>
+          <tr>
+            <td width="6%">01</td>
+            <td width="6%"><input type="text" placeholder="110" /></td>
+            <td width="18%"><input type="text" placeholder="預算來源" /></td>
+            <td width="18%"><input type="text" placeholder="計畫名稱" /></td>
+            <td width="18%"><input type="text" placeholder="計畫科目" /></td>
+            <td width="18%"><input type="text" placeholder="123456" /></td>
+            <td width="16%">
+              <img src="img/contractEdit/save.svg" alt="">
+              <img src="img/contractEdit/delete.svg" alt="">
+            </td>
+          </tr>
+        </table>
+      </section>
+      <div class="row flex">
+        <div class="left">
+          <p>竣工確認日期</p>
+          <div class="dateWP"><input type="text" class='datepicker' id='date8' autocomplete="off" placeholder="" required /></div>
+        </div>
+        <div class="right">
+          <p>實際履約完成日</p>
+          <div class="dateWP"><input type="text" class='datepicker' id='date9' autocomplete="off" placeholder="" required /></div>
+        </div>
+      </div>
+      <div class="row blue deep">查驗</div>
+      <section>
+        <div class="section flex">
+          <div class="btn add">新增</div>
+          <a href="img/contractEdit/edit.svg" class="btn download" download>查驗單下載</a>
+        </div>
+        <table>
+          <tr>
+            <th width="5%">序號</th>
+            <th width='10%'>查驗內容</th>
+            <th width='10%'>查驗日期</th>
+            <th width='7%'>主計單位</th>
+            <th width='7%'>政風單位</th>
+            <th width='7%'>查驗單位</th>
+            <th width='7%'>金額</th>
+            <th width='7%'>查驗結果</th>
+            <th width='7%'>附件名稱</th>
+            <th width='7%'>保存 刪除</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td><input type="text" placeholder="110年度機械館氣體開口契約(查驗2)" /></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='date10' autocomplete="off" placeholder="" required /></td>
+            <td><input type="text" placeholder="" /></td>
+            <td><input type="text" placeholder="" /></td>
+            <td><input type="text" placeholder="" /></td>
+            <td><input type="text" placeholder="" /></td>
+            <td><input type="text" placeholder="" /></td>
+            <td>查驗2.pdf</td>
+            <td>
+              <img src="img/contractEdit/save.svg" alt="">
+              <img src="img/contractEdit/delete.svg" alt="">
+            </td>
+          </tr>
+        </table>
+      </section>
+      <div class="row flex">
+        <div class="left">
+          <p class="deep">驗收合格日</p>
+          <div class="dateWP"><input type="text" class='datepicker' id='date11' autocomplete="off" placeholder="" required /></div>
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="row blue">扣款金額</div>
+      <section>
+        <div class="btn add">新增</div>
+        <table>
+          <tr>
+            <th>序號</th>
+            <th>內容</th>
+            <th>日期</th>
+            <th>逾期違約金</th>
+            <th>契約扣款</th>
+            <th>其他違約金</th>
+            <th>扣款總額</th>
+            <th>編輯 刪除</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>110年度機械館氣體開口契約(查驗2)</td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='date12' autocomplete="off" placeholder="" required /></div></td>
+            <td>5,000</td>
+            <td>5,000</td>
+            <td>5,000</td>
+            <td>5,000</td>
+            <td>
+              <img src="img/contractEdit/edit.svg" alt="">
+              <img src="img/contractEdit/delete.svg" alt="">
+            </td>
+          </tr>
+        </table>
+      </section>
+      <div class="row flex">
+        <div class="left">
+          <p>結算金額(元)</p>
+          <div class="dateWP"><input type="text" class='datepicker' id='date13' autocomplete="off" placeholder="" required /></div>
+        </div>
+        <div class="right">
+          <p>保固金(元)</p>
+          <input type="text">
+        </div>
+      </div>
+      <div class="row blue">保固期限</div>
+      <section>
+        <div class="btn add">新增</div>
+        <table>
+          <tr>
+            <th>序號</th>
+            <th>分批履約項目</th>
+            <th>年限</th>
+            <th>日期</th>
+            <th>編輯 刪除</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>110年度機械館氣體開口契約(查驗2)</td>
+            <td>
+              <select name="year" id="year">
+                <option value="">請選擇</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+              </select>
+            </td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='date14' autocomplete="off" placeholder="" required /></div></td>
+            <td>
+              <img src="img/contractEdit/edit.svg" alt="">
+              <img src="img/contractEdit/delete.svg" alt="">
+            </td>
+          </tr>
+        </table>
+      </section>
+      <div class="row flex">
+        <div class="left">
+          <p>履保金實際退還日期</p>
+          <div class="dateWP"><input type="text" class='datepicker' id='date15' autocomplete="off" placeholder="" required /></div>
+        </div>
+        <div class="right">
+          <p>完成付款結案日期</p>
+          <div class="dateWP"><input type="text" class='datepicker' id='date16' autocomplete="off" placeholder="" required /></div>
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>標餘款(預算-該案所花總額)(元)</p>
+          <input type="text">
+        </div>
+        <div class="right">
+          <p>保固金實際退還日期</p>
+          <div class="dateWP"><input type="text" class='datepicker' id='date17' autocomplete="off" placeholder="" required /></div>
+        </div>
+      </div>
+      <div class="row blue">備註</div>
+      <section>
+        <input type="text" style="width: 100%;">
+      </section>
+      <div class="bottomBtn">
+        <div class="btn cancel"><a href="contractList.html">取消</a></div>
+        <div class="right">
+          <div class="btn management"><a href="contractEdit.html">標案擬稿編輯</a></div>
           <div class="btn confirm">確認</div>
         </div>
       </div>
     </div>
-    <div class="popUpWP">
-      <div class="popUp">
-          <p>投標廠商資料檢視編輯</p>
-          <div class="row flex">
-            <p>序號</p>
-            <input type="text" placeholder="01">
-          </div>
-          <div class="row flex">
-            <p>統一編號</p>
-            <input type="text" placeholder="12345678">
-          </div>
-          <div class="row flex">
-            <p>廠商名稱</p>
-            <input type="text" placeholder="鴻星數位科技股份有限公司">
-          </div>
-          <div class="row flex">
-            <p>負責人</p>
-            <input type="text" placeholder="OOO">
-          </div>
-          <div class="row flex">
-            <p>組織型態</p>
-            <input type="text" placeholder="組織型態">
-          </div>
-          <div class="row flex">
-            <p>廠商資格</p>
-            <input type="text" placeholder="廠商資格">
-          </div>
-          <div class="row flex">
-            <p>電話</p>
-            <input type="text" placeholder="04-22656513">
-          </div>
-          <div class="row flex">
-            <p>登記地址</p>
-            <input type="text" placeholder="台中市南區忠明南路787號">
-          </div>
-          <div class="row flex">
-            <p>通訊地址</p>
-            <input type="text" placeholder="台中市南區忠明南路787號">
-          </div>
-          <div class="btnWP">
-            <div class="btn back">返回</div>
-            <div class="btn save">儲存</div>
-          </div>
-        </div>
-    </div>
   </div>
   <footer></footer>
-  <script>
-    $('.side>li>a').click(function(){
-      $(this).parents('.side>li').siblings('li').children('.symbol').removeClass('symbol');
-      $(this).parents('.side>li').siblings('li').children('.two').slideUp();
-      $(this).siblings('.two').slideToggle();
-      $(this).toggleClass('symbol');
-    });
-    $(function () {
-       $( ".datepicker" ).datepicker({format: 'YYYY/MM/DD'});
-    });
-    $(".datepicker").datepicker().datepicker("setDate", new Date());
-    $('.btn.addVendor').click(function(){
-      $('.popUpWP').css({'display':'flex'});
-    });
-    $('.btn.back').click(function(){
-      $('.popUpWP').hide();
-    });
-  </script>
 </body>
 </html>
