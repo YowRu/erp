@@ -1,61 +1,93 @@
-<li>
-  <a href="javascript:;" class="one">開口契約管理</a>
-  <ul class="two">
-      <li class="current"><a href="contractList.html" class="last">開口契約資料登錄管理</a></li>
-  </ul>
-</li>
-<li>
-  <a href="javascript:;" class="one">倉庫管理</a>
-  <ul class="two">
-    <li><a href="">物料類別查詢</a></li>
-    <li>
-      <a href="javascript:;" class="three">物料品項維護</a>
-      <ul class="four">
-        <li><a href="">- 新增倉庫物料品項</a></li>
-        <li><a href="">- 設定開口契約物料品項</a></li>
+<div class="sideScroll">
+  <ul class="side">
+  <li>
+    <a href="javascript:;" class="one">開口契約管理</a>
+    <ul class="two">
+        <li><a href="contractList.html" class="last">開口契約資料登錄管理</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="javascript:;" class="one">倉庫管理</a>
+    <ul class="two">
+      <li><a href="">物料類別查詢</a></li>
+      <li>
+        <a href="javascript:;" class="three">物料品項維護</a>
+        <ul class="four">
+          <li><a href="">- 新增倉庫物料品項</a></li>
+          <li><a href="">- 設定開口契約物料品項</a></li>
+        </ul>
+      </li>
+      <li><a href="">物料調撥管理</a></li>
+      <li><a href="" class="last">物料退回管理</a></li>
+    </ul>
+  </li>
+  <li><a href="javascript:;" class="one">請購管理</a>
+      <ul class="two">
+          <li><a href=" ">請購單需求申請</a></li>
+          <li><a href=" ">請購單核准</a></li>
       </ul>
-    </li>
-    <li><a href="">物料調撥管理</a></li>
-    <li><a href="" class="last">物料退回管理</a></li>
-  </ul>
-</li>
-<li><a href="javascript:;" class="one">請購管理</a>
+  </li>
+  <li><a href="javascript:;" class="one">進貨驗收管理</a>
+      <ul class="two">
+          <li><a href="" class="last">物料入庫驗收</a></li>
+      </ul>
+  </li>
+  <li><a href="javascript:;" class="one">物料領用發放管理</a>
     <ul class="two">
-        <li><a href=" ">請購單需求申請</a></li>
-        <li><a href=" ">請購單核准</a></li>
+        <li><a href="">物料線上申請單</a></li>
+        <li><a href="">部門人員審核</a></li>
+        <li><a href="">主管人員審核</a></li>
+        <li><a href="">倉管人員審核</a></li>
+        <li><a href="" class="last">物料領用發放</a></li>
     </ul>
-</li>
-<li><a href="javascript:;" class="one">進貨驗收管理</a>
+  </li>
+  <li>
+    <a href="javascript:;" class="one">系統設定管理</a>
     <ul class="two">
-        <li><a href="" class="last">物料入庫驗收</a></li>
+        <li><a href="">科室部門單位設定</a></li>
+        <li><a href="userManagement.html">使用者管理設定</a></li>
+        <li><a href="userPermissions.html">使用者權限設定</a></li>
+        <li><a href="depotMagement.html">倉庫單位設定</a></li>
+        <li><a href="">倉庫權限設定</a></li>
+        <li><a href="">系統LOG紀錄</a></li>
+        <li><a href="" class="last">公告功能</a></li>
     </ul>
-</li>
-<li><a href="javascript:;" class="one">物料領用發放管理</a>
-  <ul class="two">
-      <li><a href="">物料線上申請單</a></li>
-      <li><a href="">部門人員審核</a></li>
-      <li><a href="">主管人員審核</a></li>
-      <li><a href="">倉管人員審核</a></li>
-      <li><a href="" class="last">物料領用發放</a></li>
+  </li>
   </ul>
-</li>
-<li>
-  <a href="javascript:;" class="one">系統設定管理</a>
-  <ul class="two">
-      <li><a href="">科室部門單位設定</a></li>
-      <li><a href="">使用者管理設定</a></li>
-      <li><a href="">使用者權限設定</a></li>
-      <li><a href="depotMagement.html">倉庫單位設定</a></li>
-      <li><a href="">倉庫權限設定</a></li>
-      <li><a href="">系統LOG紀錄</a></li>
-      <li><a href="" class="last">公告功能</a></li>
-  </ul>
-</li>
+</div>
+<a href="javascript:;" class="toggle"></a>
 <script>
+  $(document).ready(function() {
+    let W = $('.sideWP').width();
+    let count = 0;
+    $('.toggle').click(function(){
+      count++;
+      if(count%2 == 0){
+        $(this).removeClass('hide');
+        $('.sideWP').css({'display':'block','width':'18%'});
+        $('.content').css({'width':'82%'});
+      }else{
+        $(this).addClass('hide');
+        $('.sideWP').css({'margin-right':W-21,'width':0});
+        $('.content').css({'width':'100%','margin-left':-(W-21)});
+      }
+    });
+
   $('.side>li>a').click(function(){
       $(this).parents('.side>li').siblings('li').children('.symbol').removeClass('symbol');
       $(this).parents('.side>li').siblings('li').children('.two').slideUp();
       $(this).siblings('.two').slideToggle();
       $(this).toggleClass('symbol');
     });
+    
+    $('.side>li .two li a').click(function(){
+      $(this).parents('.side>li .two li ').addClass('current');
+      $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
+    });
+    let sideNo = $('.sideNo').text();
+    let itemNo = $('.itemNo').text();
+    $('.side>li').eq(sideNo).addClass('current');
+    $('.side>li.current .two').css({'display':'block'});
+    $('.side>li.current .two li').eq(itemNo).addClass('current');
+  });
 </script>

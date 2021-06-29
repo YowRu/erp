@@ -1,0 +1,21 @@
+.row.orange{background-color: #EF8354;margin-top: 35px;margin-bottom: 12px;}
+#main .content>.row.flex:nth-child(5):after{content:'';}
+#main .content{display: flex;justify-content: center;align-items: flex-start;padding:41px 57px 0;}
+#main .content .department{width:17%;height:818px;border-left:6px solid #FCA311;padding-left:36px;
+background-color:#fff;border-radius:10px;margin-right: 27px;padding-top: 25px;}
+#main .content .department>p{color:#FCA311;font-size:1.1rem;margin-bottom: 28px;}
+#main .content .department ul li,#main .content .department ul li a,.two li{margin-bottom: 10px;color: #2D3142;cursor: pointer;}
+#main .content .department ul li a.one{position: relative;}
+#main .content .department ul li a.one:after{content:'▼';font-size:0.7rem;color:#FCA311;margin-left: 10px;
+  position: absolute;top:2px;right:-20px;}
+.two{display: none;padding-top: 10px;padding-left:17px;}
+#main .content .left{width: 82%;}
+.btnWP{display: flex;justify-content: center;align-items: center;margin-top: 236px;}
+.btnWP .btn.cancel{margin-right: 100px;}
+section{padding:32px 29px;border-radius: 10px;box-shadow: 0 8px 8px #BFC0C080;}
+section .btn.add{color: #fff;background-color:#EF8354;border:0;}
+#main .content .department ul li.current{color: #FCA311;}
+#main .content .row.flex.day input[type=checkbox]{width: 20px;height: 20px;border: 1px solid #6D6D6D;border-radius: 5px;} 
+table th{background-color:#EEF3FB;border:1px solid #4973BB;color: #4973BB;}
+table th.checkbox,table td.checkbox{padding:5px 15px 0px;width:50px;box-sizing: border-box;}
+table td a.border{border:1px solid #4973BB;color: #4973BB;margin:2.5px;padding:2px 25px;height:32px;border-radius: 5px;}

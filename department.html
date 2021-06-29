@@ -1,0 +1,42 @@
+<p>勞動部勞動力發展署<br>雲嘉南分署</p>
+<ul>
+  <li>分署</li>
+  <li>秘書室</li>
+  <li>人事室</li>
+  <li>綜合規劃科</li>
+  <li class="child current">
+    <a href="javascript:;" class="one">自辦訓練科</a>
+    <ul class="two">
+      <li class="current">- 電機館</li>
+      <li>- 機械館</li>
+    </ul>
+  </li>
+  <li>綜合規劃科</li>
+</ul>
+<script>
+  if($('#main .content .department>ul li').is('.child')){
+    $(this).children('.two').show();
+  }else{
+    $(this).children('.two').hide();
+  }
+  
+  $('#main .content .department ul>li').click(function(){
+    if($(this).hasClass('child')){
+        $(this).children('.two').slideToggle();
+        
+    }else{
+      $('#main .content .department .two').slideUp();
+      $('#main .content .department .two li').removeClass('current');
+      $(this).siblings('li').removeClass('current');
+    }
+    $(this).addClass('current');
+    
+  });
+  $('#main .content .department .two li').click(function(){
+    $('#main .content .department .two').show();
+    $(this).addClass('current');
+    $(this).siblings('li').removeClass('current');
+    $(this).parents('#main .content .department>ul').children('li').removeClass('current');
+  });
+  
+</script>

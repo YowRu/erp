@@ -18,7 +18,7 @@
 <body>
   <header></header>
   <div id="main">
-    <ul class="side"></ul>
+    <div class="sideWP"></div>
     <div class="content">
       <div class="title">開口契約擬稿登錄</div>
       <div class="row flex">
@@ -40,7 +40,7 @@
         </div>
         <div class="right">
             <p>案名</p>
-            <input type="text">
+            <input type="text" maxlength="40">
         </div>
       </div>
       <div class="row flex">
@@ -93,33 +93,38 @@
       <div class="row flex">
         <div class="left">
           <div class="labelWP"><label for="date1">預算核准日</label></div>
-          <div class="dateWP"><input type="text" class='datepicker' id='date1' autocomplete="off" placeholder="" required /></div>
+          <div class="dateWP"><input type="text" class='datepicker' id="date1" autocomplete="off" placeholder="" required /></div>
         </div>
         <div class="right">
           <div class="labelWP"><label for="date2">招標文件審查日期</label></div>
-          <div class="dateWP"><input type="text" class='datepicker' id='date2' autocomplete="off" placeholder="" required /></div>
+          <div class="dateWP"><input type="text" class='datepicker' id="date2" autocomplete="off" placeholder="" required /></div>
         </div>
       </div>
       <div class="row blue">公告日</div>
-      <section>
+      <section class="copy announcement">
         <div class="btn add">新增</div>
-        <div class="row">
-          <p>第1次：</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date3' autocomplete="off" placeholder="" required /></div>
+        <div class="row copy">
+          <p class="text">第<span class="number">0</span>次：</p>
+          <div class="dateWP"><input type="text" class='datepicker' id="announcement" autocomplete="off" placeholder="" required /></div>
           <div class="btn delete">刪除</div>
         </div>
         <div class="row">
-          <p>第2次：</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date4' autocomplete="off" placeholder="" required /></div>
+          <p class="text">第<span class="number">1</span>次：</p>
+          <div class="dateWP"><input type="text" class='datepicker' id="announcement1" autocomplete="off" placeholder="" required /></div>
           <div class="btn delete">刪除</div>
         </div>
       </section>
       <div class="row blue">開標日期</div>
-      <section>
+      <section class="copy bidding">
         <div class="btn add">新增</div>
+        <div class="row copy">
+          <p class="text">第<span class="number">0</span>次：</p>
+          <div class="dateWP"><input type="text" class='datepicker' id="bidding"autocomplete="off" placeholder="" required /></div>
+          <div class="btn delete">刪除</div>
+        </div>
         <div class="row">
-          <p>第1次：</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date5' autocomplete="off" placeholder="" required /></div>
+          <p class="text">第<span class="number">1</span>次：</p>
+          <div class="dateWP"><input type="text" class='datepicker' id="bidding1"autocomplete="off" placeholder="" required /></div>
           <div class="btn delete">刪除</div>
         </div>
       </section>
@@ -143,16 +148,28 @@
             <th>廠商資格</th>
             <th>編輯/刪除</th>
           </tr>
-          <tr>
-            <td>01</td>
+          <tr class="copy">
+            <td class="number">01</td>
             <td>12345678</td>
             <td>鴻星數位科技股份有限公司</td>
             <td>OOO</td>
             <td>組織型態</td>
             <td>廠商資格</td>
             <td>
-              <img src="img/contractEdit/edit.svg" alt="">
-              <img src="img/contractEdit/delete.svg" alt="">
+              <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
+              <img src="img/contractEdit/delete.svg" class="delete" alt="">
+            </td>
+          </tr>
+          <tr>
+            <td class="number">01</td>
+            <td>12345678</td>
+            <td>鴻星數位科技股份有限公司</td>
+            <td>OOO</td>
+            <td>組織型態</td>
+            <td>廠商資格</td>
+            <td>
+              <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
+              <img src="img/contractEdit/delete.svg" class="delete" alt="">
             </td>
           </tr>
         </table>
@@ -210,7 +227,12 @@
           </div>
         </div>
     </div>
+    <div class="sideNo">0</div>
+    <div class="itemNo">0</div>
   </div>
   <footer></footer>
+  <script>
+  
+  </script>
 </body>
 </html>

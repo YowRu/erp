@@ -25,18 +25,19 @@ position: absolute;right: 0;top: 40px;}
 .dateWP{position: relative;}
 .dateWP:after{content: '';background: url('../img/contractEdit/date.svg') no-repeat center;background-size: contain;width: 25px;height:35px;
 position: absolute;right:8px;top:0;cursor: pointer;}
-.row.blue{background-color: #8196BB;color:#fff;height: 36px;line-height: 24px;padding: 6px 26px;
+.row.blue,.row.orange{background-color: #8196BB;color:#fff;height: 36px;line-height: 24px;padding: 6px 26px;
   box-sizing: border-box;display: inline-block;width: 100%;
   font-size: 1rem;border: 0;border-radius: 5px;margin-bottom: 9px;}
 section{padding:17px 26px;background-color: #fff;border-radius: 5px;margin-bottom: 19px;}
 section .btn.add,section .btn.delete,.btn{color: #4973BB;font-size: 1rem;border:1px solid #4973BB;margin-bottom: 16px;
 width: 109px;height: 36px;line-height: 36px;border-radius: 5px;text-align: center;cursor: pointer;}
 section .row {display: flex;height:36px;margin-bottom: 12px;}
+section .row.copy,tr.copy{display:none;}
 section .row input{height:36px;line-height: 24px;font-size: 1rem;border: 1px solid #2D3142;border-radius:5px;width:345px;margin:0 24px;
-color: #6D6D6D;padding:6px 26px;box-sizing: border-box;}
+color: #6D6D6D;padding:6px 0 6px 26px;box-sizing: border-box;}
 section .row p{color:#6D6D6D;font-size: 1rem;}
 section .btn.delete,.btnWP .btn.add{background-color: #EF8354;color: #fff;border:1px solid #EF8354;}
-.btnWP .btn.add a{color: #fff;}
+.btnWP .btn.add a{color: #fff;display: inline-block;width: 100%;}
 section .dateWP:after{right:33px;}
 section table{width:100%;border:1px solid #BFC0C0;border-collapse:collapse;}
 table th,table td{background-color: #BCD5FF;color: #14213D;font-size:1rem;border:1px solid #BFC0C0;font-weight: 400;text-align: center;height:45px;}
@@ -63,3 +64,4 @@ table td{background-color: #fff;}
 .popUp .row.flex input{width: 612px;height:36px;margin-left:19px;color:#BFC0C0;border-radius:5px;border:1px solid #BFC0C0;padding:8px 23px;box-sizing: border-box;}
 .popUp .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 56px;}
 .popUp .btnWP .btn{margin:0 50px;}
+img{cursor: pointer;}
