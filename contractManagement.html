@@ -395,7 +395,6 @@
             $(this).siblings('table').find('tr').last().find('td:nth-child(4) input').removeClass('hasDatepicker').prop('id','warranty'+(n-1));
           
           }else if($(this).parents('section').find('table').attr('id')=='table3'){
-            alert(1);
             let newTR = $(this).parents('section').find('table').find('tr.copy').clone().removeClass('copy');
             $(this).parents('section').find('tbody').append(newTR);
             $(this).parents('section').find('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','check'+(n+2));
@@ -403,7 +402,6 @@
           }else if($(this).siblings('table').attr('id')=='table4'){
             
             $(this).siblings('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','unqualified'+(n-1));
-          
           }
 
       }else{
