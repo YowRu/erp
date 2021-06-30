@@ -64,8 +64,8 @@
       </div>
       <div class="row blue">分批履約期限</div>
       <section>
-        <div class="btn add">新增</div>
-        <table id="table1">
+        <div class="btn add table">新增</div>
+        <table id="table1" class="date">
           <tr>
             <th>序號</th>
             <th>分批履約項目</th>
@@ -88,9 +88,9 @@
           <tr>
             <td class="number">01</td>
             <td>12345678</td>
-            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1Date' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1_Date1' autocomplete="off" placeholder="" required /></div></td>
             <td><input type="text" class=' bgGary' /></td>
-            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='date5' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1_deadline1'autocomplete="off" placeholder="" required /></div></td>
             <td>
               <img src="img/contractEdit/edit.svg" alt="">
               <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
@@ -99,9 +99,9 @@
           <tr>
             <td class="number">02</td>
             <td>12345678</td>
-            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='date6' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1_Date2' autocomplete="off" placeholder="" required /></div></td>
             <td><input type="text" class=' bgGary' /></td>
-            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='date7' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1_deadline2'autocomplete="off" placeholder="" required /></div></td>
             <td>
               <img src="img/contractEdit/edit.svg" alt="">
               <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
@@ -121,7 +121,7 @@
       </div>
       <div class="row blue">契約變更</div>
       <section>
-        <div class="btn add long">新增原決標預算來源</div>
+        <div class="btn add long table">新增原決標預算來源</div>
         <table id="table2">
           <tr>
             <th>序號</th>
@@ -131,6 +131,18 @@
             <th>計畫科目</th>
             <th>變更後金額</th>
             <th>保存 刪除</th>
+          </tr>
+          <tr class="copy">
+            <td width="6%" class="number">00</td>
+            <td width="6%"><input type="text" placeholder="110" /></td>
+            <td width="18%"><input type="text" placeholder="預算來源" /></td>
+            <td width="18%"><input type="text" placeholder="計畫名稱" /></td>
+            <td width="18%"><input type="text" placeholder="計畫科目" /></td>
+            <td width="18%"><input type="text" placeholder="123456" /></td>
+            <td width="16%">
+              <img src="img/contractEdit/save.svg" alt="">
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
           </tr>
           <tr>
             <td width="6%" class="number">01</td>
@@ -149,11 +161,11 @@
       <div class="row flex">
         <div class="left">
           <p>竣工確認日期</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date8' autocomplete="off" placeholder="" required /></div>
+          <div class="dateWP"><input type="text" class='datepicker' id='date3' autocomplete="off" placeholder="" required /></div>
         </div>
         <div class="right">
           <p>實際履約完成日</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date9' autocomplete="off" placeholder="" required /></div>
+          <div class="dateWP"><input type="text" class='datepicker' id='date4' autocomplete="off" placeholder="" required /></div>
         </div>
       </div>
       <div class="row blue deep">查驗</div>
@@ -162,7 +174,7 @@
           <div class="btn add">新增</div>
           <a href="img/contractEdit/edit.svg" class="btn download" download>查驗單下載</a>
         </div>
-        <table>
+        <table class="date">
           <tr>
             <th width="5%">序號</th>
             <th width='10%'>查驗內容</th>
@@ -175,10 +187,25 @@
             <th width='7%'>附件名稱</th>
             <th width='7%'>保存 刪除</th>
           </tr>
+          <tr class="copy">
+            <td class="number">00</td>
+            <td><input type="text" placeholder="110年度機械館氣體開口契約(查驗2)" /></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='date5-1' autocomplete="off" placeholder="" required /></td>
+            <td><input type="text" placeholder="" /></td>
+            <td><input type="text" placeholder="" /></td>
+            <td><input type="text" placeholder="" /></td>
+            <td><input type="text" placeholder="" /></td>
+            <td><input type="text" placeholder="" /></td>
+            <td>查驗2.pdf</td>
+            <td>
+              <img src="img/contractEdit/save.svg" alt="">
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
+          </tr>
           <tr>
             <td class="number">01</td>
             <td><input type="text" placeholder="110年度機械館氣體開口契約(查驗2)" /></td>
-            <td><div class="dateWP"><input type="text" class='datepicker' id='date10' autocomplete="off" placeholder="" required /></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='date5' autocomplete="off" placeholder="" required /></td>
             <td><input type="text" placeholder="" /></td>
             <td><input type="text" placeholder="" /></td>
             <td><input type="text" placeholder="" /></td>
@@ -195,14 +222,14 @@
       <div class="row flex">
         <div class="left">
           <p class="deep">驗收合格日</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date11' autocomplete="off" placeholder="" required /></div>
+          <div class="dateWP"><input type="text" class='datepicker' id='date6' autocomplete="off" placeholder="" required /></div>
         </div>
         <div class="right"></div>
       </div>
       <div class="row blue">扣款金額</div>
       <section>
         <div class="btn add">新增</div>
-        <table>
+        <table class="date">
           <tr>
             <th>序號</th>
             <th>內容</th>
@@ -213,10 +240,23 @@
             <th>扣款總額</th>
             <th>編輯 刪除</th>
           </tr>
+          <tr class="copy">
+            <td class="number">00</td>
+            <td>110年度機械館氣體開口契約(查驗2)</td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='date7-1' autocomplete="off" placeholder="" required /></div></td>
+            <td>5,000</td>
+            <td>5,000</td>
+            <td>5,000</td>
+            <td>5,000</td>
+            <td>
+              <img src="img/contractEdit/edit.svg" alt="">
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
+          </tr>
           <tr>
             <td class="number">01</td>
             <td>110年度機械館氣體開口契約(查驗2)</td>
-            <td><div class="dateWP"><input type="text" class='datepicker' id='date12' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='date7' autocomplete="off" placeholder="" required /></div></td>
             <td>5,000</td>
             <td>5,000</td>
             <td>5,000</td>
@@ -231,7 +271,7 @@
       <div class="row flex">
         <div class="left">
           <p>結算金額(元)</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date13' autocomplete="off" placeholder="" required /></div>
+          <div class="dateWP"><input type="text" class='datepicker' id='date8' autocomplete="off" placeholder="" required /></div>
         </div>
         <div class="right">
           <p>保固金(元)</p>
@@ -241,13 +281,30 @@
       <div class="row blue">保固期限</div>
       <section>
         <div class="btn add">新增</div>
-        <table>
+        <table class="date">
           <tr>
             <th>序號</th>
             <th>分批履約項目</th>
             <th>年限</th>
             <th>日期</th>
             <th>編輯 刪除</th>
+          </tr>
+          <tr class="copy">
+            <td class="number">00</td>
+            <td>110年度機械館氣體開口契約(查驗2)</td>
+            <td>
+              <select name="year" id="year">
+                <option value="">請選擇</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+              </select>
+            </td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='date9' autocomplete="off" placeholder="" required /></div></td>
+            <td>
+              <img src="img/contractEdit/edit.svg" alt="">
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
           </tr>
           <tr>
             <td class="number">01</td>
@@ -260,7 +317,7 @@
                 <option value="2019">2019</option>
               </select>
             </td>
-            <td><div class="dateWP"><input type="text" class='datepicker' id='date14' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='date10' autocomplete="off" placeholder="" required /></div></td>
             <td>
               <img src="img/contractEdit/edit.svg" alt="">
               <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
@@ -271,11 +328,11 @@
       <div class="row flex">
         <div class="left">
           <p>履保金實際退還日期</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date15' autocomplete="off" placeholder="" required /></div>
+          <div class="dateWP"><input type="text" class='datepicker' id='date11' autocomplete="off" placeholder="" required /></div>
         </div>
         <div class="right">
           <p>完成付款結案日期</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date16' autocomplete="off" placeholder="" required /></div>
+          <div class="dateWP"><input type="text" class='datepicker' id='date12' autocomplete="off" placeholder="" required /></div>
         </div>
       </div>
       <div class="row flex">
@@ -285,7 +342,7 @@
         </div>
         <div class="right">
           <p>保固金實際退還日期</p>
-          <div class="dateWP"><input type="text" class='datepicker' id='date17' autocomplete="off" placeholder="" required /></div>
+          <div class="dateWP"><input type="text" class='datepicker' id='date13' autocomplete="off" placeholder="" required /></div>
         </div>
       </div>
       <div class="row blue">備註</div>
@@ -306,24 +363,48 @@
   <footer></footer>
   <script>
   $(document).ready(function() {
+    function tableNO() {
+      $('table').each(function(){
+          let n = $(this).find('tr').length;
+          for(let i =2;i<n;i++){
+            if(i<11){
+              $(this).find('tr').eq(i).find('.number').text('0'+(i-1));
+            }else{
+              $(this).find('tr').eq(i).find('.number').text(i-1);
+            }
+          }
+        });
+    };
+
     let w = $('#main .content>.row.flex .left p').width();
     $('#main .content .row.flex.day .left p').width(w);
     
-    
-    $('.deleteImg').click(function(){
-     let n = $(this).parents('table').find('tr').length;
-      
-      for(let i=1;i<n;i++){
-            if(n<10){
-            
-              $('table tr').eq(i).find('.number').text('0'+(n-2));
-            }else{
-              $('table tr').eq(i).find('.number').text(n-2);
-            }
-          } 
-      $(this).parents('tr').remove();
+    $('.btn.add.table').click(function(){
+
+      if($(this).siblings('table').hasClass('date')){
+
+          let n = $(this).siblings('table').find('tr').length;
+          let name1 = $(this).siblings('table').find('.copy .dateWP:nth-child(1)').attr('id');
+          let name2 = $(this).siblings('table').find('.copy .dateWP:nth-child(2)').attr('id');
+          
+
+
+
+        let newTR = $(this).siblings('table').find('tr.copy').removeClass('hasDatepicker').clone().prop('id', '');
+            $(this).siblings('table').find('tbody').append(newTR);
+      }else{
+        let newTR = $(this).siblings('table').find('tr.copy').clone().removeClass('copy');
+        $(this).siblings('table').find('tbody').append(newTR);
+      }
+
+      tableNO();
     });
     
+    $("table").delegate(".deleteImg","click",function(){
+      let n =$(this).parents('table').find('tr').length;
+      $(this).parents('tr').remove();
+      tableNO();
+    });
   });
   </script>
 </body>
