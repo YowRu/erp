@@ -77,9 +77,9 @@
           <tr class="copy">
             <td class="number">00</td>
             <td>12345678</td>
-            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1_Date' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='expected' autocomplete="off" placeholder="" required /></div></td>
             <td><input type="text" class=' bgGary' /></td>
-            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1_deadline' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='delivery' autocomplete="off" placeholder="" required /></div></td>
             <td>
               <img src="img/contractEdit/edit.svg" alt="">
               <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
@@ -88,9 +88,9 @@
           <tr>
             <td class="number">01</td>
             <td>12345678</td>
-            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1_Date1' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary'id='expected1'  autocomplete="off" placeholder="" required /></div></td>
             <td><input type="text" class=' bgGary' /></td>
-            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1_deadline1'autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='delivery1'autocomplete="off" placeholder="" required /></div></td>
             <td>
               <img src="img/contractEdit/edit.svg" alt="">
               <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
@@ -99,9 +99,9 @@
           <tr>
             <td class="number">02</td>
             <td>12345678</td>
-            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1_Date2' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='expected2' autocomplete="off" placeholder="" required /></div></td>
             <td><input type="text" class=' bgGary' /></td>
-            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='table1_deadline2'autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker bgGary' id='delivery2'autocomplete="off" placeholder="" required /></div></td>
             <td>
               <img src="img/contractEdit/edit.svg" alt="">
               <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
@@ -171,10 +171,10 @@
       <div class="row blue deep">查驗</div>
       <section>
         <div class="section flex">
-          <div class="btn add">新增</div>
+          <div class="btn add table">新增</div>
           <a href="img/contractEdit/edit.svg" class="btn download" download>查驗單下載</a>
         </div>
-        <table class="date">
+        <table class="date" id="table3">
           <tr>
             <th width="5%">序號</th>
             <th width='10%'>查驗內容</th>
@@ -190,7 +190,7 @@
           <tr class="copy">
             <td class="number">00</td>
             <td><input type="text" placeholder="110年度機械館氣體開口契約(查驗2)" /></td>
-            <td><div class="dateWP"><input type="text" class='datepicker' id='date5-1' autocomplete="off" placeholder="" required /></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='check' autocomplete="off" placeholder="" required /></td>
             <td><input type="text" placeholder="" /></td>
             <td><input type="text" placeholder="" /></td>
             <td><input type="text" placeholder="" /></td>
@@ -205,7 +205,7 @@
           <tr>
             <td class="number">01</td>
             <td><input type="text" placeholder="110年度機械館氣體開口契約(查驗2)" /></td>
-            <td><div class="dateWP"><input type="text" class='datepicker' id='date5' autocomplete="off" placeholder="" required /></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='check1' autocomplete="off" placeholder="" required /></td>
             <td><input type="text" placeholder="" /></td>
             <td><input type="text" placeholder="" /></td>
             <td><input type="text" placeholder="" /></td>
@@ -228,8 +228,8 @@
       </div>
       <div class="row blue">扣款金額</div>
       <section>
-        <div class="btn add">新增</div>
-        <table class="date">
+        <div class="btn add table">新增</div>
+        <table class="date" id="table4">
           <tr>
             <th>序號</th>
             <th>內容</th>
@@ -243,7 +243,7 @@
           <tr class="copy">
             <td class="number">00</td>
             <td>110年度機械館氣體開口契約(查驗2)</td>
-            <td><div class="dateWP"><input type="text" class='datepicker' id='date7-1' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='unqualified' autocomplete="off" placeholder="" required /></div></td>
             <td>5,000</td>
             <td>5,000</td>
             <td>5,000</td>
@@ -256,7 +256,7 @@
           <tr>
             <td class="number">01</td>
             <td>110年度機械館氣體開口契約(查驗2)</td>
-            <td><div class="dateWP"><input type="text" class='datepicker' id='date7' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='unqualified1' autocomplete="off" placeholder="" required /></div></td>
             <td>5,000</td>
             <td>5,000</td>
             <td>5,000</td>
@@ -280,8 +280,8 @@
       </div>
       <div class="row blue">保固期限</div>
       <section>
-        <div class="btn add">新增</div>
-        <table class="date">
+        <div class="btn add table">新增</div>
+        <table class="date" id="table5">
           <tr>
             <th>序號</th>
             <th>分批履約項目</th>
@@ -300,7 +300,7 @@
                 <option value="2019">2019</option>
               </select>
             </td>
-            <td><div class="dateWP"><input type="text" class='datepicker' id='date9' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='warranty' autocomplete="off" placeholder="" required /></div></td>
             <td>
               <img src="img/contractEdit/edit.svg" alt="">
               <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
@@ -317,7 +317,7 @@
                 <option value="2019">2019</option>
               </select>
             </td>
-            <td><div class="dateWP"><input type="text" class='datepicker' id='date10' autocomplete="off" placeholder="" required /></div></td>
+            <td><div class="dateWP"><input type="text" class='datepicker' id='warranty1' autocomplete="off" placeholder="" required /></div></td>
             <td>
               <img src="img/contractEdit/edit.svg" alt="">
               <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
@@ -380,18 +380,32 @@
     $('#main .content .row.flex.day .left p').width(w);
     
     $('.btn.add.table').click(function(){
-
-      if($(this).siblings('table').hasClass('date')){
-
-          let n = $(this).siblings('table').find('tr').length;
-          let name1 = $(this).siblings('table').find('.copy .dateWP:nth-child(1)').attr('id');
-          let name2 = $(this).siblings('table').find('.copy .dateWP:nth-child(2)').attr('id');
+      let n = $(this).siblings('table').find('tr').length;
+      if($(this).parents('section').find('table').hasClass('date')){
+        let newTR = $(this).siblings('table').find('tr.copy').clone().removeClass('copy');
+        $(this).siblings('table').find('tbody').append(newTR);
           
+          if($(this).siblings('table').attr('id')=='table1'){
 
+            $(this).siblings('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','expected'+(n-1));
+            $(this).siblings('table').find('tr').last().find('td:nth-child(5) input').removeClass('hasDatepicker').prop('id','delivery'+(n-1));
+          
+          }else if($(this).siblings('table').attr('id')=='table5'){
+            
+            $(this).siblings('table').find('tr').last().find('td:nth-child(4) input').removeClass('hasDatepicker').prop('id','warranty'+(n-1));
+          
+          }else if($(this).parents('section').find('table').attr('id')=='table3'){
+            alert(1);
+            let newTR = $(this).parents('section').find('table').find('tr.copy').clone().removeClass('copy');
+            $(this).parents('section').find('tbody').append(newTR);
+            $(this).parents('section').find('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','check'+(n+2));
+          
+          }else if($(this).siblings('table').attr('id')=='table4'){
+            
+            $(this).siblings('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','unqualified'+(n-1));
+          
+          }
 
-
-        let newTR = $(this).siblings('table').find('tr.copy').removeClass('hasDatepicker').clone().prop('id', '');
-            $(this).siblings('table').find('tbody').append(newTR);
       }else{
         let newTR = $(this).siblings('table').find('tr.copy').clone().removeClass('copy');
         $(this).siblings('table').find('tbody').append(newTR);

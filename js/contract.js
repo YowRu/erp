@@ -7,5 +7,4 @@ $(document).ready(function() {
   $( ".datepicker" ).datepicker({format: 'YYYY/MM/DD'});
   $(".datepicker").datepicker().datepicker("setDate", new Date());
 
-  
  });
