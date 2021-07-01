@@ -1,42 +1,120 @@
-<p>勞動部勞動力發展署<br>雲嘉南分署</p>
-<ul>
-  <li>分署</li>
-  <li>秘書室</li>
-  <li>人事室</li>
-  <li>綜合規劃科</li>
-  <li class="child current">
-    <a href="javascript:;" class="one">自辦訓練科</a>
-    <ul class="two">
-      <li class="current">- 電機館</li>
-      <li>- 機械館</li>
-    </ul>
-  </li>
-  <li>綜合規劃科</li>
-</ul>
-<script>
-  if($('#main .content .department>ul li').is('.child')){
-    $(this).children('.two').show();
-  }else{
-    $(this).children('.two').hide();
-  }
-  
-  $('#main .content .department ul>li').click(function(){
-    if($(this).hasClass('child')){
-        $(this).children('.two').slideToggle();
-        
-    }else{
-      $('#main .content .department .two').slideUp();
-      $('#main .content .department .two li').removeClass('current');
-      $(this).siblings('li').removeClass('current');
-    }
-    $(this).addClass('current');
-    
-  });
-  $('#main .content .department .two li').click(function(){
-    $('#main .content .department .two').show();
-    $(this).addClass('current');
-    $(this).siblings('li').removeClass('current');
-    $(this).parents('#main .content .department>ul').children('li').removeClass('current');
-  });
-  
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/department.js"></script>
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/systemSetting.css">
+  <title>科室部門單位設定</title>
+</head>
+<style>
+  .section.flex{display: flex;justify-content: flex-start;align-items: center;padding-left: 15px;}
+  .section.flex .btn{width:152px;}
+  .section.flex .btn:nth-child(1){margin-right:35px;}
+  .section.flex .btn:nth-child(2){background-color:#FCA311;border-color: #FCA311;color: #fff;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="systemSide"></div>
+      <div class="left">
+        <div class="title">科室部門單位設定</div>
+        <section>
+          <div class="section flex">
+            <div class="btn add table">新增下級單位</div>
+            <a href="userPermissions.html" class="btn" >新增使用者</a>
+          </div>
+          <table>
+            <tr>
+              <th><input type="checkbox" name='all' value="all" class="all"></th>
+              <th>編號</th>
+              <th>部門代號</th>
+              <th>部門名稱</th>
+              <th>部門主管</th>
+              <th>編輯 刪除</th>
+            </tr>
+            <tr class="copy">
+              <td><input type="checkbox" name='dept' value="dept" ></td>
+              <td>12345678</td>
+              <td>OOO</td>
+              <td>部門名稱</td>
+              <td>部門主管</td>
+              <td>
+                <a href=""><img src="img/contractEdit/edit.svg" alt="" class="edit"></a>
+                <img src="img/contractEdit/delete.svg" class="deleteImg delete"alt="">
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name='dept1' value="dept1" ></td>
+              <td>12345678</td>
+              <td>OOO</td>
+              <td>部門名稱</td>
+              <td>部門主管</td>
+              <td>
+                <a href=""><img src="img/contractEdit/edit.svg" alt="" class="edit"></a>
+                <img src="img/contractEdit/delete.svg" class="deleteImg delete"alt="">
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name='dept2' value="dept2" ></td>
+              <td>12345678</td>
+              <td>OOO</td>
+              <td>部門名稱</td>
+              <td>部門主管</td>
+              <td>
+                <a href=""><img src="img/contractEdit/edit.svg" alt="" class="edit"></a>
+                <img src="img/contractEdit/delete.svg" class="deleteImg delete"alt="">
+              </td>
+            </tr>
+          </table>
+        </section>
+        <div class="row orange">新增科室</div>
+        <div class="row flex">
+          <div class="left">
+            <p>部門代號</p>
+            <input type="text"> 
+          </div>
+          <div class="right">
+            <p>部門名稱</p>
+            <input type="text"> 
+          </div>
+        </div>
+        <div class="row flex">
+          <div class="left">
+            <p>部門主管</p>
+            <input type="text"> 
+          </div>
+          <div class="right">
+            <p>主聯絡人</p>
+            <input type="text"> 
+          </div>
+        </div>
+        <div class="row flex">
+          <div class="left">
+            <p>電話分機</p>
+            <input type="text"> 
+          </div>
+          <div class="right">
+            <p>email</p>
+            <input type="text"> 
+          </div>
+        </div>
+        <div class="btnWP">
+          <div class="btn cancel"><a href="contractList.html">取消</a></div> 
+          <div class="btn confirm">確認</div>
+        </div>
+      </div>
+    </div>
+    <div class="sideNo">5</div>
+    <div class="itemNo">0</div>
+  </div>
+  <footer></footer>
+</body>
+</html>

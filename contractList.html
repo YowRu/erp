@@ -6,10 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="js/date/jquery-ui-timepicker-addon.js"></script>
-  <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <title>開口契約履約管理</title>
@@ -107,7 +103,7 @@
             <td>標案履約作業</td>
             <td>
               <a href="contractEdit.html"><img src="img/contractEdit/edit.svg" alt="" class="edit"></a>
-              <img src="img/contractEdit/delete.svg" alt="" class="delete">
+              <img src="img/contractEdit/delete.svg" alt="" class="deleteImg">
             </td>
           </tr>
         </table>
@@ -117,5 +113,10 @@
     <div class="itemNo">0</div>
   </div>
   <footer></footer>
+  <script>
+    $('.deleteImg').click(function(){
+      $(this).parents('tr').remove();
+    });
+  </script>
 </body>
 </html>

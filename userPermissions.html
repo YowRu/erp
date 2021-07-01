@@ -6,109 +6,255 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="js/date/jquery-ui-timepicker-addon.js"></script>
-  <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="js/department.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
-  <title>使用者管理設定</title>
+  <link rel="stylesheet" href="css/systemSetting.css">
+  <link rel="stylesheet" href="css/userManagement.css">
+  <title>使用者權限設定</title>
 </head>
+<style>
+  #main .content .row.flex p{background-color:transparent;color:#2D3142;width:83px;text-align:right;padding:6px 0;}
+  #main .content .row.flex .left p,
+  #main .content .row.flex .right p{margin-right:40px;}
+  #main .content .row.flex .left div,
+  #main .content .row.flex .right div{background-color:#F6F6F6;width:348px;color:#6D6D6D;
+  border:1px solid #6D6D6D;height:36px;border-radius:5px;padding:6px 27px;box-sizing:border-box;}
+  #main table .flex,
+  #main table .flex .right{display: flex;justify-content: center;align-items: center;}
+  #main table .flex.wrap.start{align-items: flex-start;}
+  #main table td .flex.margin .right li{margin-right: 14px;}
+  #main table td .flex.wrap .right li{width:65px;}
+  #main table .flex.wrap.start .right li{width:28%;margin-right: 7px;}
+  #main table .flex.wrap.start .right{width: 85%;justify-content: flex-start;}
+  #main table .flex.wrap.start .all{width: 14%;margin-left: 43px;}
+  #main table td .flex.wrap .right{flex-wrap: wrap;width: 78%;justify-content: flex-start;}
+  #main table .flex.wrap.start .all::after
+  ,#main table td .all:after{content: '|';margin-right:14px}
+  #main table td .flex.wrap .all{width:19%;}
+  #main table td .flex.wrap .all:after{content: '';}
+  #main table td .flex.wrap.width .all{width: 31%;}
+  #main table td .flex.wrap.width .right{width: 58%;}
+
+</style>
 <body>
   <header></header>
   <div id="main">
     <div class="sideWP"></div>
     <div class="content">
-      <div class="departmen"></div>
+      <div class="systemSide"></div>
       <div class="left">
-        <div class="title">使用者管理設定</div>
+        <div class="title">使用者權限設定</div>
         <section>
           <table>
             <tr>
-              <th>序號</th>
-              <th>登入帳號</th>
-              <th>姓名</th>
-              <th>部門</th>
-              <th>帳號狀態</th>
-              <th>帳號狀態</th>
+              <th width="8%">序號</th>
+              <th width="10%">登入帳號</th>
+              <th width="10%">姓名</th>
+              <th width="10%">部門</th>
+              <th width="12%">帳號狀態</th>
+              <th width="50%">動作</th>
             </tr>
-            <tr>
-              <td>01</td>
+            <tr class="copy">
+              <td class="number">00</td>
               <td>12345678</td>
               <td>OOO</td>
               <td>部門</td>
-              <td>OOO</td>
+              <td>帳號狀態</td>
               <td>
-                <a href="">基本資料維護</a>
-                <a href="">功能權限設定</a>
-                <a href="">刪除</a>
+                <a href="" class="border">基本資料維護</a>
+                <a href="userPermissions.html" class="border">功能權限設定</a>
+                <a href="javascript:;" class="border delete">刪除</a>
               </td>
             </tr>
             <tr>
-              <td>02</td>
+              <td class="number">01</td>
               <td>12345678</td>
               <td>OOO</td>
               <td>部門</td>
-              <td>OOO</td>
+              <td>帳號狀態</td>
               <td>
-                <a href="">基本資料維護</a>
-                <a href="">功能權限設定</a>
-                <a href="">刪除</a>
+                <a href="" class="border">基本資料維護</a>
+                <a href="userPermissions.html" class="border">功能權限設定</a>
+                <a href="javascript:;" class="border delete">刪除</a>
               </td>
             </tr>
             <tr>
-              <td>03</td>
+              <td class="number">02</td>
               <td>12345678</td>
               <td>OOO</td>
               <td>部門</td>
-              <td>OOO</td>
+              <td>帳號狀態</td>
               <td>
-                <a href="">基本資料維護</a>
-                <a href="">功能權限設定</a>
-                <a href="">刪除</a>
+                <a href="" class="border">基本資料維護</a>
+                <a href="userPermissions.html" class="border">功能權限設定</a>
+                <a href="javascript:;" class="border delete">刪除</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="number">03</td>
+              <td>12345678</td>
+              <td>OOO</td>
+              <td>部門</td>
+              <td>帳號狀態</td>
+              <td>
+                <a href="" class="border">基本資料維護</a>
+                <a href="userPermissions.html" class="border">功能權限設定</a>
+                <a href="javascript:;" class="border delete">刪除</a>
               </td>
             </tr>
           </table>
         </section>
+        <div class="title">新增倉庫物料品項</div>
         <section>
           <div class="row flex">
             <div class="left">
-              <p>倉庫編號</p>
-              <input type="text"> 
+              <p>使用者姓名</p>
+              <div>OOO</div>
             </div>
             <div class="right">
-              <p>倉庫名稱</p>
-              <input type="text"> 
+              <p>帳號</p>
+              <div>OOO</div>
             </div>
           </div>
           <div class="row flex">
             <div class="left">
-              <p>倉庫編號</p>
-              <input type="text"> 
+              <p>部門</p>
+              <div>OOO</div>
             </div>
             <div class="right">
-              <p>倉庫名稱</p>
-              <input type="text"> 
+              <p>帳號狀態</p>
+              <div>OOO</div> 
             </div>
           </div>
           <table>
             <tr>
-              <th><input type="checkbox"></th>
-              <th>登入帳號</th>
-              <th>姓名</th>
-              <th>部門</th>
+              <th width="5%"><input type="checkbox" class="all" name="all" value="all" ></th>
+              <th width="12%">功能</th>
+              <th width="55%">子功能</th>
+              <th width="23%">權限</th>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td><input type="checkbox"></td>
+              <td>開口契約管理</td>
+              <td>
+                <div class="flex margin">
+                  <div class="all">
+                    <input type="checkbox" name="all_1">
+                    <label for="all_1" >全選</label>
+                  </div>
+                  <ul class="right">
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="contract1" >開口契約管理</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="contract1" >開口契約管理</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="contract1" >開口契約管理</label>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="flex wrap width">
+                  <div class="all">
+                    <input type="checkbox" name="all_1">
+                    <label for="all_1" >全選</label>
+                  </div>
+                  <ul class="right">
+                    <li>
+                      <input type="checkbox" name="add_1">
+                      <label for="add_1" >新增</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="modified_1">
+                      <label for="modified_1" >修改</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="delete_1" >刪除</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="read_1" >讀取</label>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td>倉庫物料管理</td>
+              <td>
+                <div class="flex wrap start">
+                  <div class="all">
+                    <input type="checkbox" name="all_1">
+                    <label for="all_1" >全選</label>
+                  </div>
+                  <ul class="right">
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="contract1" >開口契約管理</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="contract1" >開口契約管理</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="contract1" >開口契約管理</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="contract1" >開口契約管理</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="contract1" >開口契約管理</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="contract1" >開口契約管理</label>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="flex wrap width">
+                  <div class="all">
+                    <input type="checkbox" name="all_1">
+                    <label for="all_1" >全選</label>
+                  </div>
+                  <ul class="right">
+                    <li>
+                      <input type="checkbox" name="add_1">
+                      <label for="add_1" >新增</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="modified_1">
+                      <label for="modified_1" >修改</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="delete_1" >刪除</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="contract1">
+                      <label for="read_1" >讀取</label>
+                    </li>
+                  </ul>
+                </div>
+              </td>
             </tr>
           </table>
         </section> 
          
         <div class="btnWP">
-          <div class="btn cancel"><a href="contractList.html">取消</a></div> 
+          <div class="btn cancel"><a href="userManagement.html">取消</a></div> 
           <div class="btn confirm">確認</div>
         </div>
       </div>

@@ -6,37 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="js/date/jquery-ui-timepicker-addon.js"></script>
-  <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="js/department.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/systemSetting.css">
   <link rel="stylesheet" href="css/contractManagement.css">
+  <link rel="stylesheet" href="css/userManagement.css">
   <title>使用者管理設定</title>
 </head>
-<style>
-  #main .content .row.flex.top .left{margin-right:8px;}
-  #main .content .row.flex.top .left{width:45%;}
-  #main .content .row.flex.top .right{width:55%;display: flex;align-items: center;justify-content: space-between;}
-  #main .content .row.flex .left p, #main .content .row.flex .right p{background-color: #fff;color:#2D3142;width: 104px;
-    padding: 6px 15px;margin-right: 0;}
-  #main .content .row.flex .left input,
-  #main .content .row.flex .right select{border:1px solid #2D3142;border-radius: 5px;margin: 0;
-  padding:2px 16px;box-sizing: border-box;height:36px;color: #BFC0C0;width:50%;}
-  #main .content .row.flex .left input{width:65%;}
-  section .btn.add, section .btn.delete, .btn{margin-bottom: 0;background-color: #4973BB;color: #fff;}
-  .btnWP{margin:30px 0 28px;justify-content: flex-start;padding-left: 15px;box-sizing: border-box;}
-  .btnWP .btn{margin-right: 24px;}
-  .btnWP .btn.btn.delete{background-color:#FCA311;border: 1px solid #FCA311;}
-</style>
 <body>
   <header></header>
   <div id="main">
     <div class="sideWP"></div>
     <div class="content">
-      <div class="department"></div>
+      <div class="systemSide"></div>
       <div class="left">
         <div class="title">使用者管理設定</div>
         <section>
@@ -54,22 +37,22 @@
               <div class="btn">查詢</div>
             </div>
           </div>
-          <div class="btnWP">
-            <div class="btn add"><a href="">新增</a></div>
+          <div class="btnWP top">
+            <div class="btn add table">新增</div>
             <div class="btn delete">刪除所選帳號</div>
           </div>
           <table>
             <tr>
-              <th class="checkbox"><input type="checkbox" name="account1" value="account1"></th>
-              <th>登入帳號</th>
-              <th>姓名</th>
-              <th>倉別</th>
-              <th>館別</th>
-              <th>帳號狀態</th>
-              <th>動作</th>
+              <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
+              <th width="10%">登入帳號</th>
+              <th width="8%">姓名</th>
+              <th width="10%">倉別</th>
+              <th width="7%">館別</th>
+              <th width="10%">帳號狀態</th>
+              <th width="50%">動作</th>
             </tr>
-            <tr>
-              <td class="checkbox"><input type="checkbox" name="account2" value="account2"></td>
+            <tr class="copy">
+              <td class="checkbox"><input type="checkbox" name="account" value="account"></td>
               <td>12345678</td>
               <td>OOO</td>
               <td>倉庫名稱</td>
@@ -77,12 +60,12 @@
               <td>OOO</td>
               <td>
                 <a href="" class="border">基本資料維護</a>
-                <a href="" class="border">功能權限設定</a>
-                <a href="" class="border">刪除</a>
+                <a href="userPermissions.html" class="border">功能權限設定</a>
+                <a href="javascript:;" class="border delete">刪除</a>
               </td>
             </tr>
             <tr>
-              <td class="checkbox"><input type="checkbox"></td>
+              <td class="checkbox"><input type="checkbox" name="account1" value="account1"></td>
               <td>12345678</td>
               <td>OOO</td>
               <td>倉庫名稱</td>
@@ -90,8 +73,8 @@
               <td>OOO</td>
               <td>
                 <a href="" class="border">基本資料維護</a>
-                <a href="" class="border">功能權限設定</a>
-                <a href="" class="border">刪除</a>
+                <a href="userPermissions.html" class="border">功能權限設定</a>
+                <a href="javascript:;" class="border delete">刪除</a>
               </td>
             </tr>
           </table>
@@ -150,7 +133,7 @@
           <div class="right"></div>
         </div>
         <div class="btnWP">
-          <div class="btn cancel"><a href="contractList.html">取消</a></div> 
+          <div class="btn cancel"><a href="department.html">取消</a></div> 
           <div class="btn confirm">確認</div>
         </div>
       </div>

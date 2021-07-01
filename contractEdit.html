@@ -275,9 +275,13 @@
    });
 
 
-   $('.editVendor').click(function(){
+  $('.editVendor').click(function(){
     $('.popUpWP').css({'display':'flex'});
   });
+  $("section").delegate(".editVendor","click",function(){
+    $('.popUpWP').css({'display':'flex'});
+   })
+
 
   $('.btn.back').click(function(){
     $('.popUpWP').hide();
@@ -296,7 +300,6 @@
     } 
   });
   $("table").delegate(".deleteImg","click",function(){
-    let n =$(this).parents('table').find('tr').length;
     $(this).parents('tr').remove();
     tableNO();
   });

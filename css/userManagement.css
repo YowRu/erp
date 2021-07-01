@@ -1,0 +1,19 @@
+#main .content .row.flex.top .left{margin-right:8px;}
+#main .content .row.flex.top .left{width:45%;}
+#main .content .row.flex.top .right{width:55%;display: flex;align-items: center;justify-content: space-between;}
+#main .content .row.flex.top .left p, #main .content .row.flex.top .right p{background-color: #fff;color:#2D3142;width: 104px;
+  padding: 6px 15px;margin-right: 0;}
+#main .content .row.flex.top .left input,
+#main .content .row.flex.top .right select{border:1px solid #2D3142;border-radius: 5px;margin: 0;
+padding:2px 16px;box-sizing: border-box;height:36px;color: #BFC0C0;width:50%;}
+#main .content .row.flex.top .left input{width:65%;}
+#main .content .row.flex input{width: 47%;}
+section .btn.add, section .btn.delete, .btn{margin-bottom: 0;background-color: #4973BB;color: #fff;}
+.btnWP.top{margin:30px 0 28px;justify-content: flex-start;padding-left: 15px;box-sizing: border-box;}
+.btnWP.top .btn{margin-right: 24px;}
+.btnWP.top .btn.btn.delete{background-color:#FCA311;border: 1px solid #FCA311;}
+.btnWP{margin-top: 53px;}
+#main .content .row.flex .left input[type=radio] {border: 1px solid #2D3142;width: 20px;height: 20px;margin-right: 5px;}
+#main .content .row.flex .left span,
+#main .content .row.flex label{width:inherit;display: flex;align-items: center;justify-content: flex-start;}
+#main .content .row.flex label{margin-right:50px;}
