@@ -6,10 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="js/date/jquery-ui-timepicker-addon.js"></script>
-  <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="js/department.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/systemSetting.css">
@@ -24,7 +21,7 @@
       <div class="left">
         <div class="title">倉庫單位設定</div>
         <section>
-          <div class="btn add">新增</div>
+          <div class="btn add orange">新增</div>
           <table>
             <tr>
               <th>項次</th>
@@ -53,20 +50,22 @@
             </tr>
           </table>
         </section>
-        <div class="row orange">新增倉庫資料</div>
-        <div class="row flex">
-          <div class="left">
-            <p>倉庫編號</p>
-            <input type="text"> 
+        <div class="orangeWP">
+          <div class="row orange">新增倉庫資料</div>
+          <div class="row flex">
+            <div class="left">
+              <p>倉庫編號</p>
+              <input type="text"> 
+            </div>
+            <div class="right">
+              <p>倉庫名稱</p>
+              <input type="text"> 
+            </div>
           </div>
-          <div class="right">
-            <p>倉庫名稱</p>
-            <input type="text"> 
+          <div class="btnWP">
+            <div class="btn cancel"><a href="contractList.html">取消</a></div> 
+            <div class="btn confirm">確認</div>
           </div>
-        </div>
-        <div class="btnWP">
-          <div class="btn cancel"><a href="contractList.html">取消</a></div> 
-          <div class="btn confirm">確認</div>
         </div>
       </div>
     </div>

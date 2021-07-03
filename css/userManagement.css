@@ -11,7 +11,7 @@ padding:2px 16px;box-sizing: border-box;height:36px;color: #BFC0C0;width:50%;}
 section .btn.add, section .btn.delete, .btn{margin-bottom: 0;background-color: #4973BB;color: #fff;}
 .btnWP.top{margin:30px 0 28px;justify-content: flex-start;padding-left: 15px;box-sizing: border-box;}
 .btnWP.top .btn{margin-right: 24px;}
-.btnWP.top .btn.btn.delete{background-color:#FCA311;border: 1px solid #FCA311;}
+.btnWP.top .btn.deleteAll{background-color:#FCA311;border: 1px solid #FCA311;}
 .btnWP{margin-top: 53px;}
 #main .content .row.flex .left input[type=radio] {border: 1px solid #2D3142;width: 20px;height: 20px;margin-right: 5px;}
 #main .content .row.flex .left span,

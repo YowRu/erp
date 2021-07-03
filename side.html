@@ -10,11 +10,11 @@
     <a href="javascript:;" class="one">倉物物料管理</a>
     <ul class="two">
       <li><a href="">物料類別查詢</a></li>
-      <li>
+      <li class="hasChild">
         <a href="javascript:;" class="three">物料品項維護</a>
         <ul class="four">
-          <li><a href="">- 新增倉庫物料品項</a></li>
-          <li><a href="">- 設定開口契約物料品項</a></li>
+          <li><a href="">新增倉庫物料品項</a></li>
+          <li><a href="">設定開口契約物料品項</a></li>
         </ul>
       </li>
       <li><a href="">物料調撥管理</a></li>
@@ -34,7 +34,7 @@
   </li>
   <li><a href="javascript:;" class="one">物料領用發放管理</a>
     <ul class="two">
-        <li><a href="">物料線上申請單</a></li>
+        <li><a href="onlineApplication.html">物料線上申請單</a></li>
         <li><a href="">部門人員審核</a></li>
         <li><a href="">主管人員審核</a></li>
         <li><a href="">倉管人員審核</a></li>
@@ -48,7 +48,7 @@
         <li><a href="userManagement.html">使用者管理設定</a></li>
         <li><a href="userPermissions.html">使用者權限設定</a></li>
         <li><a href="depotManagement.html">倉庫單位設定</a></li>
-        <li><a href="">倉庫權限設定</a></li>
+        <li><a href="depotPermissions.html">倉庫權限設定</a></li>
         <li><a href="">系統LOG紀錄</a></li>
         <li><a href="" class="last">公告功能</a></li>
     </ul>
@@ -86,10 +86,23 @@
       $(this).parents('.side>li .two li ').addClass('current');
       $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
     });
+
+    $('.side>li .two>li a.three').click(function(){
+      $(this).removeClass('current');
+      $(this).siblings('.four').slideToggle();
+    });
+
+    $('.side>li .two>li .four').click(function(){
+      $(this).siblings('.three').addClass('current');
+      $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
+    });
+
     let sideNo = $('.sideNo').text();
     let itemNo = $('.itemNo').text();
     $('.side>li').eq(sideNo).addClass('current');
     $('.side>li.current .two').css({'display':'block'});
     $('.side>li.current .two li').eq(itemNo).addClass('current');
+    $('.side>li.current').children('.one').addClass('symbol');
+    
   });
 </script>

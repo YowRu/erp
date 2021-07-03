@@ -8,12 +8,34 @@ $(document).ready(function(){
     
   });
 
-  $('.btn.add.table').click(function(){
-    let newTR = $(this).parents('section').find('table .copy').clone().removeClass('copy');
-    
-    $(this).parents('section').find('table tbody').append(newTR);
-    
+  $('.btn.add.orange').click(function(){
+    $('.orangeWP').show();
   });
+  $('.btn.confirm').click(function(){
+    $('.orangeWP').hide();
+  });
+  $('.btn.cancel').click(function(){
+    $('.orangeWP').hide();
+  });
+
+$('input[type="checkbox"]').click(function(){
+  
+  if($(this).prop("checked")){
+    if($(this).hasClass('all')){
+      $(this).parents('table').find('tr').addClass('checked');
+    }else{
+      $(this).parents('tr').addClass('checked');
+    }
+
+  }else{
+    $(this).parents('tr').removeClass('checked');
+  }
+});
+
+$('.btn.deleteAll').click(function(){
+  $(this).parents('section').children('table').find('tr.checked:not(.th.checked)').remove();
+  $('table').find('.th').find('input[type="checkbox"]').prop("checked", false);
+});
 
   function tableNO() {
     $('table').each(function(){

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/pagination.min.js"></script>
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <title>物料線上申請</title>
+</head>
+<style>
+section{padding:32px 29px;border-radius: 10px;box-shadow: 0 8px 8px #BFC0C080;}
+.pagination{display: flex;justify-content: center;}
+.pagination li{width:31px;height: 31px;align-items: center;line-height: 31px;margin:0 1px;}
+.pagination .number{text-align: center;border:1px solid #4973BB;background-color: #fff;color:#4973BB;}
+.pagination .number.active{color: #fff;background-color: #4973BB;}
+.pagination .arrow{background-color:#8BA9DE;color: #fff;border: 1px solid #8BA9DE;text-align: center;cursor: pointer;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="title">物料線上申請</div>
+      <section>
+        <div class="row flex">
+          <div class="left">
+            <p>申請倉庫</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+          <div class="right">
+            <p>選擇開口契約</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+        </div>
+        <div class="btnWP top">
+          <div class="btn add import yellow"><a href="contractList.html">匯入</a></div>
+          <div class="btn add orange"><a href="newMaterial.html"></a> 新增</div>
+        </div>
+        <table>
+          <tr class="th">
+            <th width="10%">項次</th>
+            <th width="8%">單號</th>
+            <th width="10%">倉別</th>
+            <th width="7%">申請人</th>
+            <th>館別</th>
+            <th>申請日</th>
+            <th width="10%">申請進度</th>
+            <th width="50%">編輯 列印</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>12345678</td>
+            <td>倉庫</td>
+            <td>OOO</td>
+            <td>館別</td>
+            <td>2021.07.03</td>
+            <td>主管審核中</td>
+            <td><img src="img/contractEdit/edit.svg" alt=""><img src="img/contractEdit/print.svg"onclick="window.print();" alt=""></td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>12345678</td>
+            <td>倉庫</td>
+            <td>OOO</td>
+            <td>館別</td>
+            <td>2021.07.03</td>
+            <td>倉管人員審核中</td>
+            <td><img src="img/contractEdit/edit.svg" alt=""><img src="img/contractEdit/print.svg" onclick="window.print();" alt=""></td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>12345678</td>
+            <td>倉庫</td>
+            <td>OOO</td>
+            <td>館別</td>
+            <td>2021.07.03</td>
+            <td>出貨中</td>
+            <td><img src="img/contractEdit/edit.svg" alt=""><img src="img/contractEdit/print.svg" onclick="window.print();" alt=""></td>
+          </tr>
+        </table>
+        <ul class="pagination">
+            <li class="arrow back"><</li>
+            <li class="number start active">1</li>
+            <li class="number">2</li>
+            <li class="number">3</li>
+            <li class="number">4</li>
+            <li class="number end">5</li>
+            <li class="arrow next">></li>
+        </ul>
+      </section>
+    </div>
+    <div class="sideNo">4</div>
+    <div class="itemNo">0</div>
+  </div>
+  <footer></footer>
+  <script>
+    $(window).ready(function(){
+      
+      $('.next').click(function(){
+        let text = $('.number.active').text();
+        let endNumber = $('.number.end').text();
+         $('.pagination .number').eq(text).addClass('active');
+         $('.pagination .number').eq(text).siblings('.number').removeClass('active');
+         if(text >= endNumber){
+          $('.pagination .number').eq((endNumber-1)).addClass('active');
+         $('.pagination .number').eq((endNumber-1)).siblings('.number').removeClass('active');
+         }
+      });
+
+      $('.back').click(function(){
+        let text = $('.number.active').text();
+        let n = text-2;
+         $('.pagination .number').eq(n).addClass('active');
+         $('.pagination .number').eq(n).siblings('.number').removeClass('active');
+         if(n<0){
+          $('.pagination .number').eq(0).addClass('active');
+          $('.pagination .number').eq(0).siblings('.number').removeClass('active');
+         }
+      });
+
+    });
+    
+  </script>
+</body>
+</html>

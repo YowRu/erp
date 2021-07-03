@@ -38,11 +38,11 @@
             </div>
           </div>
           <div class="btnWP top">
-            <div class="btn add table">新增</div>
-            <div class="btn delete">刪除所選帳號</div>
+            <div class="btn add orange">新增</div>
+            <div class="btn deleteAll ">刪除所選帳號</div>
           </div>
           <table>
-            <tr>
+            <tr class="th">
               <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
               <th width="10%">登入帳號</th>
               <th width="8%">姓名</th>
@@ -50,19 +50,6 @@
               <th width="7%">館別</th>
               <th width="10%">帳號狀態</th>
               <th width="50%">動作</th>
-            </tr>
-            <tr class="copy">
-              <td class="checkbox"><input type="checkbox" name="account" value="account"></td>
-              <td>12345678</td>
-              <td>OOO</td>
-              <td>倉庫名稱</td>
-              <td>館別</td>
-              <td>OOO</td>
-              <td>
-                <a href="" class="border">基本資料維護</a>
-                <a href="userPermissions.html" class="border">功能權限設定</a>
-                <a href="javascript:;" class="border delete">刪除</a>
-              </td>
             </tr>
             <tr>
               <td class="checkbox"><input type="checkbox" name="account1" value="account1"></td>
@@ -79,62 +66,64 @@
             </tr>
           </table>
         </section>
-        <div class="row orange">新增帳號</div>
-        <div class="row flex">
-          <div class="left">
-            <p>部門</p>
-            <div>自辦科</div>
-          </div>
-          <div class="right">
-            <p>館別</p>
-            <div>營建館</div>
-          </div>
-        </div>
-        <div class="row flex">
-          <div class="left">
-            <p>姓名</p>
-            <input type="text">
-          </div>
-          <div class="right">
-            <p>登入帳號</p>
-            <input type="text">
-          </div>
-        </div>
-        <div class="row flex">
-          <div class="left">
-            <p>密碼</p>
-            <input type="text">
-          </div>
-          <div class="right">
-            <p>確認密碼</p>
-            <input type="text">
-          </div>
-        </div>
-        <div class="row flex">
-          <div class="left">
-            <p>連絡電話</p>
-            <input type="text">
-          </div>
-          <div class="right">
-            <p>email</p>
-            <input type="text">
-          </div>
-        </div>
-        <div class="row flex">
-          <div class="left">
-            <p>帳號狀態</p>
-            <div class="dayWP">
-              <span>
-                <label><input type="radio" name="account" value="on">啟用</label>
-                <label><input type="radio" name="account" value="off" checked>停用</label>
-              </span>
+        <div class="orangeWP">
+          <div class="row orange">新增帳號</div>
+          <div class="row flex">
+            <div class="left">
+              <p>部門</p>
+              <div>自辦科</div>
+            </div>
+            <div class="right">
+              <p>館別</p>
+              <div>營建館</div>
             </div>
           </div>
-          <div class="right"></div>
-        </div>
-        <div class="btnWP">
-          <div class="btn cancel"><a href="department.html">取消</a></div> 
-          <div class="btn confirm">確認</div>
+          <div class="row flex">
+            <div class="left">
+              <p>姓名</p>
+              <input type="text">
+            </div>
+            <div class="right">
+              <p>登入帳號</p>
+              <input type="text">
+            </div>
+          </div>
+          <div class="row flex">
+            <div class="left">
+              <p>密碼</p>
+              <input type="text">
+            </div>
+            <div class="right">
+              <p>確認密碼</p>
+              <input type="text">
+            </div>
+          </div>
+          <div class="row flex">
+            <div class="left">
+              <p>連絡電話</p>
+              <input type="text">
+            </div>
+            <div class="right">
+              <p>email</p>
+              <input type="text">
+            </div>
+          </div>
+          <div class="row flex">
+            <div class="left">
+              <p>帳號狀態</p>
+              <div class="dayWP">
+                <span>
+                  <label><input type="radio" name="account" value="on">啟用</label>
+                  <label><input type="radio" name="account" value="off" checked>停用</label>
+                </span>
+              </div>
+            </div>
+            <div class="right"></div>
+          </div>
+          <div class="btnWP">
+            <div class="btn cancel">取消</div> 
+            <div class="btn confirm">確認</div>
+          </div>
         </div>
       </div>
     </div>
