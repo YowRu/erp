@@ -7,6 +7,7 @@
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
   <script src="js/department.js"></script>
+  <script src="js/depotPermissions.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/systemSetting.css">
@@ -151,51 +152,5 @@
     <div class="itemNo">4</div>
   </div>
   <footer></footer>
-  <script>
-    function deleteText() {
-      $('.list2 label').each(function(){
-        $(this).html('<label for=""><input type="checkbox" name="selected">刪除</label>');
-      });
-    }
-
-    function AddText() {
-      $('.list1 label').each(function(){
-        $(this).html('<label for=""><input type="checkbox" name="selected">加入</label>');
-      });
-    }
-
-     $(".arrowRight").click(function(){
-        $(".list1 input").each(function(){
-          if($(this).prop('checked')){
-            $(this).parents('li').remove().appendTo(".list2");
-          }
-        });
-        deleteText();
-    });
-    
-    $(".arrowLeft").click(function(){
-      $(".list2 input").each(function(){
-          if($(this).prop('checked')){
-            $(this).parents('li').remove().appendTo(".list1");
-          }
-      }); 
-      AddText();
-    });
-
-  $('.btn.addAll').click(function(){
-    $(".list1 li").each(function(){
-       $(this).remove().appendTo(".list2");
-    });
-    deleteText();
-  });
-
-  $('.btn.deleteAll').click(function(){
-    $(".list2 li").each(function(){
-       $(this).remove().appendTo(".list1");
-    });
-    AddText();
-  });
-
-  </script>
 </body>
 </html>
