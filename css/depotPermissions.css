@@ -14,7 +14,8 @@ section.flex .listWP:nth-child(2){margin-left: 12.5px;}
 section.flex .listWP .list input[type="checkbox"]{margin-right: 15px;}
 section.flex .listWP .list li{background-color:#F6F6F6;display: flex;justify-content: space-between;align-items: center;
 margin-bottom: 12px;padding:17px 23px;}
-#main .content .row.flex select{width: 63%;margin:0 17px;}
+#main .content .row.flex.long.start{justify-content: flex-start;}
+#main .content .row.flex input{width: 63%;margin:0 17px;margin:0 14px;}
 #main .content section.flex .title{border: 0;font-size: 1.25rem;}
 #main .content section.flex .title.orange{color: #E85110;}
 #main .content section.flex .title.yellow{color:#FCA311;}
