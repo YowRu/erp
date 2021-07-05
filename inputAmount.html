@@ -1,0 +1,25 @@
+<div class="less" onclick="minus()">-</div>
+<input type="text" class="inputControl">
+<div class="plus" onclick="add()">+</div>
+<script>
+  let num = 0;
+  $('.inputControl').val(num);
+
+  function add() {
+   if (num >= 5) {
+    // alert('最多可新增5個');
+    return;
+   }
+   num++;
+   $('.inputControl').val(num);
+  }
+ 
+  function minus() {
+   if (num < 1) {
+    // alert('已減到最低了');
+    return;
+   }
+   num--;
+   $('.inputControl').val(num);
+  }
+</script>

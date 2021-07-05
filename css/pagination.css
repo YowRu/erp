@@ -1,0 +1,13 @@
+.pagination{display: flex;justify-content: center;}
+.pagination li{width:31px;height: 31px;align-items: center;line-height: 31px;margin:0 1px;}
+.pagination .number{text-align: center;border:1px solid #4973BB;background-color: #fff;color:#4973BB;}
+.pagination .number.active{color: #fff;background-color: #4973BB;}
+.pagination .arrow{background-color:#8BA9DE;color: #fff;border: 1px solid #8BA9DE;text-align: center;cursor: pointer;}
+
+.pagination.orange .number{border: 1px solid #EF8354;color: #EF8354;}
+.pagination.orange .number.active{background-color: #EF8354;color: #fff;}
+.pagination.orange .arrow{background-color:#FFB291;border: 1px solid #FFB291;}
+
+.pagination.yellow .number{border: 1px solid #FCA311;color: #FCA311;}
+.pagination.yellow .number.active{background-color: #FCA311;color: #fff;}
+.pagination.yellow .arrow{background-color:#FFEDC9;border: 1px solid #FFEDC9;}

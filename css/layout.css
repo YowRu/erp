@@ -73,8 +73,21 @@ position: absolute;right: 0;top:9px;}
 .side>li .two li:hover,
 .side>li .two li:hover a{background-color:#F6F6F6;}
 .side>li .two li.current:hover{background-color: #fff;}
+
 /*footer*/
 footer{text-align: center;}
 footer p{color: #BFC0C0;font-size:0.9rem;}
 /*sideNO*/
 .sideNo,.itemNo{display: none;}
+
+/*btn*/
+.btn{color: #4973BB;font-size: 1rem;
+  border: 1px solid #4973BB;margin-bottom: 16px;
+  width: 109px;height: 36px;line-height: 36px;
+  border-radius: 5px;text-align: center;cursor: pointer;}
+  .btn.deepBlue{background-color: #2E5AA5;color: #fff;border:0;}
+  .btn.blue{background-color:#4973BB;color: #fff;border:0;}
+  .btn.yellow{background-color: #FCA311;color:#fff;border:0;}
+.btn.orange{background-color: #EF8354;color: #fff;border:0;}
+.btn.orangeBorder{border: 1px solid #E85110;color:#E85110;border:0;}
+.btn.gray{background-color: #BFC0C0;color:#fff;border:0;}

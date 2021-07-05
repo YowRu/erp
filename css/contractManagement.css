@@ -8,7 +8,7 @@
 #main .content>.row.flex:nth-child(3):after,
 #main .content>.row.flex:nth-child(4):after,
 #main .content>.row.flex:nth-child(5):after{content: '';}
-#main .content .row.flex:nth-child(3) .left p{margin-right: 0;}
+/* #main .content .row.flex:nth-child(3) .left p{margin-right: 0;} */
 #main .content .row.flex input.dollar{width: 150px;margin:0 8px;}
 #main .content .row.flex span.dollar{width: 108px;margin-left: 15px;}
 #main .content .row.flex .right span.dollar{margin-left:38px;}

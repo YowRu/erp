@@ -1,0 +1,38 @@
+<li class="arrow back"><</li>
+<li class="number start active">1</li>
+<li class="number">2</li>
+<li class="number">3</li>
+<li class="number">4</li>
+<li class="number end">5</li>
+<li class="arrow next">></li>
+<script>
+  $(document).ready(function(){
+
+        
+        $('.pagination .next').click(function(){
+          let ID = $(this).parents('ul.pagination').attr('id');
+          let text = $('#'+ID).find('.number.active').text();
+          let endNumber = $('#'+ID).find('.number.end').text();
+          $('#'+ID+' .number').eq(text).addClass('active');
+          $('#'+ID+' .number').eq(text).siblings('.number').removeClass('active');
+          if(text >= endNumber){
+            $('#'+ID+' .number').eq((endNumber-1)).addClass('active');
+            $('#'+ID+' .number').eq((endNumber-1)).siblings('.number').removeClass('active');
+          }
+        });
+
+        $('.pagination .back').click(function(){
+          let ID = $(this).parents('ul.pagination').attr('id');
+          let text = $('#'+ID).find('.number.active').text();
+          let n = text-2;
+          $('#'+ID+' .number').eq(n).addClass('active');
+          $('#'+ID+' .number').eq(n).siblings('.number').removeClass('active');
+          if(n<0){
+            $('#'+ID+' .number').eq(0).addClass('active');
+            $('#'+ID+' .number').eq(0).siblings('.number').removeClass('active');
+          }
+        });
+
+    
+    });
+</script>
