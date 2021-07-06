@@ -4,5 +4,7 @@ $(document).ready(function(){
     $('.sideWP').load("side.html");
     $('.systemSide').load('systemSide.html');
     $('.pagination').load('pagination.html');
+    $('section.detail').load('detail.html');
     $('.inputAmount').load('inputAmount.html');
+    
 });

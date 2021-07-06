@@ -1,0 +1,118 @@
+<div class="row text">
+  <div class="left">
+    <p>申請人：</p>
+    <span>李大貓</span>
+  </div>
+  <div class="right"></div>
+</div>
+<div class="row text">
+  <div class="left">
+    <p>部門單位：</p>
+    <span>人事部</span>
+  </div>
+  <div class="middle">
+    <p>館別：</p>
+    <span>營運企劃班</span>
+  </div>
+  <div class="right">
+    <p>申請日：</p>
+    <span>110-06-04</span>
+  </div>
+</div>
+<div class="row text">
+  <div class="left">
+    <p>單號：</p>
+    <span>AAA111</span>
+  </div>
+  <div class="right">
+    <p>倉庫：</p>
+    <span>倉庫1</span>
+  </div>
+</div>
+<table class="yellow">
+  <tr>
+    <th width="6%">項次</th>
+    <th width="8%">品號</th>
+    <th width="20%">品名</th>
+    <th width="10%">規格</th>
+    <th width="8%">庫存</th>
+    <th width="8%">申請數量</th>
+    <th width="8%">核准量</th>
+    <th width="20%">批准請示</th>
+    <th width="12%">實發</th>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>品號</td>
+    <td>物品品名可能很長有兩行物品品名可能很長有兩行</td>
+    <td>藍色M號</td>
+    <td>5</td>
+    <td>5</td>
+    <td>5</td>
+    <td class="reason">
+      <div class="flex">
+        <label for=""><input type="radio" name="approve1" checked>批准</label>
+        <label for=""><input type="radio" name="approve1">退回</label>
+      </div>
+      <input type="text" placeholder="備註原因">
+    </td>
+    <td><div class="inputAmount"></div></td>
+  </tr>
+  <tr>
+    <td>02</td>
+    <td>品號</td>
+    <td>物品品名可能很長有兩行</td>
+    <td>藍色M號</td>
+    <td>5</td>
+    <td>5</td>
+    <td>5</td>
+    <td class="reason">
+      <div class="flex">
+        <label for=""><input type="radio" name="approve2" checked>批准</label>
+        <label for=""><input type="radio" name="approve2">退回</label>
+      </div>
+      <input type="text" placeholder="備註原因">
+    </td>
+    <td><div class="inputAmount"></div></td>
+  </tr>
+  <tr>
+    <td>03</td>
+    <td>品號</td>
+    <td>物品品名可能很長有兩行</td>
+    <td>藍色M號</td>
+    <td>5</td>
+    <td>5</td>
+    <td>5</td>
+    <td class="reason">
+      <div class="flex">
+        <label for=""><input type="radio" name="approve3" checked>批准</label>
+        <label for=""><input type="radio" name="approve3">退回</label>
+      </div>
+      <input type="text" placeholder="備註原因">
+    </td>
+    <td><div class="inputAmount"></div></td>
+  </tr>
+</table>
+<div class="btnWP">
+  <div class="btn cancel yellow">退回</div> 
+  <div class="btn confirm blue">核發</div>
+</div>
+<script>
+  $(document).ready(function(){
+    $('.inputAmount').load('inputAmount.html');
+
+    $('section table.gray td').click(function(){
+      $(this).parents('tr').find('td').css({'background-color':'#FFF2DC'});
+      $(this).parents('tr').siblings('tr').find('td').css({'background-color':'#fff'});
+      $('.detail').show();
+    });
+    
+    $('.detail .btnWP .btn.cancel').click(function(){
+      $('.detail').hide();
+      $('.audit').attr('src','img/contractEdit/audit.svg');
+      $('table td').css({'background-color':'#fff'});
+    });
+
+
+});
+</script>

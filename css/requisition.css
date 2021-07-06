@@ -1,0 +1,22 @@
+section{padding: 54px 35px;}
+#main .content .row.flex p{width:70px;padding:0;background-color:#fff;color:#2D3142;line-height:36px;text-align: right;}
+#main .content .row.flex select,
+#main .content .row.flex input{border:1px solid #2D3142;border-radius:5px;width:400px;}
+#main .content .row.flex input{margin: 0;}
+.btn.search.blue{margin-bottom: 0;}
+table{margin-top: 35px;}
+table tr{cursor: pointer;}
+table.gray th{background-color: #BFC0C0;border: 1px solid #6D6D6D;color: #fff;}
+.detail{display: none;}
+table.yellow th{background-color: #FFF2DC;border: 1px solid #FCA311;color: #E85110;}
+table.yellow td{padding:17px 18px;}
+.row.text{display: flex;justify-content: flex-start;align-items: center;margin-bottom: 6px;}
+.row.text>div{width:25%;display: flex;justify-content: flex-start;align-items: center;}
+.inputAmount{margin-right: 0;}
+.reason .flex{width: 80%;margin:0 auto;}
+.reason .flex,.reason .flex label{display: flex;justify-content: flex-start;align-items: center;}
+.reason .flex label:nth-child(1){margin-right:35px;}
+.reason .flex label{width: 50%;}
+.reason input{margin-right:4px;height:36px;}
+.btnWP{display: flex;justify-content: center;align-items: center;margin-top: 43px;}
+.btnWP .btn.yellow{margin-right: 100px;background-color: #FCA311;}

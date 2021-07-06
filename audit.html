@@ -10,34 +10,38 @@
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/inputAmount.css">
   <link rel="stylesheet" href="css/requisition.css">
-  <title>物料領用發放</title>
+  <title>部門主管審核</title>
 </head>
+<style>
+  #main .content .row.flex{justify-content: flex-start;}
+  #main .content .row.flex.long .left{width: 82%;}
+  #main .content .row.flex.long .left input{width:100%;}
+</style>
 <body>
   <header></header>
   <div id="main">
     <div class="sideWP"></div>
     <div class="content">
-      <div class="title">新增物料領用申請</div>
+      <div class="title">部門主管審核</div>
       <section>
         <div class="row flex">
           <div class="left">
+            <p>年度</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+          <div class="right">
             <p>申請倉庫</p>
             <select name="" id="">
               <option value="">請選擇</option>
             </select>
           </div>
-          <div class="right"></div>
         </div>
         <div class="row flex long">
           <div class="left">
             <p>關鍵字</p>
             <input type="text" placeholder="請輸入關鍵字搜尋">
-          </div>
-          <div class="right">
-            <p>核發狀態</p>
-            <select name="" id="">
-              <option value="">請選擇</option>
-            </select>
           </div>
           <div class="btn search blue">查詢</div>
         </div>
@@ -51,8 +55,7 @@
             <th>館別</th>
             <th>申請日</th>
             <th>審核狀態</th>
-            <th>核發狀態</th>
-            <th>動作 刪除</th>
+            <th>審核</th>
           </tr>
           <tr>
             <td>01</td>
@@ -63,10 +66,8 @@
             <td>館別</td>
             <td>110-07-05</td>
             <td>倉管主管已簽核</td>
-            <td>已核發</td>
             <td>
-              <img src="img/contractEdit/print.svg" class="print" alt="">
-              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+              <img src="img/contractEdit/audit.svg" class="audit" alt="">
             </td>
           </tr>
           <tr>
@@ -78,25 +79,8 @@
             <td>館別</td>
             <td>110-07-05</td>
             <td>申請中</td>
-            <td>未核發</td>
             <td>
               <img src="img/contractEdit/audit.svg" class="audit" alt="">
-              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
-            </td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>選中變橘色</td>
-            <td>內容出現在下面</td>
-            <td>申請人</td>
-            <td>部門單位</td>
-            <td>館別</td>
-            <td>110-07-05</td>
-            <td>申請中</td>
-            <td>未核發</td>
-            <td>
-              <img src="img/contractEdit/audit.svg" class="audit" alt="">
-              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
             </td>
           </tr>
         </table>
@@ -104,11 +88,14 @@
       <section class="detail"></section>
     </div>
     <div class="sideNo">4</div>
-    <div class="itemNo">4</div>
+    <div class="itemNo">1</div>
   </div>
   <footer></footer>
   <script>
-   
+    $('table.gray tr').click(function(){
+      $(this).find('.audit').attr('src','img/contractEdit/auditYellow.svg');
+      $(this).siblings('tr').find('.audit').attr('src','img/contractEdit/audit.svg');
+    });
   </script>
 </body>
 </html>
