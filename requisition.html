@@ -8,8 +8,33 @@
   <script src="js/loading.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/inputAmount.css">
   <title>物料領用發放</title>
 </head>
+<style>
+  section{padding: 54px 35px;}
+  #main .content .row.flex p{width:70px;padding:0;background-color:#fff;color:#2D3142;line-height:36px;text-align: right;}
+  #main .content .row.flex select,
+  #main .content .row.flex input{border:1px solid #2D3142;border-radius:5px;width:400px;}
+  #main .content .row.flex input{margin: 0;}
+  .btn.search.blue{margin-bottom: 0;}
+  table{margin-top: 35px;}
+  table tr{cursor: pointer;}
+  table.gray th{background-color: #BFC0C0;border: 1px solid #6D6D6D;color: #fff;}
+  .detail{display: none;}
+table.yellow th{background-color: #FFF2DC;border: 1px solid #FCA311;color: #E85110;}
+table.yellow td{padding:17px 18px;}
+.row.text{display: flex;justify-content: flex-start;align-items: center;margin-bottom: 6px;}
+.row.text>div{width:25%;display: flex;justify-content: flex-start;align-items: center;}
+.inputAmount{margin-right: 0;}
+.reason .flex{width: 80%;margin:0 auto;}
+.reason .flex,.reason .flex label{display: flex;justify-content: flex-start;align-items: center;}
+.reason .flex label:nth-child(1){margin-right:35px;}
+.reason .flex label{width: 50%;}
+.reason input{margin-right:4px;height:36px;}
+.btnWP{display: flex;justify-content: center;align-items: center;margin-top: 43px;}
+.btnWP .btn.yellow{margin-right: 100px;background-color: #FCA311;}
+</style>
 <body>
   <header></header>
   <div id="main">
@@ -37,9 +62,9 @@
               <option value="">請選擇</option>
             </select>
           </div>
-          <div class="btn search">查詢</div>
+          <div class="btn search blue">查詢</div>
         </div>
-        <table>
+        <table class="gray">
           <tr>
             <th>項次</th>
             <th>單號</th>
@@ -99,10 +124,121 @@
           </tr>
         </table>
       </section>
+      <section class="detail">
+        <div class="row text">
+          <div class="left">
+            <p>申請人：</p>
+            <span>李大貓</span>
+          </div>
+          <div class="right"></div>
+        </div>
+        <div class="row text">
+          <div class="left">
+            <p>部門單位：</p>
+            <span>人事部</span>
+          </div>
+          <div class="middle">
+            <p>館別：</p>
+            <span>營運企劃班</span>
+          </div>
+          <div class="right">
+            <p>申請日：</p>
+            <span>110-06-04</span>
+          </div>
+        </div>
+        <div class="row text">
+          <div class="left">
+            <p>單號：</p>
+            <span>AAA111</span>
+          </div>
+          <div class="right">
+            <p>倉庫：</p>
+            <span>倉庫1</span>
+          </div>
+        </div>
+        <table class="yellow">
+          <tr>
+            <th width="6%">項次</th>
+            <th width="8%">品號</th>
+            <th width="20%">品名</th>
+            <th width="10%">規格</th>
+            <th width="8%">庫存</th>
+            <th width="8%">申請數量</th>
+            <th width="8%">核准量</th>
+            <th width="20%">批准請示</th>
+            <th width="12%">實發</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>品號</td>
+            <td>物品品名可能很長有兩行物品品名可能很長有兩行</td>
+            <td>藍色M號</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td class="reason">
+              <div class="flex">
+                <label for=""><input type="radio" name="approve1" checked>批准</label>
+                <label for=""><input type="radio" name="approve1">退回</label>
+              </div>
+              <input type="text" placeholder="備註原因">
+            </td>
+            <td><div class="inputAmount"></div></td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>品號</td>
+            <td>物品品名可能很長有兩行</td>
+            <td>藍色M號</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td class="reason">
+              <div class="flex">
+                <label for=""><input type="radio" name="approve2" checked>批准</label>
+                <label for=""><input type="radio" name="approve2">退回</label>
+              </div>
+              <input type="text" placeholder="備註原因">
+            </td>
+            <td><div class="inputAmount"></div></td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>品號</td>
+            <td>物品品名可能很長有兩行</td>
+            <td>藍色M號</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td class="reason">
+              <div class="flex">
+                <label for=""><input type="radio" name="approve3" checked>批准</label>
+                <label for=""><input type="radio" name="approve3">退回</label>
+              </div>
+              <input type="text" placeholder="備註原因">
+            </td>
+            <td><div class="inputAmount"></div></td>
+          </tr>
+        </table>
+        <div class="btnWP">
+          <div class="btn cancel yellow">返回</div> 
+          <div class="btn confirm blue">核發</div>
+        </div>
+      </section>
     </div>
     <div class="sideNo">4</div>
     <div class="itemNo">4</div>
   </div>
   <footer></footer>
+  <script>
+    $('section table.gray td').click(function(){
+      $(this).parents('tr').find('td').css({'background-color':'#FFF2DC'});
+      $(this).parents('tr').siblings('tr').find('td').css({'background-color':'#fff'});
+      $('.detail').show();
+    });
+    $('.btn.cancel').click(function(){
+      $('.detail').hide();
+    });
+  </script>
 </body>
 </html>
