@@ -63,4 +63,5 @@ $('.btn.deleteAll').click(function(){
   $("table").delegate(".delete","click",function(){
     $(this).parents('tr').remove();
   });
+
 });

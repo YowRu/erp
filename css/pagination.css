@@ -1,4 +1,4 @@
-.pagination{display: flex;justify-content: center;}
+.pagination{display: flex;justify-content: center;margin-top: 16px;}
 .pagination li{width:31px;height: 31px;align-items: center;line-height: 31px;margin:0 1px;}
 .pagination .number{text-align: center;border:1px solid #4973BB;background-color: #fff;color:#4973BB;}
 .pagination .number.active{color: #fff;background-color: #4973BB;}

@@ -12,11 +12,13 @@ table.yellow th{background-color: #FFF2DC;border: 1px solid #FCA311;color: #E851
 table.yellow td{padding:17px 18px;}
 .row.text{display: flex;justify-content: flex-start;align-items: center;margin-bottom: 6px;}
 .row.text>div{width:25%;display: flex;justify-content: flex-start;align-items: center;}
-.inputAmount{margin-right: 0;}
+.inputAmount{margin:0 auto;}
 .reason .flex{width: 80%;margin:0 auto;}
 .reason .flex,.reason .flex label{display: flex;justify-content: flex-start;align-items: center;}
 .reason .flex label:nth-child(1){margin-right:35px;}
 .reason .flex label{width: 50%;}
-.reason input{margin-right:4px;height:36px;}
+.reason .textReason{margin-right:4px;height:36px;border-radius: 5px;border: 1px solid #6D6D6D;background-color: #F6F6F6;
+  line-height: 36px;color: #BFC0C0;margin-top: 4px;}
 .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 43px;}
 .btnWP .btn.yellow{margin-right: 100px;background-color: #FCA311;}
+input[type="radio"]{margin-right: 4px;}

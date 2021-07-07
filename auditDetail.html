@@ -37,9 +37,8 @@
     <th width="10%">規格</th>
     <th width="8%">庫存</th>
     <th width="8%">申請數量</th>
-    <th width="8%">核准量</th>
-    <th width="20%">批准請示</th>
-    <th width="12%">實發</th>
+    <th width="20%">核准量</th>
+    <th width="15%">批准請示</th>
   </tr>
   <tr>
     <td>01</td>
@@ -48,15 +47,10 @@
     <td>藍色M號</td>
     <td>5</td>
     <td>5</td>
-    <td>5</td>
+    <td><div class="inputAmount"></div></td>
     <td class="reason">
-      <!-- <div class="flex">
-        <label for=""><input type="radio" name="approve1" >批准</label>
-        <label for=""><input type="radio" name="approve1" checked>退回</label>
-      </div> -->
       <div class="textReason">備註原因</div>
     </td>
-    <td><div class="inputAmount"></div></td>
   </tr>
   <tr>
     <td>02</td>
@@ -65,15 +59,10 @@
     <td>藍色M號</td>
     <td>5</td>
     <td>5</td>
-    <td>5</td>
+    <td><div class="inputAmount"></div></td>
     <td class="reason">
-      <!-- <div class="flex">
-        <label for=""><input type="radio" name="approve2" checked>批准</label>
-        <label for=""><input type="radio" name="approve2">退回</label>
-      </div> -->
       <div class="textReason">備註原因</div>
     </td>
-    <td><div class="inputAmount"></div></td>
   </tr>
   <tr>
     <td>03</td>
@@ -82,15 +71,10 @@
     <td>藍色M號</td>
     <td>5</td>
     <td>5</td>
-    <td>5</td>
+    <td><div class="inputAmount"></div></td>
     <td class="reason">
-      <!-- <div class="flex">
-        <label for=""><input type="radio" name="approve3" checked>批准</label>
-        <label for=""><input type="radio" name="approve3">退回</label>
-      </div> -->
       <div class="textReason">備註原因</div>
     </td>
-    <td><div class="inputAmount"></div></td>
   </tr>
 </table>
 <div class="btnWP">
@@ -106,11 +90,11 @@
     $('section table.gray td').click(function(){
       $(this).parents('tr').find('td').css({'background-color':'#FFF2DC'});
       $(this).parents('tr').siblings('tr').find('td').css({'background-color':'#fff'});
-      $('.detail').show();
+      $('.auditDetail').show();
     });
     
-    $('.detail .btnWP .btn.cancel').click(function(){
-      $('.detail').hide();
+    $('.auditDetail .btnWP .btn.cancel').click(function(){
+      $('.auditDetail').hide();
       $('.audit').attr('src','img/contractEdit/audit.svg');
       $('table td').css({'background-color':'#fff'});
     });

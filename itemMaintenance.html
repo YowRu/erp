@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <title>物料品項維護</title>
+</head>
+<style>
+#main .content .row.flex.white{margin-bottom: 33px;}
+#main .content .row.flex.white p{background-color: #fff;color: #2D3142;width: 109px;}
+#main .content .row.flex.white select,#main .content .row.flex.white input{width: 80%;border:1px solid #2D3142;color: #BFC0C0;}
+.btnWP.top{display: flex;justify-content: space-between;align-items: center;}
+.btnWP.top .left{display: flex;justify-content: center;align-items: center;}
+.btnWP.top .btn.yellow{margin:0 24px 16px;}
+table{margin: 52px auto;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="title">物料品項維護</div>
+      <section>
+        <div class="row flex white">
+          <div class="left">
+            <p>倉別</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+          <div class="right">
+            <p>關鍵字</p>
+            <input type="text" placeholder="請輸入關鍵字搜尋">
+          </div>
+        </div>
+        <div class="btnWP top">
+          <div class="left">
+            <a href="addItem.html" class="btn add orange">新增</a>
+            <a href=" " class="btn yellow">匯入</a>
+            <a href=" " class="btn blue">匯出</a>
+          </div>
+          <div class="btn search">查詢</div>
+        </div>
+        <table>
+          <tr>
+            <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
+            <th>物料編號</th>
+            <th>項目</th>
+            <th>規格說明</th>
+            <th>單位</th>
+            <th>預估數量</th>
+            <th>單價</th>
+            <th>複價</th>
+            <th>附註</th>
+            <th>編輯 刪除</th>
+          </tr>
+          <tr>
+            <td class="checkbox"><input type="checkbox"></td>
+            <td>物料編號</td>
+            <td>項目</td>
+            <td>規格說明</td>
+            <td>單位</td>
+            <td>預估數量</td>
+            <td>單價</td>
+            <td>複價</td>
+            <td>附註附註附註附註附註附註</td>
+            <td>
+              <a href="addItem.html"><img src="img/contractEdit/edit.svg" class="editVendor" alt=""></a>
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
+          </tr>
+          <tr>
+            <td class="checkbox"><input type="checkbox"></td>
+            <td>物料編號</td>
+            <td>項目</td>
+            <td>規格說明</td>
+            <td>單位</td>
+            <td>預估數量</td>
+            <td>單價</td>
+            <td>複價</td>
+            <td>附註附註附註附註附註附註</td>
+            <td>
+              <a href="addItem.html"><img src="img/contractEdit/edit.svg" class="editVendor" alt=""></a>
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
+          </tr>
+        </table>
+        <ul class="pagination"></ul>
+      </section>
+    </div>
+    <div class="sideNo">1</div>
+    <div class="itemNo">1</div>
+  </div>
+  <footer></footer>
+</body>
+</html>

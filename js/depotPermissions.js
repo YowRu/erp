@@ -45,4 +45,14 @@ $('.btn.deleteAll').click(function(){
   AddText();
 });
 
+$('.btn.next').click(function(){
+  $('.nextContent').show();
+  $(this).parents('.bottom').hide();
+  
+});
+$('.nextContent .btn.cancel').click(function(){
+  $(this).parents('.nextContent').hide();
+  $('.bottom').show();
+});
+
 });

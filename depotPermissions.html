@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/systemSetting.css">
   <link rel="stylesheet" href="css/depotPermissions.css">
-  <title>倉庫權限設定管理</title>
+  <title>開口契約權限設定</title>
 </head>
 <body>
   <header></header>
@@ -21,29 +21,35 @@
     <div class="content">
       <div class="systemSide"></div>
       <div class="left">
-        <div class="title">倉庫權限設定管理</div>
+        <div class="title">開口契約權限設定</div>
         <section>
           <div class="btn add orange">新增</div>
           <table>
             <tr>
+              <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
               <th>項次</th>
+              <th>年度</th>
+              <th>開口契約</th>
               <th>使用者</th>
-              <th>倉別</th>
               <th>編輯 刪除</th>
             </tr>
             <tr>
+              <td class="checkbox"><input type="checkbox"></td>
               <td>01</td>
+              <td>年度</td>
+              <td>開口契約</td>
               <td>使用者</td>
-              <td>倉別</td>
               <td>
                 <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
                 <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
               </td>
             </tr>
             <tr>
+              <td class="checkbox"><input type="checkbox"></td>
               <td>02</td>
+              <td>年度</td>
+              <td>開口契約</td>
               <td>使用者</td>
-              <td>倉別</td>
               <td>
                 <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
                 <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
@@ -52,15 +58,25 @@
           </table>
         </section>
         <div class="orangeWP">
-          <div class="row orange">新增倉庫權限設定</div>
-          <div class="row flex long">
-            <p>選擇倉別</p>
-            <input type="text" placeholder="請輸入倉別">
-            <div class="btn search">查詢</div>
+          <div class="row orange">新增開口契約權限設定</div>
+          <div class="row flex">
+            <div class="left">
+              <p>選擇年度</p>
+              <select name="" id="">
+                <option value="">110</option>
+              </select>
+            </div>
+            <div class="right">
+              <p>選擇開口契約</p>
+              <select name="" id="">
+                <option value="">契約案號＋標案名</option>
+              </select>
+            </div>
           </div>
-          <div class="row flex long start">
-            <p>倉庫人員</p>
-            <input type="text" placeholder="請輸入人員">
+          <div class="row flex long">
+            <p>設定使用者</p>
+            <input type="text" placeholder="輸入名字或關鍵字（可多筆）">
+            <div class="btn search">查詢</div>
           </div>
           <!-- <section class="flex">
             <div class="listWP">

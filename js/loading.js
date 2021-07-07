@@ -5,6 +5,7 @@ $(document).ready(function(){
     $('.systemSide').load('systemSide.html');
     $('.pagination').load('pagination.html');
     $('section.detail').load('detail.html');
+    $('section.auditDetail').load('auditDetail.html');
     $('.inputAmount').load('inputAmount.html');
     
 });
