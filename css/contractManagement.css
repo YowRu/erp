@@ -38,3 +38,4 @@ border-radius: 5px;padding: 2px 25px;box-sizing: border-box;height: 36px;}
 #main .content .row.flex.day label{width:inherit;display: flex;align-items: center;justify-content: flex-start;}
 #main .content .row.flex.day input[type=radio] {border: 1px solid #2D3142;width: 20px;height: 20px;margin-right: 5px;}
 img,.deleteImg{cursor: pointer;}
+.btn.yellow{margin-right: 24px;}

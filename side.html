@@ -11,10 +11,10 @@
     <ul class="two">
       <li><a href="">物料類別查詢</a></li>
       <li class="hasChild">
-        <a href="itemMaintenance.html" class="three">物料品項維護</a>
+        <a href="itemMaintenance.html" class="three">物料品項維護</a><a href="javascript:;" class="open"></a>
         <ul class="four">
           <li><a href="addItem.html">新增倉庫物料品項</a></li>
-          <li><a href="">設定開口契約物料品項</a></li>
+          <li><a href="setItem.html">設定開口契約物料品項</a></li>
         </ul>
       </li>
       <li><a href="">物料調撥管理</a></li>
@@ -86,22 +86,45 @@
       $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
     });
 
-    $('.side>li .two>li a.three').click(function(){
-      $(this).removeClass('current');
-      $(this).siblings('.four').slideToggle();
-    });
-
-    $('.side>li .two>li .four').click(function(){
-      $(this).siblings('.three').addClass('current');
-      $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
-    });
-
     let sideNo = $('.sideNo').text();
     let itemNo = $('.itemNo').text();
+    let child =$('#main>.childNo').text();
     $('.side>li').eq(sideNo).addClass('current');
     $('.side>li.current .two').css({'display':'block'});
     $('.side>li.current .two li').eq(itemNo).addClass('current');
     $('.side>li.current').children('.one').addClass('symbol');
     
+    if($('.childNo').length>0){
+        $('.side>li .two>li .four').show();
+        $('.open').addClass('text');
+        $('.side>li .two>li .four li').eq(child).addClass('current');
+    }else{
+        $('.side>li .two>li .four').hide();
+        $('.side>li .two>li .four li').eq(child).removeClass('current');
+        $('.side>li .two>li.hasChild .open.text').removeClass('text');
+    }
+
+    $('.side>li .two>li a.three').click(function(){
+      $(this).addClass('current');
+      $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
+      $('.side>li .four>li').removeClass('current');
+      $('.side>li .two>li.hasChild .open.text').removeClass('text');
+    });
+
+    
+
+    $('.side>li .two>li .open').click(function(){
+      $(this).siblings('.four').slideToggle();
+      $(this).toggleClass('text');
+    });
+
+    $('.side>li .two>li .four li').click(function(){
+      $(this).addClass('current');
+      $(this).siblings('.three').addClass('current');
+      $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
+      $('.side>li.current .two .four li').eq(child).addClass('current');
+    });
+    
+
   });
 </script>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/department.js"></script>
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/requisition.css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <title>設定開口契約物料品項</title>
+</head>
+<style>
+  .btnWP.top{justify-content: space-between;}
+  #main .content .row.flex{justify-content: flex-start;}
+  #main .content .row.flex .left p, #main .content .row.flex .right p{text-align:left;}
+  table{margin-bottom: 54px;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="title">物料品項維護</div>
+      <section>
+        <div class="row flex">
+          <div class="left">
+            <p>年度</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+        </div>
+        <div class="row flex">
+          <div class="left">
+            <p>倉別</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+          <div class="right">
+            <p>關鍵字</p>
+            <input type="text" placeholder="請輸入關鍵字搜尋">
+          </div>
+        </div>
+        <div class="btnWP top">
+            <a href="" class="btn add orange">新增</a>
+            <a href="" class="btn blue">查詢</a>
+        </div>
+        <table>
+          <tr>
+            <th width="5%">序號</th>
+            <th>年度</th>
+            <th>館別</th>
+            <th>倉別</th>
+            <th>開口契約案件</th>
+            <th>編輯 刪除</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>110</td>
+            <td>機械館</td>
+            <td>倉別</td>
+            <td>開口契約</td>
+            <td>
+              <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>110</td>
+            <td>機械館</td>
+            <td>倉別</td>
+            <td>開口契約</td>
+            <td>
+              <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
+          </tr>
+        </table>
+        <ul class="pagination"></ul>
+      </section>
+    </div>
+    <div class="sideNo">1</div>
+    <div class="itemNo">1</div>
+    <div class="childNo">1</div>
+  </div>
+  <footer></footer>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/department.js"></script>
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <title>新增倉庫物料品項</title>
+</head>
+<style>
+  #main .content .row.flex.long{justify-content: flex-start;}
+  #main .content .row.flex.long .left{width:100%;margin: 0;}
+  #main .content .row.flex select{width: 80%;}
+#main .content .row.flex.white{margin:0 49px 16px;width: 60%;}
+#main .content .row.flex.white p{background-color: #fff;color: #2D3142;width: 109px;padding: 6px 0;}
+#main .content .row.flex.white select,#main .content .row.flex.white input{width: 80%;border:1px solid #2D3142;color: #BFC0C0;}
+.btnWP.top{display: flex;justify-content: flex-start;align-items: center;}
+.btnWP.top .left{display: flex;justify-content: flex-start;align-items: center;}
+.btnWP.top .btn.yellow{margin:0 24px 16px 0;}
+table{margin:0 auto 31px;}
+.row.orange{background-color:#EF8354;}
+table input{width:90%;margin:0 auto;border: 1px solid #BFC0C0;height: 36px;border-radius: 5px;color: #2D3142;padding-left: 5px;box-sizing: border-box;}
+input[type="checkbox"]{width:13px;height:13px;border: 1px solid #6D6D6D;}
+</style>
+<body>
+  <header></header>
+  <div id="main" class="childNo">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="title">新增倉庫物料品項</div>
+      <div class="row flex long">
+        <div class="left">
+          <p>倉別</p>
+          <select name="" id="">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+      </div>
+      <div class="row orange">物料品項資料</div>
+      <section>
+        <div class="btnWP top">
+          <div class="left">
+            <a href=" " class="btn yellow">匯入</a>
+            <a href="addItem.html" class="btn add orange">新增</a>
+          </div>
+          <div class="row flex white">
+            <p>複製開口契約</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+          <div class="btn">送出</div>
+        </div>
+        <table>
+          <tr>
+            <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
+            <th width="10%">物料編號</th>
+            <th width="5%">項目</th>
+            <th width="15%">規格說明</th>
+            <th width="5%">單位</th>
+            <th width="10%">預估數量</th>
+            <th width="5%">單價</th>
+            <th width="10%">上限數量</th>
+            <th width="5%">複價</th>
+            <th width="25%">附註</th>
+            <th width="5%">刪除</th>
+          </tr>
+          <tr>
+            <td class="checkbox"><input type="checkbox"></td>
+            <td>倉+編號</td>
+            <td><input type="text" placeholder="項目"></td>
+            <td><input type="text" placeholder="規格說明"></td>
+            <td><input type="text" placeholder="支"></td>
+            <td><input type="text" placeholder="100"></td>
+            <td><input type="text" placeholder="20"></td>
+            <td><input type="text" placeholder="20"></td>
+            <td><input type="text" placeholder="複價"></td>
+            <td><input type="text" placeholder="附註附註附註附註附註附註"></td>
+            <td>
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
+          </tr>
+          <tr>
+            <td class="checkbox"><input type="checkbox"></td>
+            <td>倉+編號</td>
+            <td><input type="text" placeholder="項目"></td>
+            <td><input type="text" placeholder="規格說明"></td>
+            <td><input type="text" placeholder="支"></td>
+            <td><input type="text" placeholder="100"></td>
+            <td><input type="text" placeholder="20"></td>
+            <td><input type="text" placeholder="20"></td>
+            <td><input type="text" placeholder="複價"></td>
+            <td><input type="text" placeholder="附註附註附註附註附註附註"></td>
+            <td>
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
+          </tr>
+        </table>
+      </section>
+      <div class="orangeWP">
+        <div class="row orange">物料品項列表</div>
+        <section>
+          <table>
+            <tr>
+              <th width="5%">項次</th>
+              <th>物料編號</th>
+              <th>項目</th>
+              <th>規格說明</th>
+              <th>單位</th>
+              <th>預估數量</th>
+              <th>單價</th>
+              <th>上限數量</th>
+              <th>複價</th>
+              <th>附註</th>
+              <th>修改 刪除</th>
+            </tr>
+            <tr>
+              <td>01</td>
+              <td>倉+編號</td>
+              <td>項目</td>
+              <td>規格說明</td>
+              <td>單位</td>
+              <td>預估數量</td>
+              <td>單價</td>
+              <td>上限數量</td>
+              <td>複價</td>
+              <td>附註附註附註附註附註附註附註附註附註附註</td>
+              <td>
+                <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
+                <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+              </td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>倉+編號</td>
+              <td>項目</td>
+              <td>規格說明</td>
+              <td>單位</td>
+              <td>預估數量</td>
+              <td>單價</td>
+              <td>上限數量</td>
+              <td>複價</td>
+              <td>附註附註附註附註附註附註附註附註附註附註</td>
+              <td>
+                <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
+                <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+              </td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </div>
+    <div class="sideNo">1</div>
+    <div class="itemNo">1</div>
+    <div class="childNo">0</div>
+  </div>
+  <footer></footer>
+</body>
+</html>
