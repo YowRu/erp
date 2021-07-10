@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
-  <script src="js/department.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/pagination.css">
@@ -26,6 +25,8 @@ table{margin:0 auto 31px;}
 .row.orange{background-color:#EF8354;}
 table input{width:90%;margin:0 auto;border: 1px solid #BFC0C0;height: 36px;border-radius: 5px;color: #2D3142;padding-left: 5px;box-sizing: border-box;}
 input[type="checkbox"]{width:13px;height:13px;border: 1px solid #6D6D6D;}
+.orangeWP{display: none;}
+.orangeWP.show{display: block;}
 </style>
 <body>
   <header></header>
@@ -46,7 +47,7 @@ input[type="checkbox"]{width:13px;height:13px;border: 1px solid #6D6D6D;}
         <div class="btnWP top">
           <div class="left">
             <a href=" " class="btn yellow">匯入</a>
-            <a href="addItem.html" class="btn add orange">新增</a>
+            <div class="btn add orange">新增</div>
           </div>
           <div class="row flex white">
             <p>複製開口契約</p>
@@ -54,7 +55,7 @@ input[type="checkbox"]{width:13px;height:13px;border: 1px solid #6D6D6D;}
               <option value="">請選擇</option>
             </select>
           </div>
-          <div class="btn">送出</div>
+          <div class="btn blue">送出</div>
         </div>
         <table>
           <tr>
@@ -70,22 +71,7 @@ input[type="checkbox"]{width:13px;height:13px;border: 1px solid #6D6D6D;}
             <th width="25%">附註</th>
             <th width="5%">刪除</th>
           </tr>
-          <tr>
-            <td class="checkbox"><input type="checkbox"></td>
-            <td>倉+編號</td>
-            <td><input type="text" placeholder="項目"></td>
-            <td><input type="text" placeholder="規格說明"></td>
-            <td><input type="text" placeholder="支"></td>
-            <td><input type="text" placeholder="100"></td>
-            <td><input type="text" placeholder="20"></td>
-            <td><input type="text" placeholder="20"></td>
-            <td><input type="text" placeholder="複價"></td>
-            <td><input type="text" placeholder="附註附註附註附註附註附註"></td>
-            <td>
-              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
-            </td>
-          </tr>
-          <tr>
+          <tr class="copy">
             <td class="checkbox"><input type="checkbox"></td>
             <td>倉+編號</td>
             <td><input type="text" placeholder="項目"></td>
@@ -160,5 +146,25 @@ input[type="checkbox"]{width:13px;height:13px;border: 1px solid #6D6D6D;}
     <div class="childNo">0</div>
   </div>
   <footer></footer>
+  <script>
+    function orangeWP(){
+      if($('.orangeWP').hasClass('show')){
+        $('.orangeWP').show();
+      }else{
+        $('.orangeWP').hide();
+      }
+    }
+    
+    $('.btn.add.orange').click(function(){
+      let newTR = $(this).parents('.btnWP.top').siblings('table').find('.copy').clone().removeClass('copy');
+      $(this).parents('.btnWP.top').siblings('table').find('tbody').append(newTR);
+      orangeWP();
+    });
+
+    $('.btn.blue').click(function(){
+      $('.orangeWP').addClass('show');
+      orangeWP();
+    });
+  </script>
 </body>
 </html>

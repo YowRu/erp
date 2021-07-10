@@ -75,6 +75,7 @@
     });
 
   $('.side>li>a').click(function(){
+    alert(5);
       $(this).parents('.side>li').siblings('li').children('.symbol').removeClass('symbol');
       $(this).parents('.side>li').siblings('li').children('.two').slideUp();
       $(this).siblings('.two').slideToggle();
@@ -82,7 +83,13 @@
     });
     
     $('.side>li .two li a').click(function(){
-      $(this).parents('.side>li .two li ').addClass('current');
+      alert(4);
+      if($(this).hasClass('open')){
+         console.log('y');
+      }else{
+        $(this).parents('.side>li .two li ').addClass('current');
+      }
+      
       $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
     });
 
@@ -98,13 +105,17 @@
         $('.side>li .two>li .four').show();
         $('.open').addClass('text');
         $('.side>li .two>li .four li').eq(child).addClass('current');
+        $('.three').addClass('childCurrent');
+        $('.three').removeClass('current');
     }else{
         $('.side>li .two>li .four').hide();
-        $('.side>li .two>li .four li').eq(child).removeClass('current');
+        $('.side>li .two>li .four').find('li').removeClass('current');
         $('.side>li .two>li.hasChild .open.text').removeClass('text');
+        $('.three').removeClass('childCurrent');
     }
 
     $('.side>li .two>li a.three').click(function(){
+      alert(1);
       $(this).addClass('current');
       $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
       $('.side>li .four>li').removeClass('current');
@@ -114,13 +125,16 @@
     
 
     $('.side>li .two>li .open').click(function(){
+      alert(2);
       $(this).siblings('.four').slideToggle();
       $(this).toggleClass('text');
     });
 
     $('.side>li .two>li .four li').click(function(){
+      alert(3);
       $(this).addClass('current');
-      $(this).siblings('.three').addClass('current');
+      $(this).siblings('.three').removeClass('current');
+      $(this).siblings('.three').addClass('childCurrent');
       $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
       $('.side>li.current .two .four li').eq(child).addClass('current');
     });
