@@ -75,7 +75,6 @@
     });
 
   $('.side>li>a').click(function(){
-    alert(5);
       $(this).parents('.side>li').siblings('li').children('.symbol').removeClass('symbol');
       $(this).parents('.side>li').siblings('li').children('.two').slideUp();
       $(this).siblings('.two').slideToggle();
@@ -83,13 +82,11 @@
     });
     
     $('.side>li .two li a').click(function(){
-      alert(4);
       if($(this).hasClass('open')){
          console.log('y');
       }else{
         $(this).parents('.side>li .two li ').addClass('current');
       }
-      
       $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
     });
 
@@ -115,7 +112,6 @@
     }
 
     $('.side>li .two>li a.three').click(function(){
-      alert(1);
       $(this).addClass('current');
       $(this).parents('.side>li').siblings('li').children('.two li').removeClass('current');
       $('.side>li .four>li').removeClass('current');
@@ -125,13 +121,11 @@
     
 
     $('.side>li .two>li .open').click(function(){
-      alert(2);
       $(this).siblings('.four').slideToggle();
       $(this).toggleClass('text');
     });
 
     $('.side>li .two>li .four li').click(function(){
-      alert(3);
       $(this).addClass('current');
       $(this).siblings('.three').removeClass('current');
       $(this).siblings('.three').addClass('childCurrent');
