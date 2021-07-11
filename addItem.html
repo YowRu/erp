@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
+  <script src="js/action.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/pagination.css">
@@ -105,8 +106,8 @@ input[type="checkbox"]{width:13px;height:13px;border: 1px solid #6D6D6D;}
               <th>附註</th>
               <th>修改 刪除</th>
             </tr>
-            <tr>
-              <td>01</td>
+            <tr class="copy">
+              <td class="number">00</td>
               <td>倉+編號</td>
               <td>項目</td>
               <td>規格說明</td>
@@ -122,7 +123,23 @@ input[type="checkbox"]{width:13px;height:13px;border: 1px solid #6D6D6D;}
               </td>
             </tr>
             <tr>
-              <td>02</td>
+              <td class="number">01</td>
+              <td>倉+編號</td>
+              <td>項目</td>
+              <td>規格說明</td>
+              <td>單位</td>
+              <td>預估數量</td>
+              <td>單價</td>
+              <td>上限數量</td>
+              <td>複價</td>
+              <td>附註附註附註附註附註附註附註附註附註附註</td>
+              <td>
+                <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
+                <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+              </td>
+            </tr>
+            <tr>
+              <td class="number">02</td>
               <td>倉+編號</td>
               <td>項目</td>
               <td>規格說明</td>
@@ -146,25 +163,5 @@ input[type="checkbox"]{width:13px;height:13px;border: 1px solid #6D6D6D;}
     <div class="childNo">0</div>
   </div>
   <footer></footer>
-  <script>
-    function orangeWP(){
-      if($('.orangeWP').hasClass('show')){
-        $('.orangeWP').show();
-      }else{
-        $('.orangeWP').hide();
-      }
-    }
-    
-    $('.btn.add.orange').click(function(){
-      let newTR = $(this).parents('.btnWP.top').siblings('table').find('.copy').clone().removeClass('copy');
-      $(this).parents('.btnWP.top').siblings('table').find('tbody').append(newTR);
-      orangeWP();
-    });
-
-    $('.btn.blue').click(function(){
-      $('.orangeWP').addClass('show');
-      orangeWP();
-    });
-  </script>
 </body>
 </html>

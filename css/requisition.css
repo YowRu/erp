@@ -6,6 +6,7 @@ section{padding: 54px 35px;}
 .btn.search.blue{margin-bottom: 0;}
 table{margin-top: 35px;}
 table tr{cursor: pointer;}
+table td img{position: relative;z-index: 2;}
 table.gray th{background-color: #BFC0C0;border: 1px solid #6D6D6D;color: #fff;}
 .detail{display: none;}
 table.yellow th{background-color: #FFF2DC;border: 1px solid #FCA311;color: #E85110;}

@@ -85,8 +85,8 @@ position: absolute;right: 0;top:9px;}
 .side>li .two li:hover a,
 .side>li .two>li .four li:hover a{background-color:#F6F6F6;}
 .side>li .two>li .four li:hover{background-color: transparent;}
-.side>li .two>li .four li.current:hover a,
-.side>li .two>li .four li.current a:hover{background-color: transparent;color: #4973BB;}
+.side>li .two>li .four li.current:hover>a,
+.side>li .two>li .four li.current>a:hover{background-color: transparent;color: #4973BB;}
 .side>li .two li.current:hover,
 .side>li .two li.hasChild:hover a,
 .side>li .two>li .four li.current:hover{background-color: #fff;}

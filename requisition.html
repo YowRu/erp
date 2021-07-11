@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
+  <script src="js/action.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/inputAmount.css">
@@ -54,8 +55,8 @@
             <th>核發狀態</th>
             <th>動作 刪除</th>
           </tr>
-          <tr>
-            <td>01</td>
+          <tr class="copy">
+            <td class="number">00</td>
             <td>單號</td>
             <td>倉庫</td>
             <td>申請人</td>
@@ -70,7 +71,22 @@
             </td>
           </tr>
           <tr>
-            <td>02</td>
+            <td class="number">01</td>
+            <td>單號</td>
+            <td>倉庫</td>
+            <td>申請人</td>
+            <td>部門單位</td>
+            <td>館別</td>
+            <td>110-07-05</td>
+            <td>倉管主管已簽核</td>
+            <td>已核發</td>
+            <td>
+              <img src="img/contractEdit/print.svg" class="print" alt="">
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
+          </tr>
+          <tr>
+            <td class="number">02</td>
             <td>單號</td>
             <td>倉庫</td>
             <td>申請人</td>
@@ -85,7 +101,7 @@
             </td>
           </tr>
           <tr>
-            <td>03</td>
+            <td class="number">03</td>
             <td>選中變橘色</td>
             <td>內容出現在下面</td>
             <td>申請人</td>
@@ -107,8 +123,5 @@
     <div class="itemNo">3</div>
   </div>
   <footer></footer>
-  <script>
-   
-  </script>
 </body>
 </html>

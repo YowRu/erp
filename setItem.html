@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
-  <script src="js/department.js"></script>
+  <script src="js/action.js"></script>
+  <script src="js/depotPermissions.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/requisition.css">
@@ -59,8 +60,8 @@
             <th>開口契約案件</th>
             <th>編輯 刪除</th>
           </tr>
-          <tr>
-            <td>01</td>
+          <tr class="copy">
+            <td class="number">00</td>
             <td>110</td>
             <td>機械館</td>
             <td>倉別</td>
@@ -71,7 +72,18 @@
             </td>
           </tr>
           <tr>
-            <td>02</td>
+            <td class="number">01</td>
+            <td>110</td>
+            <td>機械館</td>
+            <td>倉別</td>
+            <td>開口契約</td>
+            <td>
+              <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
+              <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+            </td>
+          </tr>
+          <tr>
+            <td class="number">02</td>
             <td>110</td>
             <td>機械館</td>
             <td>倉別</td>
@@ -82,7 +94,7 @@
             </td>
           </tr>
         </table>
-        <ul class="pagination"></ul>
+        <ul class="pagination" id="pagination"></ul>
       </section>
     </div>
     <div class="sideNo">1</div>

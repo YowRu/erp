@@ -104,9 +104,15 @@
     $('input[type="radio"]').attr('disabled','disabled');
 
     $('section table.gray td').click(function(){
+      
+      if($(this).children().length>0){
+        return
+      }else{
+        $('.detail').show();
+      }
       $(this).parents('tr').find('td').css({'background-color':'#FFF2DC'});
       $(this).parents('tr').siblings('tr').find('td').css({'background-color':'#fff'});
-      $('.detail').show();
+     
     });
     
     $('.detail .btnWP .btn.cancel').click(function(){

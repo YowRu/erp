@@ -8,7 +8,8 @@
   <script src="js/loading.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/date/jquery-ui-timepicker-addon.js"></script>
-  <script src="js/contract.js"></script>
+  <script src="js/datepicker.js"></script>
+  <script src="js/action.js"></script>
   <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/layout.css" type="text/css">
@@ -231,79 +232,5 @@
     <div class="itemNo">0</div>
   </div>
   <footer></footer>
-  <script>
-   $('section .btn.add').click(function(){
-     let n = $(this).siblings('.row').length;
-     let name = $(this).siblings('.copy').find('.datepicker').attr('id');
-     let datepicker = $(this).siblings('.copy').find('.datepicker').removeClass('hasDatepicker').clone().prop('id', name+n);
-     let btn = $(this).siblings('.copy').children('.btn').clone();
-
-     $(this).parents('section').append('<div class="row"><p class="text">第<span class="number">'+n+'</span>次：</p></div>');
-     $(this).parents('section').children('.row').last().append('<div class="dateWP"></div>');
-     $(this).parents('section').children('.row').last().find('.dateWP').append(datepicker);
-     $(this).parents('section').children('.row').last().append(btn);
-
-   });
-
-   function sectionNO() {
-      $('section').each(function(){
-          let n = $(this).find('.row').length;
-          for(let i =1;i<n;i++){
-              $(this).find('.row').eq(i).find('.number').text(i);
-          }
-        });
-    };
-    function tableNO() {
-      $('table').each(function(){
-          let n = $(this).find('tr').length;
-          for(let i =2;i<n;i++){
-            if(i<11){
-              $(this).find('tr').eq(i).find('.number').text('0'+(i-1));
-            }else{
-              $(this).find('tr').eq(i).find('.number').text(i-1);
-            }
-          }
-        });
-    };
-  $(".btn.delete").click(function(){
-    $(this).parents('.row').remove();
-    sectionNO();
-  });
-   $("section").delegate(".btn.delete","click",function(){
-    $(this).parents('.row').remove();
-    sectionNO();
-   });
-
-
-  $('.editVendor').click(function(){
-    $('.popUpWP').css({'display':'flex'});
-  });
-  $("section").delegate(".editVendor","click",function(){
-    $('.popUpWP').css({'display':'flex'});
-   })
-
-
-  $('.btn.back').click(function(){
-    $('.popUpWP').hide();
-  });
-  
-  $('.addVendor').click(function(){
-    let newTr = $(this).siblings('table').find('.copy').clone().removeClass('copy');
-    $(this).siblings('table').find('tbody').append(newTr);
-    let n = $(this).siblings('table').find('tr').length;
-    for(let i=1;i<n-1;i++){
-      if(n<10){
-        $('table tr').eq(i+1).find('.number').text('0'+(i));
-      }else{
-        $('table tr').eq(i+1).find('.number').text(i);
-      }
-    } 
-  });
-  $("table").delegate(".deleteImg","click",function(){
-    $(this).parents('tr').remove();
-    tableNO();
-  });
-
-  </script>
 </body>
 </html>
