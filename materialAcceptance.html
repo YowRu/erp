@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/action.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/date/jquery-ui-timepicker-addon.js"></script>
+  <script src="js/datepicker.js"></script>
+  <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/inputAmount.css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/newMaterial.css">
+  <title>物料進貨驗收</title>
+</head>
+<style>
+#main .content>.row.flex:nth-child(4):after,
+#main .content>.row.flex:nth-child(5):after{content:'';}
+#main .content>.row.flex:nth-child(3),
+#main .content>.row.flex:nth-child(4),
+#main .content>.row.flex:nth-child(5){padding-bottom:0;}
+#main .content span.span.flex{display:flex;justify-content:flex-start;align-items:center;width:49%;}
+#main .content span.span.flex label{display: inline-block;width:48%;display:flex;justify-content:flex-start;align-items:center;}
+#main .content span.span.flex input[type=radio] {border:1px solid #2D3142;width:20px;height:20px;margin-right:5px;}
+#main .content .row.flex select.margin{margin-right:20px;}
+#main .content .row.flex .rigth.margin select{border:1px solid #2D3142;}
+#main .content .row.flex .dateWP input{width:100%;}
+textarea{padding-left:26px;width:100%;height:105px;resize:none;box-sizing:border-box;}
+.inputAmount{margin:0 auto;}
+.height31,input[type="file"]
+{height:31px;border-radius:5px;border:1px solid #4F5D75;}
+td.space-around{text-align: left;}
+td.space-around span{display:inline-block;width:10%;padding-left: 16px;box-sizing:border-box;vertical-align:middle;}
+.btn.border{margin-bottom: 0;vertical-align:middle;}
+table td .right{display: inline-block;position: relative;width:89%;}
+input[type="file"]{width:100%;vertical-align:middle;position: absolute;top: 0;left: 0;
+  opacity: 0;border: 0;cursor: pointer;height:36px;z-index: 2;}
+.right.hasImg{width:76%;}
+table td{padding: 5px 0;}
+table td img{vertical-align:middle;width: 115px;height: 115px;object-fit: contain;display: none;}
+label[for="file-upload"]{
+    width:85%;border: 1px solid #4F5D75;vertical-align: middle;
+    border-radius: 5px;display: inline-block;cursor: pointer;padding-left: 26px;
+    box-sizing: border-box;height:36px;line-height: 36px;
+}
+.view{display: inline-block;}
+.btnWP{display: flex;justify-content: center;align-items: center;margin-bottom: 55px;}
+.btnWP .cancel{margin-right:100px;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="title">物料進貨驗收</div>
+      <div class="row flex">
+        <div class="left">
+          <p>請購人</p>
+          <div>OOO</div>
+        </div>
+        <div class="right">
+          <p>倉庫代號與名稱</p>
+          <div>A001分倉1</div>
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>請購單號</p>
+          <div>1234567</div>
+        </div>
+        <div class="right">
+          <p>請購日期</p>
+          <div class="dateWP"><input type="text" class='datepicker' id="requisitionDate" autocomplete="off" placeholder="" required /></div>
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+            <p>來源</p>
+              <span class="span flex">
+                <label><input type="radio" name="day" value="work">小額</label>
+                <label><input type="radio" name="day" value="calendar" checked>開口契約</label>
+              </span>
+        </div>
+        <div class="right margin">
+          <select name="" id="" class="margin">
+            <option value="">請選擇年度</option>
+          </select>
+          <select name="" id="">
+            <option value="">請選擇開口契約案件名稱</option>
+          </select>
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>年度</p>
+          <select name="" id="">
+            <option value="">110年</option>
+          </select>
+        </div>
+        <div class="right">
+          <p>開口契約</p>
+          <select name="" id="">
+            <option value="">開口契約案號+標案名稱</option>
+          </select>
+        </div>
+      </div>
+      <div class="row blue">用途說明</div>
+      <textarea name="" id="">A倉庫有開口與小額(不用標案)的物料 故若選標案則帶出開口的物料清單</textarea>
+      <div class="row blue">物料清單</div>
+      <section>
+        <table>
+          <tr>
+            <th>項次</th>
+            <th>物料編號</th>
+            <th>項目</th>
+            <th>規格說明</th>
+            <th>單位</th>
+            <th>單價</th>
+            <th>申請數量</th>
+            <th>申請總計</th>
+            <th>驗收數量</th>
+            <th>驗收單價</th>
+            <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
+          </tr>
+          <tr>
+            <td rowspan="2">01</td>
+            <td>倉+編號</td>
+            <td>項目</td>
+            <td>規格說明</td>
+            <td>支</td>
+            <td>20</td>
+            <td>100</td>
+            <td>100</td>
+            <td><div class="inputAmount"></div></td>
+            <td><input type="text" class="height31"></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td colspan="9" class="space-around">
+              <span>上傳圖片</span>
+              <img src="img/img.png" alt="" class="imgView">
+              <div class="right">
+                <input type="file" accept="image/*" class="imgInp">
+                <label for="file-upload"></label>
+                <div class="btn border">選擇檔案</div>
+              </div>
+            </td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td rowspan="2">02</td>
+            <td>倉+編號</td>
+            <td>項目</td>
+            <td>規格說明</td>
+            <td>支</td>
+            <td>20</td>
+            <td>100</td>
+            <td>100</td>
+            <td><div class="inputAmount"></div></td>
+            <td><input type="text" class="height31"></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td colspan="9" class="space-around">
+              <span>上傳圖片</span>
+              <img src="img/img.png" alt="" class="imgView">
+              <div class="right">
+                <input type="file" accept="image/*" class="imgInp">
+                <label for="file-upload" ></label>
+                <div class="btn border">選擇檔案</div>
+              </div>
+            </td>
+            <td><input type="checkbox"></td>
+          </tr>
+        </table>
+      </section>
+      <div class="row blue">審核結果說明</div>
+      <section><textarea name="" id=""></textarea></section>
+      <div class="btnWP">
+        <a href="acceptance.html" class="btn cancel">取消</a>
+        <a class="btn blue">確認</a>
+      </div>
+    </div>
+    <div class="sideNo">3</div>
+    <div class="itemNo">0</div>
+  </div>
+  <footer></footer>
+  <script>
+$('input[type="file"]').change(function(){
+    const [file] = this.files
+  if (file) {
+    let val = URL.createObjectURL(file);
+    $(this).parents('.right').addClass('hasImg');
+        $(this).siblings('label').text(val);
+        $(this).parents('.right').siblings('img').addClass('view');
+    $(this).parents('.right').siblings('img').attr({'src':val});
+  }
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/action.js"></script>
+  <script src="js/depotPermissions.js"></script>
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/requisition.css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <title>物料入庫驗收</title>
+</head>
+<style>
+  #main .content .row.flex p{width: 100px;}
+  .btn.blue{margin-bottom: 0;margin-left:25px;}
+  #main .content .row.flex .keyWordWP{display: flex;justify-content: flex-start;align-items: center;}
+  #main .content .row.flex .keyWordWP,
+  #main .content .row.flex input.keyWord{width:70%;}
+  .btnWP.top{display: flex;justify-content: flex-start;align-items: center;}
+  .pagination{margin-top: 48px;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="title">物料入庫驗收</div>
+      <section>
+        <div class="row flex white">
+          <div class="left">
+            <p>年度</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+          <div class="right">
+            <p>選擇開口契約</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+        </div>
+        <div class="row flex white">
+          <div class="left">
+            <p>申請倉庫</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+          <div class="right">
+            <p>關鍵字</p>
+            <div class="keyWordWP">
+              <input type="text" placeholder="請輸入關鍵字搜尋" class="keyWord">
+              <a href="javascript:;" class="btn blue">查詢</a>
+            </div>
+          </div>
+        </div>
+        <div class="btnWP top">
+          <a class="btn blue">匯出</a>
+        </div>
+        <table>
+          <tr>
+            <th width="5%">項次</th>
+            <th width="10%">請購單號</th>
+            <th width="15%">申請人</th>
+            <th width="10%">請購日期</th>
+            <th width="10%">倉庫</th>
+            <th width="20%">開口契約案件</th>
+            <th width="15%">狀態</th>
+            <th width="10%">編輯 列印</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>單號</td>
+            <td>申請人</td>
+            <td>2021.07.12</td>
+            <td>倉庫</td>
+            <td>開口契約案件</td>
+            <td>驗收完成</td>
+            <td>
+              <a href="materialAcceptance.html"><img src="img/contractEdit/edit.svg" class="editVendor"alt=""></a>
+              <img src="img/contractEdit/print.svg" class="print"alt="">
+            </td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>單號</td>
+            <td>申請人</td>
+            <td>2021.07.12</td>
+            <td>倉庫</td>
+            <td>開口契約案件</td>
+            <td>未驗收</td>
+            <td>
+              <a href="materialAcceptance.html"><img src="img/contractEdit/edit.svg" class="editVendor"alt=""></a>
+              <img src="img/contractEdit/print.svg" class="print"alt="">
+            </td>
+          </tr>
+        </table>
+        <ul class="pagination" id="pagination"></ul>
+      </section>
+    </div>
+    <div class="sideNo">3</div>
+    <div class="itemNo">0</div>
+  </div>
+  <footer></footer>
+</body>
+</html>

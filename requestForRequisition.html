@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/action.js"></script>
+  <script src="js/depotPermissions.js"></script>
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/requisition.css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <title>請購單需求申請</title>
+</head>
+<style>
+  .btnWP.top{justify-content: space-between;}
+  #main .content .row.flex{justify-content: flex-start;}
+  #main .content .row.flex .left p, #main .content .row.flex .right p{text-align:left;}
+  table{margin-bottom: 54px;}
+  .btnWP.start{justify-content: flex-start;}
+  .btnWP.start .btn{margin-right:43px;}
+  .btn.blue{margin-bottom: 0;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="title">請購單需求申請</div>
+      <section>
+        <div class="row flex">
+          <div class="left">
+            <p>年度</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+          <div class="right">
+            <p>選擇開口契約</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+        </div>
+        <div class="row flex">
+          <div class="left">
+            <p>申請倉庫</p>
+            <select name="" id="">
+              <option value="">請選擇</option>
+            </select>
+          </div>
+          <div class="right">
+            <p>關鍵字</p>
+            <input type="text" placeholder="請輸入關鍵字搜尋">
+            <a href="" class="btn blue">查詢</a>
+          </div>
+        </div>
+        <div class="btnWP start">
+            <a href="requisitionApproval.html" class="btn add orange">新增</a>
+            <a href=" " class="btn yellow">匯入</a>
+        </div>
+        <table>
+          <tr>
+            <th width="5%">項次</th>
+            <th>請購單號</th>
+            <th>倉庫</th>
+            <th>請購人</th>
+            <th>部門</th>
+            <th>請購日期</th>
+            <th>審核結果</th>
+            <th>動作 列印</th>
+          </tr>
+          <tr>
+            <td class="number">01</td>
+            <td>0001110</td>
+            <td>倉庫</td>
+            <td>請購人</td>
+            <td>部門</td>
+            <td>2021.04.23</td>
+            <td>未審核</td>
+            <td>
+              <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
+              <img src="img/contractEdit/print.svg" class="print"alt="">
+            </td>
+          </tr>
+          <tr>
+            <td class="number">02</td>
+            <td>0001110</td>
+            <td>倉庫</td>
+            <td>請購人</td>
+            <td>部門</td>
+            <td>2021.04.23</td>
+            <td>核准</td>
+            <td>
+              <img src="img/contractEdit/look.svg" class="look" alt="">
+              <img src="img/contractEdit/print.svg" class="print"alt="">
+            </td>
+          </tr>
+        </table>
+        <ul class="pagination" id="pagination"></ul>
+      </section>
+    </div>
+    <div class="sideNo">2</div>
+    <div class="itemNo">0</div>
+  </div>
+  <footer></footer>
+</body>
+</html>

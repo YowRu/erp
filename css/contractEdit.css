@@ -28,8 +28,9 @@ position: absolute;right:8px;top:0;cursor: pointer;}
 .row.blue,.row.orange{background-color: #8196BB;color:#fff;height: 36px;line-height: 24px;padding: 6px 26px;
   box-sizing: border-box;display: inline-block;width: 100%;
   font-size: 1rem;border: 0;border-radius: 5px;margin-bottom: 9px;}
+  .row.orange{background-color:#EF8354;}
 section{padding:17px 26px;background-color: #fff;border-radius: 5px;margin-bottom: 19px;}
-section .btn.add,section .btn.delete,.btn{color: #4973BB;font-size: 1rem;border:1px solid #4973BB;margin-bottom: 16px;
+.btn{color: #4973BB;font-size: 1rem;border:1px solid #4973BB;margin-bottom: 16px;
 width: 109px;height: 36px;line-height: 36px;border-radius: 5px;text-align: center;cursor: pointer;}
 section .row {display: flex;height:36px;margin-bottom: 12px;}
 section .row.copy,tr.copy{display:none;}

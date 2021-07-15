@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/action.js"></script>
+  <script src="js/depotPermissions.js"></script>
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <link rel="stylesheet" href="css/inputAmount.css">
+  <link rel="stylesheet" href="css/depotPermissions.css">
+  <link rel="stylesheet" href="css/newMaterial.css">
+  <title>新增開口契約請購單</title>
+</head>
+<style>
+  #main .content>.row.flex:nth-child(4):after,
+  #main .content>.row.flex:nth-child(5):after{content:'';}
+  #main .content .row.flex p.blue{background-color: #8196BB;color: #fff;}
+  .row.orange{background-color:#EF8354;}
+  #main .content .row.flex.long{width: 100%;justify-content: flex-start;}
+  #main .content .row.flex.long .blue{padding-left: 26px;width: 23%;margin-right: 22px;}
+  #main .content .row.flex.long select{width:76%;}
+  #main .content .btnWP{display: flex;justify-content: center;align-items: center;}
+  #main .content .btnWP .btn{margin:0 50px;}
+  #main .content{margin-bottom: 60px;}
+  .flex.between{display: flex;justify-content: space-between;align-items: center;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="title">新增開口契約請購單</div>
+      <div class="row flex">
+        <div class="left">
+          <p>申請人</p>
+          <div>OOO</div>
+        </div>
+        <div class="right">
+          <p>部門</p>
+          <div>OOO</div>
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>請購單號</p>
+          <div>1234567</div>
+        </div>
+        <div class="right">
+          <p>倉庫</p>
+          <select name="" id="" class="border">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+      </div>
+      <div class="row orange">用途說明</div>
+      <section class="textareaWP">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </section>
+      <div class="row orange">選擇物料</div>
+      <div class="bottom">
+        <section class="flex">
+          <div class="listWP">
+            <div class="title orange">選擇物料品項</div>
+            <!-- <div class="row flex long">
+              <input type="text" placeholder="請輸入關鍵字" class="keyWords">
+                <div class="btn search orange">搜尋</div>
+            </div> -->
+            <div class="row flex">
+              <div class="left">
+                <select name="" id="">
+                  <option value="">物料選項</option>
+                </select>
+              </div>
+              <div class="right">
+                <input type="text" placeholder="請輸入關鍵字" class="keyWords">
+                <div class="btn search orange">搜尋</div>
+              </div>
+            </div>
+            <div class="row flex long">
+              <div class="left">
+                <select name="" id="">
+                  <option value="">年度</option>
+                </select>
+              </div>
+              <div class="right">
+                <p>開口契約</p>
+                <select name="" id="">
+                  <option value="">請選擇</option>
+                </select>
+              </div>
+            </div>
+            <ul class="list list1">
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000001</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">加入</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000002</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">加入</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000003</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">加入</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="btn addAll">全部加入</div>
+            <ul class="pagination orange" id="pagination1"></ul>
+          </div>
+          <div class="listWP">
+            <div class="title yellow">已加入物料品項</div>
+            <div class="flex between">
+              <p>※ 目前已加入<span class="total">3</span>筆。</p>
+              <p>可用餘額： 契約總額-當次請購總額</p>
+            </div>
+            <div class="row flex searchBar">
+              <input type="text" placeholder="請輸入關鍵字" class="keyWords">
+              <div class="btn search yellow">搜尋</div>
+            </div>
+            <ul class="list list2">
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000004</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">移除</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000005</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">移除</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000006</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">移除</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="btn deleteAll">全部移除</div>
+            <ul class="pagination yellow" id="pagination2"></ul>
+          </div>
+          <div class="imgWP">
+            <img src="img/arrowRight.svg" class="arrowRight"alt=""><img src="img/arrowLeft.svg" class="arrowLeft"alt="">
+          </div>
+        </section>
+        <div class="row flex">
+          <div class="left">
+            <p>年度</p>
+            <div>110</div>
+          </div>
+          <div class="right">
+            <p>契約編號</p>
+            <div>11222OOO</div>
+          </div>
+        </div>
+        <div class="row flex">
+          <div class="left">
+            <p>可用餘額</p>
+            <div>5,000</div>
+          </div>
+          <div class="right">
+            <p>契約到期日</p>
+            <div>115.7.12</div>
+          </div>
+        </div>
+        <div class="row flex long">
+          <p>標案名稱</p>
+          <div>5,000</div>
+        </div>
+        <div class="row flex long">
+          <p>歷次請購申請費用</p>
+          <div>1. 110/6/6 500元</div>
+        </div>
+        <div class="btnWP">
+          <a href="requestForRequisition.html" class="btn cancel">取消</a>
+          <a href="addContract.html" class="btn blue next">下一步</a>
+        </div>
+      </div>
+    </div>
+    <div class="sideNo">2</div>
+    <div class="itemNo">0</div>
+  </div>
+  <footer></footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/action.js"></script>
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/inputAmount.css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <title>物料調撥管理</title>
+</head>
+<style>
+#main .content .row.flex.long{justify-content: flex-start;}
+ #main .content .row.flex.long p{background-color: #fff;width:10%;color: #2D3142;}
+ #main .content .row.flex.long select{width:80%;border: 1px solid #2D3142;}
+
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="title">物料調撥管理</div>
+      <section>
+        <div class="row flex long">
+          <p>申請倉庫</p>
+          <select name="" id="">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+        <div class="row flex">
+          <div class="left">
+            <p>關鍵字</p>
+            <input type="text" placeholder="請輸入關鍵字搜尋">
+          </div>
+          <div class="right">
+              <div class="btn add orange">新增</div>
+              <div class="btn search deepBlue">查詢</div>
+          </div>
+        </div>
+        <table>
+          <tr>
+            <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
+            <th>年度</th>
+            <th>申請人</th>
+            <th>調出倉庫</th>
+            <th>調入倉庫</th>
+            <th>申請時間</th>
+            <th>編輯</th>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>110</td>
+            <td>OOO</td>
+            <td>調出倉庫</td>
+            <td>調入倉庫</td>
+            <td>110-07-13</td>
+            <td><img src="img/contractEdit/edit.svg" class="editVendor"alt=""></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>110</td>
+            <td>OOO</td>
+            <td>調出倉庫</td>
+            <td>調入倉庫</td>
+            <td>110-07-13</td>
+            <td><img src="img/contractEdit/edit.svg" class="editVendor"alt=""></td>
+          </tr>
+        </table>
+        <ul class="pagination" id="pagination"></ul>
+      </section>
+      <div class="row orange">新增調播</div>
+      <div class="row flex">
+        <div class="left">
+          <p>撥出倉庫</p>
+          <select name="" id="">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+        <div class="right">
+          <p>撥入倉庫</p>
+          <select name="" id="">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+      </div>
+      <div class="row flex long">
+          <p>調撥原因</p>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+    <div class="sideNo">1</div>
+    <div class="itemNo">2</div>
+  </div>
+  <footer></footer>
+</body>
+</html>
