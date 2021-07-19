@@ -141,7 +141,7 @@ $(window).ready(function(){
   }
 
   $('.btn.add.orange').click(function(){
-    if(consult[number-1] === "addItem.html"){
+    if(consult[number-1] === "addItem.html" || consult[number-1] === "setItemDetail.html"){
       let newTR = $(this).parents('.btnWP.top').siblings('table').find('.copy').clone().removeClass('copy');
       $(this).parents('.btnWP.top').siblings('table').find('tbody').append(newTR);
       orangeWP();
