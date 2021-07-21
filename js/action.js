@@ -123,12 +123,11 @@ $(window).ready(function(){
     } 
   });
 
-
   $('input.all').click(function(){
     if($(this).prop("checked")){
-      $('table').find('input[type="checkbox"]').prop("checked", true);
+      $(this).parents('table').find('input[type="checkbox"]').prop("checked", true);
     }else{
-      $('table').find('input[type="checkbox"]').prop("checked", false);
+      $(this).parents('table').find('input[type="checkbox"]').prop("checked", false);
     }
   });
 //addItem
@@ -155,7 +154,6 @@ $(window).ready(function(){
     orangeWP();
   });
 
-
   $('.btn.confirm').click(function(){
     $('.orangeWP').hide();
   });
@@ -163,6 +161,17 @@ $(window).ready(function(){
   $('.btn.cancel').click(function(){
     $('.orangeWP').hide();
   });
+
+$('.btn.blue.copy').click(function(){
+  $('#main .pop').css({'display':'flex'});
+  $('.orangeWP').removeClass('show');
+    orangeWP();
+});
+
+$('.pop .close').click(function(){
+  $('#main .pop').hide();
+});
+
 
 $('input[type="checkbox"]').click(function(){
   

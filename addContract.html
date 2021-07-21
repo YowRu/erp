@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/inputAmount.css">
   <link rel="stylesheet" href="css/depotPermissions.css">
   <link rel="stylesheet" href="css/newMaterial.css">
+  <link rel="stylesheet" href="css/addItem.css">
   <title>新增開口契約請購單</title>
 </head>
 <style>
@@ -66,20 +67,19 @@
         <section>
           <table>
             <tr>
-              <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
+              <th width="5%">項次</th>
               <th width="10%">物料編號</th>
               <th width="5%">項目</th>
               <th width="15%">規格說明</th>
               <th width="5%">單位</th>
-              <th width="10%">預估數量</th>
               <th width="5%">單價</th>
-              <th width="10%">上限數量</th>
-              <th width="5%">複價</th>
-              <th width="25%">附註</th>
-              <th width="5%">刪除</th>
+              <th width="5%">庫存</th>
+              <th width="10%">申請數量</th>
+              <th width="5%">總計</th>
+              <th width="5%">編輯 刪除</th>
             </tr>
             <tr class="copy">
-              <td class="checkbox"><input type="checkbox"></td>
+              <td class="number">00</td>
               <td>倉+編號</td>
               <td><input type="text" placeholder="項目"></td>
               <td><input type="text" placeholder="規格說明"></td>
@@ -87,9 +87,24 @@
               <td><input type="text" placeholder="100"></td>
               <td><input type="text" placeholder="20"></td>
               <td><input type="text" placeholder="20"></td>
-              <td><input type="text" placeholder="複價"></td>
-              <td><input type="text" placeholder="附註附註附註附註附註附註"></td>
+              <td><input type="text" placeholder="20"></td>
               <td>
+                <img src="img/contractEdit/edit.svg" class="editVendor"alt="">
+                <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
+              </td>
+            </tr>
+            <tr>
+              <td class="number">01</td>
+              <td>倉+編號</td>
+              <td><input type="text" placeholder="項目"></td>
+              <td><input type="text" placeholder="規格說明"></td>
+              <td><input type="text" placeholder="支"></td>
+              <td><input type="text" placeholder="100"></td>
+              <td><input type="text" placeholder="20"></td>
+              <td><input type="text" placeholder="20"></td>
+              <td><input type="text" placeholder="20"></td>
+              <td>
+                <img src="img/contractEdit/edit.svg" class="editVendor"alt="">
                 <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
               </td>
             </tr>
@@ -115,17 +130,23 @@
             <div>115.7.12</div>
           </div>
         </div>
-        <div class="row flex long">
-          <p>標案名稱</p>
-          <div>5,000</div>
+        <div class="row flex">
+          <div class="left">
+            <p>標案名稱</p>
+            <div>5,000</div>
+          </div>
+          <div class="right"></div>
         </div>
-        <div class="row flex long">
-          <p>歷次請購申請費用</p>
-          <div>1. 110/6/6 500元</div>
+        <div class="row flex">
+          <div class="left">
+            <p>歷次請購申請費用</p>
+            <div>1. 110/6/6 500元</div>
+          </div>
+          <div class="right"></div>
         </div>
         <div class="btnWP">
-          <a href="requestForRequisition.html" class="btn cancel">取消</a>
-          <a href="addContract.html" class="btn blue next">下一步</a>
+          <a href="requestApproval.html" class="btn cancel">取消</a>
+          <a href="requestForRequisition.html" class="btn blue comfirm">確認</a>
         </div>
       </div>
     </div>

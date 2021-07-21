@@ -7,7 +7,6 @@
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
   <script src="js/action.js"></script>
-  <!-- <script src="js/depotPermissions.js"></script> -->
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/pagination.css">
@@ -15,6 +14,7 @@
   <title>設定開口契約物料品項</title>
 </head>
 <style>
+  #main .content{position: relative;margin-bottom: 60px;}
   #main .content>.row.flex:nth-child(3):after,
   #main .content>.row.flex:nth-child(4):after,
   #main .content>.row.flex:nth-child(5):after{content:'';}
@@ -28,7 +28,11 @@
   #main .content .row.flex.long select{width:76%;}
   #main .content .btnWP.bottom{display: flex;justify-content: center;align-items: center;}
   #main .content .btnWP.bottom .btn{margin:0 50px;}
-  #main .content{margin-bottom: 60px;}
+  #main .pop{display: none;position: fixed;width: 100vw;height: 100vh;left: 0;top: 0;justify-content: center;align-items: center;
+  background-color: rgba(255, 255, 255, 0.755);z-index: 2;}
+  #main .popWP{max-width:1200px;width:100%;margin:0 auto;}
+  #main .pop table{width:100%;border:1px solid #BFC0C0;border-collapse: collapse;}
+  #main .pop .close{font-size:2rem;color:#2E5AA5;font-weight: bolder;text-align: right;cursor: pointer;}
 </style>
 <body>
   <header></header>
@@ -73,7 +77,7 @@
               <option value="">請選擇</option>
             </select>
           </div>
-          <div class="btn blue">送出</div>
+          <div class="btn blue copy">複製</div>
         </div>
         <table>
           <tr>
@@ -104,6 +108,61 @@
           </tr>
         </table>
       </section>
+      <div class="pop">
+        <div class="popWP">
+          <div class="close">X</div>
+          <div class="row orange">物料品項列表</div>
+          <table>
+            <tr>
+              <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
+              <th>項目</th>
+              <th>規格說明</th>
+              <th>單位</th>
+              <th>預估數量</th>
+              <th>單價</th>
+              <th>上限數量</th>
+              <th>複價</th>
+              <th>附註</th>
+            </tr>
+            <tr class="copy">
+              <td class="checkbox"><input type="checkbox"></td>
+              <td>項目</td>
+              <td>規格說明</td>
+              <td>單位</td>
+              <td>預估數量</td>
+              <td>單價</td>
+              <td>上限數量</td>
+              <td>複價</td>
+              <td>附註附註附註附註附註附註附註附註附註附註</td>
+            </tr>
+            <tr>
+              <td class="checkbox"><input type="checkbox"></td>
+              <td>項目</td>
+              <td>規格說明</td>
+              <td>單位</td>
+              <td>預估數量</td>
+              <td>單價</td>
+              <td>上限數量</td>
+              <td>複價</td>
+              <td>附註附註附註附註附註附註附註附註附註附註</td>
+            </tr>
+            <tr>
+              <td class="checkbox"><input type="checkbox"></td>
+              <td>項目</td>
+              <td>規格說明</td>
+              <td>單位</td>
+              <td>預估數量</td>
+              <td>單價</td>
+              <td>上限數量</td>
+              <td>複價</td>
+              <td>附註附註附註附註附註附註附註附註附註附註</td>
+            </tr>
+          </table>
+          <div class="row flex">
+            <div class="btn blue comfirm">確認</div>
+          </div>
+        </div>
+      </div>
       <div class="orangeWP">
         <div class="row orange">物料品項列表</div>
         <section>

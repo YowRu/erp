@@ -28,6 +28,7 @@
   #main .content .btnWP .btn{margin:0 50px;}
   #main .content{margin-bottom: 60px;}
   .flex.between{display: flex;justify-content: space-between;align-items: center;}
+  #main .content .row.flex.long p{width:30%;}
 </style>
 <body>
   <header></header>
@@ -82,17 +83,16 @@
               </div>
             </div>
             <div class="row flex long">
-              <div class="left">
-                <select name="" id="">
-                  <option value="">年度</option>
-                </select>
-              </div>
-              <div class="right">
-                <p>開口契約</p>
+                <p>開口契約採購人</p>
                 <select name="" id="">
                   <option value="">請選擇</option>
                 </select>
-              </div>
+            </div>
+            <div class="row flex long">
+                <p>非開口契約採購人</p>
+                <select name="" id="">
+                  <option value="">請選擇</option>
+                </select>
             </div>
             <ul class="list list1">
               <li>
@@ -258,13 +258,19 @@
             <div>115.7.12</div>
           </div>
         </div>
-        <div class="row flex long">
-          <p>標案名稱</p>
-          <div>5,000</div>
+        <div class="row flex">
+          <div class="left">
+            <p>標案名稱</p>
+            <div>5,000</div>
+          </div>
+          <div class="right"></div>
         </div>
-        <div class="row flex long">
-          <p>歷次請購申請費用</p>
-          <div>1. 110/6/6 500元</div>
+        <div class="row flex">
+          <div class="left">
+            <p>歷次請購申請費用</p>
+            <div>1. 110/6/6 500元</div>
+          </div>
+          <div class="right"></div>
         </div>
         <div class="btnWP">
           <a href="requestForRequisition.html" class="btn cancel">取消</a>
