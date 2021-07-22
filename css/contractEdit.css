@@ -42,7 +42,7 @@ section .btn.delete,.btnWP .btn.add{background-color: #EF8354;color: #fff;border
 section .dateWP:after{right:33px;}
 section table{width:100%;border:1px solid #BFC0C0;border-collapse:collapse;}
 table th,table td{background-color: #BCD5FF;color: #14213D;font-size:1rem;border:1px solid #BFC0C0;font-weight: 400;text-align: center;height:45px;}
-table th{border: 1px solid #4973BB;}
+table th{border: 1px solid #4973BB;color: #4973BB;}
 table td{background-color: #fff;color: #2D3142;}
 .ui-datepicker th,.ui-datepicker td{background-color: transparent;height: auto;}
 .ui-state-highlight,

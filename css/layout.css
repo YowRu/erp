@@ -113,3 +113,8 @@ footer p{color: #BFC0C0;font-size:0.9rem;}
 .btn.orange{background-color: #EF8354;color: #fff;border:0;}
 .btn.orangeBorder{border: 1px solid #E85110;color:#E85110;border:0;}
 .btn.gray{background-color: #BFC0C0;color:#fff;border:0;}
+/*table*/
+section table{width:100%;border:1px solid #BFC0C0;border-collapse:collapse;}
+table th,table td{background-color: #BCD5FF;color: #4973BB;font-size:1rem;border:1px solid #BFC0C0;font-weight: 400;text-align: center;height:45px;}
+table th{border: 1px solid #4973BB;color: #4973BB;}
+table td{background-color: #fff;color: #2D3142;}

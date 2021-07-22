@@ -10,14 +10,22 @@
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/inputAmount.css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/depotPermissions.css">
+  <link rel="stylesheet" href="css/newMaterial.css">
+  <link rel="stylesheet" href="css/addRequistion.css">
   <link rel="stylesheet" href="css/pagination.css">
   <title>物料調撥管理</title>
 </head>
 <style>
+  #main .content>.row.flex:nth-child(3),
+  #main .content>.row.flex:nth-child(4),
+  #main .content>.row.flex:nth-child(5){padding-bottom: 0;}
 #main .content .row.flex.long{justify-content: flex-start;}
  #main .content .row.flex.long p{background-color: #fff;width:10%;color: #2D3142;}
- #main .content .row.flex.long select{width:80%;border: 1px solid #2D3142;}
-
+ #main .content .row.flex.long select,
+ #main .content .row.flex.long input{width:80%;border: 1px solid #2D3142;}
+ #main .content .row.flex.long select{margin-left: 15px;}
+ .btn.orange,.btn.deepBlue{margin:0 5px;}
 </style>
 <body>
   <header></header>
@@ -32,15 +40,11 @@
             <option value="">請選擇</option>
           </select>
         </div>
-        <div class="row flex">
-          <div class="left">
+        <div class="row flex long">
             <p>關鍵字</p>
             <input type="text" placeholder="請輸入關鍵字搜尋">
-          </div>
-          <div class="right">
-              <div class="btn add orange">新增</div>
-              <div class="btn search deepBlue">查詢</div>
-          </div>
+            <div class="btn search deepBlue">查詢</div>
+          <div class="btn add orange">新增</div>
         </div>
         <table>
           <tr>
@@ -88,9 +92,221 @@
           </select>
         </div>
       </div>
-      <div class="row flex long">
+      <div class="row flex">
+        <div class="left">
           <p>調撥原因</p>
           <input type="text">
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="bottom">
+        <section class="flex">
+          <div class="listWP">
+            <div class="title orange">選擇物料品項</div>
+            <div class="row flex">
+              <div class="left">
+                <select name="" id="">
+                  <option value="">物料選項</option>
+                </select>
+              </div>
+              <div class="right">
+                <input type="text" placeholder="請輸入關鍵字" class="keyWords">
+                <div class="btn search orange">搜尋</div>
+              </div>
+            </div>
+            <div class="row flex long">
+                <p>開口契約採購人</p>
+                <select name="" id="">
+                  <option value="">請選擇</option>
+                </select>
+            </div>
+            <div class="row flex long">
+                <p>非開口契約採購人</p>
+                <select name="" id="">
+                  <option value="">請選擇</option>
+                </select>
+            </div>
+            <ul class="list list1">
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000001</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">加入</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000002</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">加入</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000003</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">加入</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="btn addAll">全部加入</div>
+            <ul class="pagination orange" id="pagination1"></ul>
+          </div>
+          <div class="listWP">
+            <div class="title yellow">已加入物料品項</div>
+            <div class="flex between">
+              <p>※ 目前已加入<span class="total">3</span>筆。</p>
+              <p>可用餘額： 契約總額-當次請購總額</p>
+            </div>
+            <div class="row flex searchBar">
+              <input type="text" placeholder="請輸入關鍵字" class="keyWords">
+              <div class="btn search yellow">搜尋</div>
+            </div>
+            <ul class="list list2">
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000004</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">移除</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000005</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">移除</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="img/img.png" alt="">
+                <div class="info">
+                  <div class="top">
+                    <div class="No">7000006</div>
+                    <div class="name">物料名稱物料名稱物料名稱物料名稱</div>
+                  </div>
+                  <div class="down">
+                    <div class="left">
+                      <div class="detail">規格明細：<span>35cm</span></div>
+                      <div class="quantity">庫存數量：<span>50 支</span></div>
+                      <div class="price">單價：<span>100</span></div>
+                    </div>
+                    <div class="right">
+                      <div class="inputAmount"></div>
+                      <label for=""><input type="checkbox">移除</label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="btn deleteAll">全部移除</div>
+            <ul class="pagination yellow" id="pagination2"></ul>
+          </div>
+          <div class="imgWP">
+            <img src="img/arrowRight.svg" class="arrowRight"alt=""><img src="img/arrowLeft.svg" class="arrowLeft"alt="">
+          </div>
+        </section>
+        <div class="row flex">
+          <div class="left">
+            <p>年度</p>
+            <div>110</div>
+          </div>
+          <div class="right">
+            <p>契約編號</p>
+            <div>11222OOO</div>
+          </div>
+        </div>
+        <div class="row flex">
+          <div class="left">
+            <p>可用餘額</p>
+            <div>5,000</div>
+          </div>
+          <div class="right">
+            <p>契約到期日</p>
+            <div>115.7.12</div>
+          </div>
+        </div>
+        <div class="row flex">
+          <div class="left">
+            <p>標案名稱</p>
+            <div>5,000</div>
+          </div>
+          <div class="right"></div>
+        </div>
+        <div class="row flex">
+          <div class="left">
+            <p>歷次請購申請費用</p>
+            <div>1. 110/6/6 500元</div>
+          </div>
+          <div class="right"></div>
+        </div>
+        <div class="btnWP">
+          <a href="requestForRequisition.html" class="btn cancel">取消</a>
+          <a href="addContract.html" class="btn blue next">下一步</a>
         </div>
       </div>
     </div>
