@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/date/jquery-ui-timepicker-addon.js"></script>
+  <script src="js/datepicker.js"></script>
+  <script src="js/action.js"></script>
+  <script src="js/depotPermissions.js"></script>
+  <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <link rel="stylesheet" href="css/inputAmount.css">
+  <link rel="stylesheet" href="css/depotPermissions.css">
+  <link rel="stylesheet" href="css/newMaterial.css">
+  <title>請購單核准</title>
+</head>
+<style>
+  #main .content>.row.flex:nth-child(4):after,
+  #main .content>.row.flex:nth-child(5):after{content:'';}
+  #main .content .row.flex p.blue{background-color: #8196BB;color: #fff;}
+  .row.orange{background-color:#EF8354;}
+  #main .content .row.flex.long{width: 100%;justify-content: flex-start;}
+  #main .content .row.flex.long .blue{padding-left: 26px;width: 23%;margin-right: 22px;}
+  #main .content .row.flex.long select{width:76%;}
+  #main .content .btnWP{display: flex;justify-content: center;align-items: center;}
+  #main .content .btnWP .btn{margin:0 50px;}
+  #main .content{margin-bottom: 60px;}
+  .flex.between{display: flex;justify-content: space-between;align-items: center;}
+  #main .content .row.flex.long p{width:30%;}
+  #main .content .row.flex .dateWP input{padding-left:0;color:#2D3142;margin-left: 0;}
+  #main .content>.row.flex:nth-child(3),
+  #main .content>.row.flex:nth-child(4),
+  #main .content>.row.flex:nth-child(5){padding-bottom: 0;}
+  #main .content .dayWP,
+  #main .content .dayWP label{display: flex;justify-content: flex-start;align-items: center;}
+  #main .content .dayWP,
+  #main .content .dayWP label{width:49%;}
+  #main .content .row.flex input[type="radio"]{width: 20px;}
+  #main .content .row.flex.day .right select:nth-child(1){width: 35%;margin-right:3%;}
+  #main .content .row.flex.day .right select:nth-child(2){width: 62%;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="sideWP"></div>
+    <div class="content">
+      <div class="title">請購單核准</div>
+      <div class="row flex">
+        <div class="left">
+          <p>申請人</p>
+          <div>OOO</div>
+        </div>
+        <div class="right">
+          <p>部門</p>
+          <div>OOO</div>
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>請購單號</p>
+          <div>1234567</div>
+        </div>
+        <div class="right">
+          <p>年度</p>
+          <select name="" id="" class="border">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p class="labelWP"><label for="date1">請購日期</label></p>
+          <div class="dateWP"><input type="text" class='datepicker' id="date1" autocomplete="off" placeholder="" required /></div>
+        </div>
+        <div class="right">
+          <p>倉庫</p>
+          <select name="" id="" class="border">
+            <option value="">請選擇</option>
+          </select>
+        </div>
+      </div>
+      <div class="row flex day">
+        <div class="left">
+            <p>來源</p>
+            <span class="dayWP">
+                <label><input type="radio" name="small" value="small">小額</label>
+                <label><input type="radio" name="big" value="big" checked>開口契約</label>
+            </span>
+        </div>
+        <div class="right">
+            <select name="" id="">
+              <option value="">請選擇年度</option>
+            </select>
+            <select name="" id="">
+              <option value="">請選擇開口契約案件名稱</option>
+            </select>
+        </div>
+      </div>
+      <div class="row blue">用途說明</div>
+      <section class="textareaWP">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </section>
+      <div class="row blue">物料清單</div>
+      <section>
+        <table>
+          <tr>
+            <th width="5%">項次</th>
+            <th>物料編號</th>
+            <th>項目</th>
+            <th>規格說明</th>
+            <th>單位</th>
+            <th>單價</th>
+            <th>申請數量</th>
+            <th>庫存數量</th>
+          </tr>
+          <tr>
+            <td class="number">01</td>
+            <td>倉+編號</td>
+            <td>項目</td>
+            <td>規格說明</td>
+            <td>單位</td>
+            <td>單價</td>
+            <td>申請數量</td>
+            <td>庫存數量</td>
+          </tr>
+          <tr>
+            <td class="number">02</td>
+            <td>倉+編號</td>
+            <td>項目</td>
+            <td>規格說明</td>
+            <td>單位</td>
+            <td>單價</td>
+            <td>申請數量</td>
+            <td>庫存數量</td>
+          </tr>
+        </table>
+      </section>
+      <div class="row flex">
+        <div class="left">
+          <p>年度</p>
+          <div>110</div>
+        </div>
+        <div class="right">
+          <p>契約編號</p>
+          <div>11222OOO</div>
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>可用餘額</p>
+          <div>5,000</div>
+        </div>
+        <div class="right">
+          <p>契約到期日</p>
+          <div>115.7.12</div>
+        </div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>標案名稱</p>
+          <div>5,000</div>
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="row flex">
+        <div class="left">
+          <p>歷次請購申請費用</p>
+          <div>1. 110/6/6 500元</div>
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="row blue">審核結果說明</div>
+      <section class="textareaWP">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </section>
+      <div class="btnWP">
+        <a href="requestForRequisition.html" class="btn cancel">取消</a>
+        <a href="requisitionApproval.html" class="btn blue">核准</a>
+      </div>
+    </div>
+    <div class="sideNo">2</div>
+    <div class="itemNo">1</div>
+  </div>
+  <footer></footer>
+</body>
+</html>
