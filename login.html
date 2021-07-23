@@ -10,14 +10,16 @@
   <title>登入</title>
 </head>
 <style>
-  header{background: transparent;}
+  body{position: relative;}
+  body::after{content:'';background:url('img/loginBg.png') no-repeat center;background-size: cover;width:100vw;height: 100vh;
+  filter: blur(25px);position: absolute;z-index: -1;top:0;left: 0;}
+header{background: transparent;}
 header .wrapper img:nth-child(2),
 header .btnWP {display: none;}
-
 #main,
 #main .middle{display:flex;justify-content: center;align-items: center;
   width:80%;height:634px;}
-  #main{width:100%;}
+  #main{width:100%;background-color: transparent;}
 .left,.right{width:570px;height:634px;}
 .left{background: url('img/index/login.png') no-repeat center;background-size: cover;
 width:570px;}
@@ -28,6 +30,9 @@ width:570px;}
 p{color:#6D6D6D;font-size:1rem;}
 p.orange{color: #EF8354;font-size:1rem;}
 p.title{font-size: 1.5rem;color: #EF8354;}
+.right .flex p:nth-child(1){position: relative;}
+.right .flex p:nth-child(1)::before{content: '';background: url('img/check.svg') no-repeat center;background-size:contain;
+display: inline-block;width: 20px;height: 14px;margin-right: 17px;}
 input{border: 0;border-left: 5px solid #EF8354;background-color: #F7F7F7;color: #6D6D6D;
   font-size: 1rem;margin-bottom: 23px;padding-left: 18px;box-sizing: border-box;max-width: 396px;width: 100%;height: 50px;line-height: 50px;}
 .btn{max-width: 396px;width: 100%;border-radius:26px;height:50px;line-height: 50px;}

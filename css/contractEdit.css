@@ -21,6 +21,8 @@ position: absolute;right: 0;top: 40px;}
 #main .content .row.flex .left,#main .content .row.flex .right{width: 49%;height:36px;display: flex;justify-content:flex-start;align-items: center;}
 #main .content .row.flex .left{margin-right:26px;}
 #main .content .row.flex .left p,#main .content .row.flex .right p,.content .row.flex .labelWP{margin-right:22px;}
+#main .content .row.flex .left.heightAuto{height: auto;min-height: 36px;align-items:flex-start;}
+#main .content .row.flex .left div.heightAuto{height: auto;min-height: 36px;align-self: flex-start;}
 .datepicker{cursor: pointer;}
 .dateWP{position: relative;}
 .dateWP:after{content: '';background: url('../img/contractEdit/date.svg') no-repeat center;background-size: contain;width: 25px;height:35px;
@@ -28,7 +30,7 @@ position: absolute;right:8px;top:0;cursor: pointer;}
 .row.blue,.row.orange{background-color: #8196BB;color:#fff;height: 36px;line-height: 24px;padding: 6px 26px;
   box-sizing: border-box;display: inline-block;width: 100%;
   font-size: 1rem;border: 0;border-radius: 5px;margin-bottom: 9px;}
-  .row.orange{background-color:#EF8354;}
+.row.orange{background-color:#EF8354;}
 section{padding:17px 26px;background-color: #fff;border-radius: 5px;margin-bottom: 19px;}
 .btn{color: #4973BB;font-size: 1rem;border:1px solid #4973BB;margin-bottom: 16px;
 width: 109px;height: 36px;line-height: 36px;border-radius: 5px;text-align: center;cursor: pointer;}
@@ -60,8 +62,7 @@ table td{background-color: #fff;color: #2D3142;}
 .popUp{max-width:1086px;padding:48px 74px 69px;background-color: #fff;border-radius: 5px;}
 .popUp>p{color:#4973BB;font-size:1.2rem;font-weight: bold;text-align: center;margin-bottom: 34px;}
 .popUp .row.flex{display: flex;justify-content: center;align-items: center;margin-bottom: 12px;}
-.popUp .row.flex p{background-color:#8196BB;border-radius:5px;width:306px;padding:8px 23px;box-sizing: border-box;color:#fff;
-}
+.popUp .row.flex p{background-color:#8196BB;border-radius:5px;width:306px;padding:8px 23px;box-sizing: border-box;color:#fff;}
 .popUp .row.flex input{width: 612px;height:36px;margin-left:19px;color:#BFC0C0;border-radius:5px;border:1px solid #BFC0C0;padding:8px 23px;box-sizing: border-box;}
 .popUp .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 56px;}
 .popUp .btnWP .btn{margin:0 50px;}
