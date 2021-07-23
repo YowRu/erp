@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <title>登入</title>
+</head>
+<style>
+  header{background: transparent;}
+header .wrapper img:nth-child(2),
+header .btnWP {display: none;}
+
+#main,
+#main .middle{display:flex;justify-content: center;align-items: center;
+  width:80%;height:634px;}
+  #main{width:100%;}
+.left,.right{width:570px;height:634px;}
+.left{background: url('img/index/login.png') no-repeat center;background-size: cover;
+width:570px;}
+.right{background-color: #fff;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.right .top{margin-bottom:40px;}
+.right .flex{display: flex;justify-content: space-between;align-items: center;
+  max-width: 396px;width: 100%;margin-bottom: 23px;}
+p{color:#6D6D6D;font-size:1rem;}
+p.orange{color: #EF8354;font-size:1rem;}
+p.title{font-size: 1.5rem;color: #EF8354;}
+input{border: 0;border-left: 5px solid #EF8354;background-color: #F7F7F7;color: #6D6D6D;
+  font-size: 1rem;margin-bottom: 23px;padding-left: 18px;box-sizing: border-box;max-width: 396px;width: 100%;height: 50px;line-height: 50px;}
+.btn{max-width: 396px;width: 100%;border-radius:26px;height:50px;line-height: 50px;}
+</style>
+<body>
+  <header></header>
+  <div id="main">
+    <div class="middle">
+      <div class="left"></div>
+      <div class="right">
+        <div class="top">
+          <img src="img/index/user.svg" alt="">
+          <p class="title">使用者登入</p>
+        </div>
+        <input type="text" placeholder="請輸入帳號">
+        <input type="text" placeholder="請輸入密碼">
+        <div class="flex">
+          <p>記住我的登入資訊</p>
+          <p class="orange">忘記密碼</p>
+        </div>
+        <div class="btn orange">登入</div>
+      </div>
+    </div>
+  </div>
+  <footer></footer>
+  <script>
+    $(document).ready(function(){
+      let H = $(window).height();
+      $('#main').height((H-187));
+    });
+    
+  </script>
+</body>
+</html>

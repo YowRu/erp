@@ -26,7 +26,7 @@
       <ul class="two">
           <li><a href="acceptance.html" class="last">物料入庫驗收</a></li>
           <li><a href="materialAllocation.html">物料調撥管理</a></li>
-          <li><a href="" class="last">物料報廢管理</a></li>
+          <li><a href="materialAllocation.html" class="last">物料報廢管理</a></li>
       </ul>
   </li>
   <li><a href="javascript:;" class="one">物料領用發放管理</a>
@@ -45,7 +45,7 @@
         <li><a href="userPermissions.html">使用者權限設定</a></li>
         <li><a href="depotManagement.html">倉庫單位設定</a></li>
         <li><a href="depotPermissions.html">開口契約權限設定</a></li>
-        <li><a href="">系統LOG紀錄</a></li>
+        <li><a href="systemLog.html">系統LOG紀錄</a></li>
         <li><a href="" class="last">公告功能</a></li>
     </ul>
   </li>
@@ -56,6 +56,9 @@
 </a>
 <script>
   $(document).ready(function() {
+    let pathname = window.location.pathname;
+    let consult = pathname.split("/");
+    let number = consult.length
     let W = $('.sideWP').width();
     let count = 0;
     $('.toggle').click(function(){
@@ -80,7 +83,6 @@
     
     $('.side>li .two li a').click(function(){
       if($(this).hasClass('open')){
-         console.log('y');
       }else{
         $(this).parents('.side>li .two li ').addClass('current');
       }
@@ -90,11 +92,17 @@
     let sideNo = $('.sideNo').text();
     let itemNo = $('.itemNo').text();
     let child =$('#main>.childNo').text();
-    $('.side>li').eq(sideNo).addClass('current');
-    $('.side>li.current .two').css({'display':'block'});
-    $('.side>li.current .two li').eq(itemNo).addClass('current');
-    $('.side>li.current').children('.one').addClass('symbol');
-    
+   
+    if(consult[number-1] === "index.html"){
+      $('.side').find('li').removeClass('current');
+      $('.side>li.current .two').css({'display':'none'});
+    }else{
+      $('.side>li').eq(sideNo).addClass('current');
+      $('.side>li.current .two').css({'display':'block'});
+      $('.side>li.current .two li').eq(itemNo).addClass('current');
+      $('.side>li.current').children('.one').addClass('symbol');
+    }
+
     if($('.childNo').length>0){
         $('.side>li .two>li .four').show();
         $('.open').addClass('text');

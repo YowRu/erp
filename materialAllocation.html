@@ -21,11 +21,15 @@
   #main .content>.row.flex:nth-child(4),
   #main .content>.row.flex:nth-child(5){padding-bottom: 0;}
 #main .content .row.flex.long{justify-content: flex-start;}
- #main .content .row.flex.long p{background-color: #fff;width:10%;color: #2D3142;}
+#main .content .row.flex.start .left{width:100%;}
+#main .content .row.flex.start .left p{width:20%;}
+#main .content .row.flex.start .left input{width: 80%;margin-right: 0;}
+ #main .content .row.flex.long p{background-color: #fff;width:140px;color: #2D3142;}
  #main .content .row.flex.long select,
  #main .content .row.flex.long input{width:80%;border: 1px solid #2D3142;}
  #main .content .row.flex.long select{margin-left: 15px;}
  .btn.orange,.btn.deepBlue{margin:0 5px;}
+ .flex.between p{margin-bottom: 12px;padding-bottom: 8px;}
 </style>
 <body>
   <header></header>
@@ -92,39 +96,19 @@
           </select>
         </div>
       </div>
-      <div class="row flex">
+      <div class="row flex start">
         <div class="left">
           <p>調撥原因</p>
           <input type="text">
         </div>
-        <div class="right"></div>
       </div>
       <div class="bottom">
         <section class="flex">
           <div class="listWP">
             <div class="title orange">選擇物料品項</div>
-            <div class="row flex">
-              <div class="left">
-                <select name="" id="">
-                  <option value="">物料選項</option>
-                </select>
-              </div>
-              <div class="right">
+            <div class="row flex searchBar">
                 <input type="text" placeholder="請輸入關鍵字" class="keyWords">
                 <div class="btn search orange">搜尋</div>
-              </div>
-            </div>
-            <div class="row flex long">
-                <p>開口契約採購人</p>
-                <select name="" id="">
-                  <option value="">請選擇</option>
-                </select>
-            </div>
-            <div class="row flex long">
-                <p>非開口契約採購人</p>
-                <select name="" id="">
-                  <option value="">請選擇</option>
-                </select>
             </div>
             <ul class="list list1">
               <li>
@@ -192,10 +176,9 @@
             <ul class="pagination orange" id="pagination1"></ul>
           </div>
           <div class="listWP">
-            <div class="title yellow">已加入物料品項</div>
             <div class="flex between">
+              <div class="title yellow">已加入物料品項</div>
               <p>※ 目前已加入<span class="total">3</span>筆。</p>
-              <p>可用餘額： 契約總額-當次請購總額</p>
             </div>
             <div class="row flex searchBar">
               <input type="text" placeholder="請輸入關鍵字" class="keyWords">
@@ -270,43 +253,9 @@
             <img src="img/arrowRight.svg" class="arrowRight"alt=""><img src="img/arrowLeft.svg" class="arrowLeft"alt="">
           </div>
         </section>
-        <div class="row flex">
-          <div class="left">
-            <p>年度</p>
-            <div>110</div>
-          </div>
-          <div class="right">
-            <p>契約編號</p>
-            <div>11222OOO</div>
-          </div>
-        </div>
-        <div class="row flex">
-          <div class="left">
-            <p>可用餘額</p>
-            <div>5,000</div>
-          </div>
-          <div class="right">
-            <p>契約到期日</p>
-            <div>115.7.12</div>
-          </div>
-        </div>
-        <div class="row flex">
-          <div class="left">
-            <p>標案名稱</p>
-            <div>5,000</div>
-          </div>
-          <div class="right"></div>
-        </div>
-        <div class="row flex">
-          <div class="left">
-            <p>歷次請購申請費用</p>
-            <div>1. 110/6/6 500元</div>
-          </div>
-          <div class="right"></div>
-        </div>
         <div class="btnWP">
           <a href="requestForRequisition.html" class="btn cancel">取消</a>
-          <a href="addContract.html" class="btn blue next">下一步</a>
+          <a href="" class="btn blue confirm">確認</a>
         </div>
       </div>
     </div>

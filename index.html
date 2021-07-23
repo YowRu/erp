@@ -6,59 +6,299 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/loading.js"></script>
+  <script src="js/highcharts.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <title>首頁</title>
 </head>
 <style>
-  header{background: transparent;}
-header .wrapper img:nth-child(2),
-header .btnWP {display: none;}
-
-#main,
-#main .middle{display:flex;justify-content: center;align-items: center;
-  width:80%;height:634px;}
-  #main{width:100%;}
-.left,.right{width:570px;height:634px;}
-.left{background: url('img/index/login.png') no-repeat center;background-size: cover;
-width:570px;}
-.right{background-color: #fff;display: flex;flex-direction: column;justify-content: center;align-items: center;}
-.right .top{margin-bottom:40px;}
-.right .flex{display: flex;justify-content: space-between;align-items: center;
-  max-width: 396px;width: 100%;margin-bottom: 23px;}
-p{color:#6D6D6D;font-size:1rem;}
-p.orange{color: #EF8354;font-size:1rem;}
-p.title{font-size: 1.5rem;color: #EF8354;}
-input{border: 0;border-left: 5px solid #EF8354;background-color: #F7F7F7;color: #6D6D6D;
-  font-size: 1rem;margin-bottom: 23px;padding-left: 18px;box-sizing: border-box;max-width: 396px;width: 100%;height: 50px;line-height: 50px;}
-.btn{max-width: 396px;width: 100%;border-radius:26px;height:50px;line-height: 50px;}
+  .container{height: 200px;position: relative;top:0;}
+ .chart1 .highcharts-pie-series .highcharts-point {
+	stroke: #fff;
+	stroke-width: 8px;
+}
+.chart2{width: 100%;position: relative;}
+.chart2 .highcharts-pie-series .highcharts-point{stroke-width:0;}
+.chart2 tspan {text-anchor: end;color: #6D6D6D;font-size:1rem;position: relative;z-index: 2;}
+.chart2 .highcharts-pie-series .highcharts-legend-item.highcharts-pie-series{position: absolute;z-index:1;}
+rect.highcharts-background{fill:transparent;}
+#main .content .title{position: relative;padding-left:3rem;}
+#main .content .title::before{content: '';background: url('img/index/bell.svg') no-repeat center;background-size: contain;
+width:29px;height:33px;display: inline-block;position: absolute;top:2px;left: 0;}
+.waiting{background-color:#F6F6F6;padding: 14px 53px 33px;box-sizing: border-box;margin-bottom: 26px;}
+.waiting .flex{margin-top: 14px;}
+.waiting .orangeDeep.margin{margin-top: 20px;}
+.orangeDeep{color: #E85110;font-size:1.25rem;}
+.orange{color:#EF8354;}
+.blue{color: #4973BB;font-size:1.25rem;margin-bottom: 14px;}
+.number.orange{font-size: 6.25rem;font-weight: bold;text-align: center;line-height: 6rem;margin-bottom: 30px;}
+.bottom{display: flex;justify-content: space-around;align-items: center;margin-top: 30px;}
+.bottom .left{box-sizing: border-box;width: 50%;}
+.bottom .right{width: 50%; position: relative;}
+.bottom span{text-align: center;width: 100%;display: inline-block;}
+.number.small{text-align: center;font-size: 3.125rem;font-weight: bold;}
+p,span{color: #6D6D6D;font-size: 1.25rem;}
+.red{color: #EF547E;}
+.border{border-right:1px solid #c1c1c1;}
+p.center{text-align: center;font-size: 1.5rem;font-weight: 600;}
+#main .content section{padding: 42px 71px;box-sizing: border-box;}
+#main .content>section:nth-child(1) ul{border-bottom: 1px solid #707070;padding: 14px 53px 33px;box-sizing: border-box;}
+#main .content>section:nth-child(1) ul li{margin-bottom: 4px;}
+.SectionWP{display: flex;justify-content: center;align-items: center;}
+.SectionWP>.right,
+.SectionWP>.left{width: 44%;margin:49px auto;border-radius:10px;
+box-shadow: 0 8px 8px #BFC0C080;}
+.bottom.two>.right{width:40%;}
+.bottom.two>.left{width: 48%;}
+.bottom .right li{display: flex;justify-content: flex-start;align-items: center;}
+.bottom .right li .text{color: #2D3142;font-size: 1rem;font-weight: normal;}
+.bottom .right li .color{width: 87px;height: 44px;line-height: 44px;color: #fff;text-align: center;margin-right: 23px;
+  font-size: 1rem;font-weight: normal;}
+.bottom .right li:nth-child(1) .color{color: #2D3142;background-color: #E2E2E2;}
+.bottom .right li:nth-child(2) .color{background-color: #4F5D75;}
+.bottom .right li:nth-child(3) .color{background-color: #FCA311;}
+.bottom .right li:nth-child(4) .color{background-color: #EF547E;}
 </style>
 <body>
   <header></header>
   <div id="main">
-    <div class="middle">
-      <div class="left"></div>
-      <div class="right">
-        <div class="top">
-          <img src="img/index/user.svg" alt="">
-          <p class="title">使用者登入</p>
+    <div class="sideWP"></div>
+    <div class="content">
+      <section>
+        <div class="title">綜合資訊</div>
+        <div class="waiting">
+          <p class="orangeDeep">請購待審核案件</p>
+          <p class="flex">
+            <span>110.04.21</span>
+            <span>請購申請單位未審核<a class="orange">5</a>件</span>
+          </p>
+          <p class="orangeDeep margin">領用申請待審核案件</p>
+          <p class="flex">
+            <span>110.04.21</span>
+            <span>請購申請單位未審核<a class="orange">5</a>件</span>
+          </p>
         </div>
-        <input type="text" placeholder="請輸入帳號">
-        <input type="text" placeholder="請輸入密碼">
-        <div class="flex">
-          <p>記住我的登入資訊</p>
-          <p class="orange">忘記密碼</p>
-        </div>
-        <div class="btn orange">登入</div>
+        <ul>
+          <p class="blue">待執行列表</p>
+          <li><span>110.04.21</span><span>倉庫：A，單號：AAA111，請購人：OOO，請領需求：請領需求需求需求需求</span></li>
+          <li><span>110.04.21</span><span>倉庫：A，單號：AAA111，請購人：OOO，請領需求：請領需求需求需求需求</span></li>
+          <li><span>110.04.21</span><span>倉庫：A，單號：AAA111，請購人：OOO，請領需求：請領需求需求需求需求</span></li>
+        </ul>
+        <ul>
+          <p class="blue">最新物料動態</p>
+          <li><span>110.04.21</span><span>倉庫：A，單號：AAA111，領料0項</span></li>
+          <li><span>110.04.21</span><span>倉庫：A，單號：AAA111，領料0項</span></li>
+          <li><span>110.04.21</span><span>倉庫：A，單號：AAA111，領料0項</span></li>
+        </ul>
+      </section>
+      <div class="SectionWP">
+        <section class="left">
+          <p class="orange center">請購物料</p>
+          <div class="bottom">
+            <div class="left border">
+              <div class="number orange">35</div>
+              <span>已領用物料</span>
+            </div>
+            <div class="right">
+              <div class="number orange">109</div>
+              <span>申請中</span>
+            </div>
+          </div>
+        </section>
+        <section class="right">
+          <p class="orange center">領用物料</p>
+          <div class="bottom">
+            <div class="left border">
+              <div class="number orange">35</div>
+              <span>已領用物料</span>
+            </div>
+            <div class="right">
+              <div class="number orange">109</div>
+              <span>申請中</span>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="SectionWP">
+        <section class="left">
+          <p class="center">預算費用執行情形</p>
+          <div class="bottom">
+            <div class="left">
+              <div class="number red small">156,000</div>
+              <span class="red">待核銷</span>
+              <div class="number orangeDeep small">600,000</div>
+              <span class="orangeDeep">未使用</span>
+            </div>
+            <div class="right">
+              <div id="container1" class="container chart1" data-highcharts-chart="1"></div>
+            </div>
+          </div>
+        </section>
+        <section class="right">
+          <p class="center">庫存量占比分析</p>
+          <div class="bottom two">
+            <div class="left">
+              <div id="container2" class="container chart2" data-highcharts-chart="2"></div>
+            </div>
+            <ul class="right">
+              <li>
+                <div class="color">13%</div>
+                <div class="text">文具類</div>
+              </li>
+              <li>
+                <div class="color">13%</div>
+                <div class="text">大型器具</div>
+              </li>
+              <li>
+                <div class="color">13%</div>
+                <div class="text">原物料</div>
+              </li>
+              <li>
+                <div class="color">50%</div>
+                <div class="text">消耗品</div>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
     </div>
   </div>
+  <div class="sideNo"></div>
   <footer></footer>
   <script>
     $(document).ready(function(){
-      let H = $(window).height();
-      $('#main').height((H-187));
-    });
-    
+
+// chart
+Highcharts.chart('container1', {
+  chart: {
+    plotBackgroundColor: null,
+    plotBorderWidth: 0,
+    plotShadow: false
+  },
+  title: {
+    text: ' ',
+    align: 'center',
+    verticalAlign: 'middle',
+    y: 60
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+  },
+  accessibility: {
+    point: {
+      valueSuffix: '%'
+    }
+  },
+  plotOptions: {
+    pie: {
+      dataLabels: {
+        enabled: false,
+        distance:0,
+        style: {
+          fontWeight: 'bold',
+          color: 'white',
+        }
+      },
+      startAngle: 0,
+      endAngle: 360,
+      center: ['50%', '50%'],
+      size: '130%'
+    }
+  },
+  credits:{
+    enabled:false,
+  },
+  series: [{
+    type: 'pie',
+    name: '預算費用執行情形',
+    innerSize: '50%',
+    data: [
+      { 
+        name: '待核銷',
+        drilldown: '待核銷',
+        y: 25,
+        color:'#EF547E'
+      },
+      {
+        name: '未使用',
+        drilldown: '未使用',
+        y: 75,
+        color:'#E85110'
+      }
+    ]
+  }]
+});
+// Build the chart
+Highcharts.chart('container2', {
+  chart: {
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false,
+    type: 'pie'
+  },
+  title: {
+    text: ''
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+  },
+  accessibility: {
+    point: {
+      valueSuffix: '%'
+    }
+  },
+  legend: {
+        layout: 'vertical',
+        verticalAlign: 'middle',
+        symbolHeight: 27,
+        symbolWidth: 47,
+        symbolRadius:0,
+        align: 'right',
+        itemMarginTop:10,
+    },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: false
+      },
+      showInLegend: false,
+      size: '130%',
+      itemMarginRight: 30,
+    }
+  },
+  credits:{
+      enabled:false,
+    },
+  series: [{
+    name: '庫存量占比分析',
+    colorByPoint: true,
+    data: [{
+      name: '大型器具',
+      y:13,
+      color:'#4F5D75'
+    }, {
+      name: '原物料',
+      y: 13,
+      color:'#FCA311'
+    }, {
+      name: '消耗品',
+      y: 50,
+      color:'#EF547E'
+    }, {
+      name: '文具類',
+      y: 13,
+      color:'#E2E2E2'
+    }]
+  }]
+});
+
+  
+
+
+});
+
   </script>
 </body>
 </html>
