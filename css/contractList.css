@@ -1,0 +1,5 @@
+#main .content>.row.flex:nth-child(4):after{content: '';}
+  section{margin-top: 53px;padding: 39px 35px;}
+  .dataNo{margin-bottom: 36px;}
+  .dataNo span{color:#2D3142;}
+  .dataNo select{margin:0 19px;width:157px;height:36px;border-radius:5px;border:1px solid #BFC0C0;color: #BFC0C0;}

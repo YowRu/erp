@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/rwd.css" type="text/css">
+  <link rel="stylesheet" href="css/mobileTable.css">
   <title>開口契約擬稿登錄</title>
 </head>
 <body>
@@ -32,7 +34,7 @@
             <option value="2019">2019</option>
           </select>
         </div>
-        <div class="right"></div>
+        <div class="right none"></div>
       </div>
       <div class="row flex">
         <div class="left">
@@ -89,10 +91,10 @@
             <option value="">請選擇</option>
           </select>
         </div>
-        <div class="right"></div>
+        <div class="right none"></div>
       </div>
       <div class="row flex">
-        <div class="left">
+        <div class="left margin">
           <div class="labelWP"><label for="date1">預算核准日</label></div>
           <div class="dateWP"><input type="text" class='datepicker' id="date1" autocomplete="off" placeholder="" required /></div>
         </div>
@@ -134,12 +136,12 @@
           <p>押標金(元)</p>
           <input type="text">
         </div>
-        <div class="right"></div>
+        <div class="right none"></div>
       </div>
       <div class="row blue">投標廠商</div>
       <section>
         <div class="btn addVendor border">新增廠商</div>
-        <table>
+        <table class="pcTable">
           <tr>
             <th>序號</th>
             <th>統一編號</th>
@@ -147,7 +149,7 @@
             <th>負責人</th>
             <th>組織型態</th>
             <th>廠商資格</th>
-            <th>編輯/刪除</th>
+            <th class="btnImg">編輯/刪除</th>
           </tr>
           <tr class="copy">
             <td class="number">01</td>
@@ -156,7 +158,7 @@
             <td>OOO</td>
             <td>組織型態</td>
             <td>廠商資格</td>
-            <td>
+            <td class="btnImg">
               <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
               <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
             </td>
@@ -168,12 +170,94 @@
             <td>OOO</td>
             <td>組織型態</td>
             <td>廠商資格</td>
-            <td>
+            <td class="btnImg">
               <img src="img/contractEdit/edit.svg" class="editVendor" alt="">
               <img src="img/contractEdit/delete.svg" class="deleteImg"alt="">
             </td>
           </tr>
         </table>
+        <div class="mobileTableWP">
+          <div class="mobileTable">
+            <table>
+              <tr>
+                <th>序號</th>
+                <th>統一編號</th>
+                <th>廠商名稱</th>
+              </tr>
+              <tr>
+                <td class="number">01</td>
+                <td>12345678</td>
+                <td>鴻星數位科技股份有限公司</td>
+              </tr>
+            </table>
+            <div class="detailText">
+              <div class="rowText">
+                <div>
+                  <p>負責人</p>
+                  <p>OOO</p>
+                </div>
+                <div>
+                  <p>組織型態</p>
+                  <p>組織型態</p>
+                </div>
+                <div>
+                  <p>廠商資格</p>
+                  <p>廠商資格廠商資格</p>
+                </div>
+                <div class="editDelete">
+                  <a class="btn blue editVendor">
+                    <img src="img/white/edit.svg" alt="">
+                    <span>編輯</span>
+                  </a>
+                  <a class="btn orangeDeep deleteImg">
+                    <img src="img/white/delete.svg" alt="" class="deleteImg">
+                    <span>刪除</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mobileTable">
+            <table>
+              <tr>
+                <th>序號</th>
+                <th>統一編號</th>
+                <th>廠商名稱</th>
+              </tr>
+              <tr>
+                <td class="number">02</td>
+                <td>12345678</td>
+                <td>鴻星數位科技股份有限公司</td>
+              </tr>
+            </table>
+            <div class="detailText">
+              <div class="rowText">
+                <div>
+                  <p>負責人</p>
+                  <p>OOO</p>
+                </div>
+                <div>
+                  <p>組織型態</p>
+                  <p>組織型態</p>
+                </div>
+                <div>
+                  <p>廠商資格</p>
+                  <p>廠商資格廠商資格</p>
+                </div>
+                <div class="editDelete">
+                    <a class="btn blue editVendor">
+                      <img src="img/white/edit.svg" alt="">
+                      <span>編輯</span>
+                    </a>
+                    <a class="btn orangeDeep deleteImg">
+                      <img src="img/white/delete.svg" alt="" class="deleteImg">
+                      <span>刪除</span>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <div class="bottomBtn">
         <div class="btn cancel gray"><a href="contractList.html">取消</a></div>

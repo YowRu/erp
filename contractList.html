@@ -9,17 +9,11 @@
   <script src="js/action.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
+  <link rel="stylesheet" href="css/contractList.css" type="text/css">
+  <link rel="stylesheet" href="css/rwd.css" type="text/css">
+  <link rel="stylesheet" href="css/mobileTable.css">
   <title>開口契約履約管理</title>
 </head>
-<style>
-  #main .content>.row.flex:nth-child(4):after{content: '';}
-  .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 55px;}
-  .btnWP .btn.add{margin-right:100px;}
-  section{margin-top: 53px;padding: 39px 35px;}
-  .dataNo{margin-bottom: 36px;}
-  .dataNo span{color:#2D3142;}
-  .dataNo select{margin:0 19px;width:157px;height:36px;border-radius:5px;border:1px solid #BFC0C0;color: #BFC0C0;}
-</style>
 <body>
   <header></header>
   <div id="main">
@@ -36,7 +30,7 @@
             <option value="2019">2019</option>
           </select>
         </div>
-        <div class="right"></div>
+        <div class="right none"></div>
       </div>
       <div class="row flex">
         <div class="left">
@@ -55,7 +49,7 @@
             <option value="">請選擇</option>
           </select>
         </div>
-        <div class="right"></div>
+        <div class="right none"></div>
       </div>
       <div class="row flex">
         <div class="left">
@@ -83,7 +77,7 @@
           </select>
           <span>筆</span>
         </div>
-        <table>
+        <table class="pcTable">
           <tr>
             <th>項次</th>
             <th>標案案號</th>
@@ -92,7 +86,7 @@
             <th>採購單位</th>
             <th>採購人員</th>
             <th>狀態</th>
-            <th>編輯/刪除</th>
+            <th class="btnImg">編輯/刪除</th>
           </tr>
           <tr>
             <td>01</td>
@@ -102,12 +96,58 @@
             <td>電機館</td>
             <td>OOO</td>
             <td>標案履約作業</td>
-            <td>
+            <td class="btnImg">
               <a href="contractEdit.html"><img src="img/contractEdit/edit.svg" alt="" class="edit"></a>
               <img src="img/contractEdit/delete.svg" alt="" class="deleteImg">
             </td>
           </tr>
         </table>
+        <div class="mobileTableWP">
+          <div class="mobileTable">
+            <table>
+              <tr>
+                <th>項次</th>
+                <th>標案案號</th>
+                <th>標案名稱</th>
+              </tr>
+              <tr>
+                <td class="number">01</td>
+                <td>1100809</td>
+                <td>標案名稱</td>
+              </tr>
+            </table>
+            <div class="detailText">
+              <div class="rowText">
+                <div>
+                  <p>預算金額(元)</p>
+                  <p>5,000</p>
+                </div>
+                <div>
+                  <p>採購單位</p>
+                  <p>電機館</p>
+                </div>
+                <div>
+                  <p>採購人員</p>
+                  <p>OOO</p>
+                </div>
+                <div>
+                  <p>狀態</p>
+                  <p>標案履約作業</p>
+                </div>
+                <div class="editDelete">
+                  <a href="contractEdit.html" class="btn blue">
+                    <img src="img/white/edit.svg" alt="" class="edit">
+                    <span>編輯</span>
+                  </a>
+                  <a class="btn orangeDeep deleteImg">
+                    <img src="img/white/delete.svg" alt="" class="deleteImg">
+                    <span>刪除</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
     <div class="sideNo">0</div>

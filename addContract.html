@@ -26,7 +26,9 @@
   #main .content .row.flex.long .blue{padding-left: 26px;width: 23%;margin-right: 22px;}
   #main .content .row.flex.long select{width:76%;}
   #main .content .btnWP{display: flex;justify-content: center;align-items: center;}
+  #main .content .btnWP.top{justify-content: flex-start;margin: 10px 0 20px 0;}
   #main .content .btnWP .btn{margin:0 50px;}
+  #main .content .btnWP.top .btn{margin:0;}
   #main .content{margin-bottom: 60px;}
   .flex.between{display: flex;justify-content: space-between;align-items: center;}
 </style>
@@ -65,6 +67,9 @@
       <div class="row orange">選擇物料列表</div>
       <div class="bottom">
         <section>
+          <div class="btnWP top">
+            <a class="btn add orange">新增</a>
+          </div>
           <table>
             <tr>
               <th width="5%">項次</th>

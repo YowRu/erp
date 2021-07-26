@@ -1,0 +1,28 @@
+.detailText{border: 1px solid #BFC0C0;background-color: #fff;}
+.detailText .rowText{padding:13px 0;}
+.detailText .rowText div{display: flex;justify-content: space-around;align-items: flex-start;
+width:80%;margin:0 auto 6px;}
+.detailText p{min-height:45px;line-height: 45px;color:#2D3142;
+  min-width: 100px;
+  width: 45%;text-align: center;
+}
+.detailText p.td{color: #6D6D6D;}
+.detailText a.btn{display: flex;justify-content: space-around;align-items: center;width: 109px;padding:0 8px;cursor: pointer;}
+.detailText a.btn span{color: #fff;width:40px;}
+.detailText .btnWP{width: 300px;margin:16px auto 0;}
+.detailText .editDelete .btn:nth-child(1){margin-right: 100px;}
+.mobileTable input{width:100%;padding: 2px 8px;box-sizing: border-box;}
+@media(max-width:500px){
+.detailText .btnWP {width: 80%;}
+.detailText .editDelete .btn:nth-child(1){margin-right: 50px;}
+.detailText p{width: 100%;}
+
+}
+@media(max-width:414px){
+  .detailText .editDelete .btn:nth-child(1){margin-right: 30px;}
+}
+@media(max-width:375px){
+  .detailText div{margin:0 auto 6px;}
+  .detailText p{min-height:24px;line-height: 24px;}
+  .detailText p.td{margin-left: 0;}
+}

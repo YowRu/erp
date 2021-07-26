@@ -2,6 +2,7 @@ $(window).ready(function(){
     let pathname = window.location.pathname;
     let consult = pathname.split("/");
     let number = consult.length
+    let W = $(window).width();
     
    $('section .btn.add').click(function(){
 
@@ -18,39 +19,75 @@ $(window).ready(function(){
      }
 
    });
+//mobileTable
+function mobileTableNO() {
+  $('.mobileTableWP').each(function(){
+      let n = $(this).find('.mobileTable').length;
+      for(let i =0;i<n;i++){
+        if(i<10){
+          $(this).find('.mobileTable').eq(i).find('.number').text('0'+(i+1));
+        }else{
+          $(this).find('.mobileTable').eq(i).find('.number').text(i+1);
+        }
+      }
+    });
+};
+
+$('.btn.orangeDeep.deleteImg').click(function(){
+  $(this).parents('.mobileTable').remove();
+  mobileTableNO();
+});
+
+$(".mobileTableWP").delegate(".btn.orangeDeep.deleteImg","click",function(){
+  $(this).parents('.mobileTable').remove();
+  mobileTableNO();
+  //  if($(this).parents('td').css({'background-color':'rgb(255, 242, 220)'})){
+  //     $('section.detail').hide();
+  //  }
+});
+
+for(let i=0;i<$('.mobileTable .datePicker').length;i++){
+  $('body').find('.mobileTable input.datepicker').eq(i).prop('id','date'+i);
+}
+//mobileTable END
 
    //contractManagement
    $('.btn.add.table').click(function(){
-    let n = $(this).siblings('table').find('tr').length;
-    if($(this).parents('section').find('table').hasClass('date')){
-       let newTR = $(this).siblings('table').find('tr.copy').clone().removeClass('copy');
-       $(this).siblings('table').find('tbody').append(newTR);
-        
-       if($(this).siblings('table').attr('id')=='table1'){
+     if($('.pcTable').hide()){
+        let newRow = $(this).siblings('.mobileTableWP').find('.mobileTable').last().clone();
+        $(this).siblings('.mobileTableWP').append(newRow);
+        mobileTableNO();
+     }else{
+        let n = $(this).siblings('table').find('tr').length;
+        if($(this).parents('section').find('table').hasClass('date')){
+          let newTR = $(this).siblings('table').find('tr.copy').clone().removeClass('copy');
+          $(this).siblings('table').find('tbody').append(newTR);
+            
+          if($(this).siblings('table').attr('id')=='table1'){
 
-          $(this).siblings('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','expected'+(n-1));
-          $(this).siblings('table').find('tr').last().find('td:nth-child(5) input').removeClass('hasDatepicker').prop('id','delivery'+(n-1));
-        
-       }else if($(this).siblings('table').attr('id')=='table5'){
-          
-          $(this).siblings('table').find('tr').last().find('td:nth-child(4) input').removeClass('hasDatepicker').prop('id','warranty'+(n-1));
-        
-        }else if($(this).parents('section').find('table').attr('id')=='table3'){
-          let newTR = $(this).parents('section').find('table').find('tr.copy').clone().removeClass('copy');
-          $(this).parents('section').find('tbody').append(newTR);
-          $(this).parents('section').find('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','check'+(n+2));
-        
-        }else if($(this).siblings('table').attr('id')=='table4'){
-          
-          $(this).siblings('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','unqualified'+(n-1));
+              $(this).siblings('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','expected'+(n-1));
+              $(this).siblings('table').find('tr').last().find('td:nth-child(5) input').removeClass('hasDatepicker').prop('id','delivery'+(n-1));
+            
+          }else if($(this).siblings('table').attr('id')=='table5'){
+              
+              $(this).siblings('table').find('tr').last().find('td:nth-child(4) input').removeClass('hasDatepicker').prop('id','warranty'+(n-1));
+            
+            }else if($(this).parents('section').find('table').attr('id')=='table3'){
+              let newTR = $(this).parents('section').find('table').find('tr.copy').clone().removeClass('copy');
+              $(this).parents('section').find('tbody').append(newTR);
+              $(this).parents('section').find('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','check'+(n+2));
+            
+            }else if($(this).siblings('table').attr('id')=='table4'){
+              
+              $(this).siblings('table').find('tr').last().find('td:nth-child(3) input').removeClass('hasDatepicker').prop('id','unqualified'+(n-1));
+            }
+
+        }else{
+          let newTR = $(this).siblings('table').find('tr.copy').clone().removeClass('copy');
+          $(this).siblings('table').find('tbody').append(newTR);
         }
-
-    }else{
-      let newTR = $(this).siblings('table').find('tr.copy').clone().removeClass('copy');
-      $(this).siblings('table').find('tbody').append(newTR);
+        tableNO();
     }
-
-    tableNO();
   });
 
 
@@ -101,7 +138,7 @@ $(window).ready(function(){
     $('.popUpWP').css({'display':'flex'});
   });
 
-  $("section").delegate(".editVendor","click",function(){
+  $("#main").delegate(".editVendor","click",function(){
     $('.popUpWP').css({'display':'flex'});
    })
 
@@ -111,16 +148,31 @@ $(window).ready(function(){
   });
   
   $('.addVendor').click(function(){
-    let newTr = $(this).siblings('table').find('.copy').clone().removeClass('copy');
-    $(this).siblings('table').find('tbody').append(newTr);
-    let n = $(this).siblings('table').find('tr').length;
-    for(let i=1;i<n-1;i++){
-      if(n<10){
-        $('table tr').eq(i+1).find('.number').text('0'+(i));
-      }else{
-        $('table tr').eq(i+1).find('.number').text(i);
-      }
-    } 
+    if(W<1146){
+      let newTr = $(this).parents('section').find('.mobileTableWP .mobileTable').last().clone();
+      $(this).parents('section').find('.mobileTableWP').append(newTr);
+      let n = $(this).parents('section').find('.mobileTableWP .mobileTable').length;
+      
+      for(let i=0;i<n;i++){
+        if(n<10){
+          $('.mobileTable').eq(i).find('.number').text('0'+(i+1));
+        }else{
+          $('.mobileTable').eq(i).find('.number').text(i+1);
+        }
+      } 
+    }else{
+      let newTr = $(this).siblings('table').find('.copy').clone().removeClass('copy');
+      $(this).siblings('table').find('tbody').append(newTr);
+      let n = $(this).siblings('table').find('tr').length;
+      for(let i=1;i<n-1;i++){
+        if(n<10){
+          $('table tr').eq(i+1).find('.number').text('0'+(i));
+        }else{
+          $('table tr').eq(i+1).find('.number').text(i);
+        }
+      } 
+    }
+    
   });
 
   $('input.all').click(function(){
@@ -140,10 +192,11 @@ $(window).ready(function(){
   }
 
   $('.btn.add.orange').click(function(){
-    if(consult[number-1] === "addItem.html" || consult[number-1] === "setItemDetail.html"){
+    if(consult[number-1] === "addItem.html" || consult[number-1] === "setItemDetail.html" || consult[number-1] === "addContract.html"){
       let newTR = $(this).parents('.btnWP.top').siblings('table').find('.copy').clone().removeClass('copy');
       $(this).parents('.btnWP.top').siblings('table').find('tbody').append(newTR);
       orangeWP();
+      tableNO();
     }else{
       $('.orangeWP').show();
     }
@@ -186,7 +239,10 @@ $('input[type="checkbox"]').click(function(){
     $(this).parents('tr').removeClass('checked');
   }
 });
-
+//audit
+$('.audit').click(function(){
+  $('.detail').slideDown();
+});
 
 //userPermissions,userManagement
   $('.border.delete').click(function(){

@@ -6,7 +6,7 @@ section{padding: 54px 35px;}
 .btn.search.blue{margin-bottom: 0;}
 table{margin-top: 35px;}
 table tr{cursor: pointer;}
-table td img{position: relative;z-index: 2;}
+table td img{position: relative;z-index:1;}
 table.gray th{background-color: #BFC0C0;border: 1px solid #6D6D6D;color: #fff;}
 .detail{display: none;}
 table.yellow th{background-color: #FFF2DC;border: 1px solid #FCA311;color: #E85110;}
@@ -21,5 +21,6 @@ table.yellow td{padding:17px 18px;}
 .reason .textReason{margin-right:4px;height:36px;border-radius: 5px;border: 1px solid #6D6D6D;background-color: #F6F6F6;
   line-height: 36px;color: #BFC0C0;margin-top: 4px;}
 .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 43px;}
-.btnWP .btn.yellow{margin-right: 100px;background-color: #FCA311;}
+.btnWP .btn.margin{margin-right: 100px;}
+.btnWP .btn.yellow{color:#fff ;background-color:#FCA311 ;}
 input[type="radio"]{margin-right: 4px;}

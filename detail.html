@@ -94,7 +94,7 @@
   </tr>
 </table>
 <div class="btnWP">
-  <div class="btn cancel yellow">退回</div> 
+  <div class="btn cancel yellow margin">退回</div> 
   <div class="btn confirm blue">核發</div>
 </div>
 <script>
@@ -103,7 +103,7 @@
 
     $('input[type="radio"]').attr('disabled','disabled');
 
-    $('section table.gray td').click(function(){
+    $('section table.gray .audit').click(function(){
       
       if($(this).children().length>0){
         return

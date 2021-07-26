@@ -8,7 +8,7 @@ color: #fff;border-radius:5px;width:49%;padding:6px 26px;box-sizing: border-box;
 #main .content .row.flex input,
 #main .content .row.flex select,#main .content .row.flex .dateWP{background-color: #fff;color: #BFC0C0;}
 #main .content .row.flex .dateWP{width: 49%;border-radius: 5px;}
-#main .content .row.flex .dateWP input{padding-left: 22px;background: transparent; }
+#main .content .row.flex .dateWP input{padding-left: 22px;background: transparent;width:80%;box-sizing: border-box; }
 #main .content>.row.flex:nth-child(3),
 #main .content>.row.flex:nth-child(4),
 #main .content>.row.flex:nth-child(5){position: relative;padding-bottom: 24px;}
@@ -39,7 +39,8 @@ section .row.copy,tr.copy{display:none;}
 section .row input{height:36px;line-height: 24px;font-size: 1rem;border: 1px solid #2D3142;border-radius:5px;width:345px;margin:0 24px;
 color: #6D6D6D;padding:6px 0 6px 26px;box-sizing: border-box;}
 section .row p{color:#6D6D6D;font-size: 1rem;}
-section .btn.delete,.btnWP .btn.add{background-color: #EF8354;color: #fff;border:1px solid #EF8354;}
+section .btn.delete,
+.btnWP .btn.add{background-color: #EF8354;color: #fff;border:1px solid #EF8354;}
 .btnWP .btn.add a{color: #fff;display: inline-block;width: 100%;}
 section .dateWP:after{right:33px;}
 section table{width:100%;border:1px solid #BFC0C0;border-collapse:collapse;}
@@ -58,7 +59,7 @@ table td{background-color: #fff;color: #2D3142;}
 .btn.management a{color:#fff;}
 .btn.confirm,.btn.save,.btnWP .btn.search{background-color: #2E5AA5;border: 0;color: #fff;}
 .popUpWP{display: flex;justify-content: center;align-items: center;position:fixed;top: 0;left: 0;width: 100%;
-  height: 100vh;background-color: #9d9d9dd2;display: none;}
+  height: 100vh;background-color: #9d9d9dd2;display: none;z-index: 2;}
 .popUp{max-width:1086px;padding:48px 74px 69px;background-color: #fff;border-radius: 5px;}
 .popUp>p{color:#4973BB;font-size:1.2rem;font-weight: bold;text-align: center;margin-bottom: 34px;}
 .popUp .row.flex{display: flex;justify-content: center;align-items: center;margin-bottom: 12px;}
@@ -67,3 +68,40 @@ table td{background-color: #fff;color: #2D3142;}
 .popUp .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 56px;}
 .popUp .btnWP .btn{margin:0 50px;}
 img{cursor: pointer;}
+
+#main .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 55px;}
+  .btnWP .btn.add{margin-right:100px;}
+
+@media(max-width:1000px){
+  #main .content>.row.flex:nth-child(3):after,
+  #main .content>.row.flex:nth-child(4):after,
+  #main .content>.row.flex:nth-child(5):after {display: none;}
+  #main .content>.row.flex:nth-child(3) .right,
+  #main .content>.row.flex:nth-child(4) .right,
+  #main .content>.row.flex:nth-child(5) .right{position: relative;margin-bottom: 30px;}
+  #main .content>.row.flex:nth-child(3) .right:after{content: '※限填40個中文字';
+  color: #E85110;font-size: 0.9rem;position: absolute;right: 0;bottom: -29px;}
+  #main .content>.row.flex:nth-child(4) .right:after{content: '※採購單位清單';color: #4973BB;
+  font-size: 0.9rem;position: absolute;right: 0;bottom: -29px;}
+  #main .content>.row.flex:nth-child(5) .right:after{content: '※招標方式清單';color: #4973BB;
+  font-size: 0.9rem;position: absolute;right: 0;bottom: -29px;}
+}
+@media(max-width:700px){
+  section .row{flex-direction: column;justify-content: flex-start;align-items: flex-start;height: auto;}
+  section .row input{margin:10px 0;}
+  section .dateWP:after{top:9px;}
+}
+@media(max-width:600px){
+  #main .content .row.flex .left,
+  #main .content .row.flex .right{flex-direction: column;height: 72px;}
+  #main .content .row.flex .left p,
+  #main .content .row.flex .right p,
+  .content .row.flex .labelWP,
+  #main .content .row.flex .labelWP {margin-right:0;width:100%;margin-bottom: 10px;}
+  #main .content .row.flex input,
+  #main .content .row.flex select,
+  #main .content .row.flex .dateWP{width: 100%;margin-bottom: 12px;}
+  #main .content .row.flex .dateWP input{margin-bottom: 0;}
+  #main .content .row.flex .left.margin{margin-bottom: 24px;}
+  .dateWP,section .row .dateWP input{width: 100%;}
+}

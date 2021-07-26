@@ -13,6 +13,7 @@
       <li><a href="">物料類別查詢</a></li>
       <li><a href="itemMaintenance.html">物料品項維護</a></li>
       <li><a href="addItem.html">新增倉庫物料品項</a></li>
+      <li><a href="">檢視開口契約物料品項</a></li>
     </ul>
   </li>
   <li><a href="javascript:;" class="one">請購管理</a>
@@ -33,7 +34,7 @@
     <ul class="two">
         <li><a href="onlineApplication.html">物料線上申請單</a></li>
         <li><a href="audit.html">部門主管審核</a></li>
-        <li><a href="audit.html">倉管人員審核</a></li>
+        <li><a href="warehouseAudit.html">倉管人員審核</a></li>
         <li><a href="requisition.html" class="last">物料領用發放</a></li>
     </ul>
   </li>
@@ -60,18 +61,20 @@
     let consult = pathname.split("/");
     let number = consult.length
     let W = $('.sideWP').width();
+    let windowWidth =$(window).width();
     let count = 0;
+    
     $('.toggle').click(function(){
-      count++;
-      if(count%2 == 0){
-        $(this).removeClass('hide');
-        $('.sideWP').css({'display':'block','width':'18%'});
-        $('.content').css({'width':'82%'});
-      }else{
-        $(this).addClass('hide');
-        $('.sideWP').css({'margin-right':W-21,'width':0});
-        $('.content').css({'width':'100%','margin-left':-(W-21)});
-      }
+          count++;
+          if(count%2 == 0){
+            $(this).removeClass('hide');
+            $('.sideWP').css({'display':'block','width':'18%'});
+            $('.content').css({'width':'82%'});
+          }else{
+            $(this).addClass('hide');
+            $('.sideWP').css({'margin-right':W-21,'width':0});
+            $('.content').css({'width':'100%','margin-left':-(W-21)});
+          }
     });
 
   $('.side>li>a').click(function(){
