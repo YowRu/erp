@@ -11,29 +11,11 @@
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/pagination.css">
   <link rel="stylesheet" href="css/addItem.css">
+  <link rel="stylesheet" href="css/rwd.css" type="text/css">
+  <link rel="stylesheet" href="css/mobileTable.css">
+  <link rel="stylesheet" href="css/setItemDetail.css">
   <title>設定開口契約物料品項</title>
 </head>
-<style>
-  #main .content{position: relative;margin-bottom: 60px;}
-  #main .content>.row.flex:nth-child(3):after,
-  #main .content>.row.flex:nth-child(4):after,
-  #main .content>.row.flex:nth-child(5):after{content:'';}
-  #main .content>.row.flex:nth-child(3), 
-  #main .content>.row.flex:nth-child(4), 
-  #main .content>.row.flex:nth-child(5){padding-bottom:0;}
-  #main .content .row.flex p.blue{background-color: #8196BB;color: #fff;}
-  .row.orange{background-color:#EF8354;}
-  #main .content .row.flex.long{width: 100%;justify-content: flex-start;}
-  #main .content .row.flex.long .blue{padding-left: 26px;width: 23%;margin-right: 22px;}
-  #main .content .row.flex.long select{width:76%;}
-  #main .content .btnWP.bottom{display: flex;justify-content: center;align-items: center;}
-  #main .content .btnWP.bottom .btn{margin:0 50px;}
-  #main .pop{display: none;position: fixed;width: 100vw;height: 100vh;left: 0;top: 0;justify-content: center;align-items: center;
-  background-color: #f3f3f3f4;z-index: 2;}
-  #main .popWP{max-width:1200px;width:100%;margin:0 auto;}
-  #main .pop table{width:100%;border:1px solid #BFC0C0;border-collapse: collapse;}
-  #main .pop .close{font-size:2rem;color:#2E5AA5;font-weight: bolder;text-align: right;cursor: pointer;}
-</style>
 <body>
   <header></header>
   <div id="main">
@@ -79,7 +61,7 @@
           </div>
           <div class="btn blue copy">複製</div>
         </div>
-        <table>
+        <table class="pcTable">
           <tr>
             <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
             <th width="5%">項目</th>
@@ -107,12 +89,71 @@
             </td>
           </tr>
         </table>
+        <div class="mobileTableWP">
+          <div class="mobileTable hide">
+            <table>
+              <tr>
+                <th width="10%"><input type="checkbox" name="all" value="all" class="all"></th>
+                <th width="40%">項目</th>
+                <th width="50%">規格說明</th>
+              </tr>
+            </table>
+          </div>
+          <div class="mobileTable copy">
+            <table>
+              <tr>
+                <th width="10%"><input type="checkbox" name="all" value="all" class="all"></th>
+                <th width="40%">項目</th>
+                <th width="50%">規格說明</th>
+              </tr>
+              <tr>
+                <td class="checkbox"><input type="checkbox"></td>
+                <td>項目</td>
+                <td>規格說明</td>
+              </tr>
+            </table>
+            <div class="detailText">
+              <div class="rowText">
+                <div>
+                  <p>單位</p>
+                  <p>支</p>
+                </div>
+                <div>
+                  <p>預估數量</p>
+                  <p>100</p>
+                </div>
+                <div>
+                  <p>單價</p>
+                  <p>20</p>
+                </div>
+                <div>
+                  <p>上限數量</p>
+                  <p>20</p>
+                </div>
+                <div>
+                  <p>複價</p>
+                  <p>複價</p>
+                </div>
+                <div>
+                  <p>附註</p>
+                  <p>附註附註附註附註附註附註附註附註附註</p>
+                </div>
+                <div class="editDelete">
+                  <a class="btn orangeDeep deleteImg">
+                    <img src="img/white/delete.svg" alt="" class="deleteImg">
+                    <span>刪除</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <div class="pop">
         <div class="popWP">
           <div class="close">X</div>
           <div class="row orange">物料品項列表</div>
-          <table>
+          <table class="pcTable">
             <tr>
               <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
               <th>項目</th>
@@ -158,6 +199,50 @@
               <td>附註附註附註附註附註附註附註附註附註附註</td>
             </tr>
           </table>
+          <div class="mobileTableWP">
+            <div class="mobileTable">
+              <table>
+                <tr>
+                  <th width="10%"><input type="checkbox" name="all" value="all" class="all"></th>
+                  <th width="40%">項目</th>
+                  <th width="50%">規格說明</th>
+                </tr>
+                <tr>
+                  <td class="checkbox"><input type="checkbox"></td>
+                  <td>項目</td>
+                  <td>規格說明</td>
+                </tr>
+              </table>
+              <div class="detailText">
+                <div class="rowText">
+                  <div>
+                    <p>單位</p>
+                    <p>支</p>
+                  </div>
+                  <div>
+                    <p>預估數量</p>
+                    <p>100</p>
+                  </div>
+                  <div>
+                    <p>單價</p>
+                    <p>20</p>
+                  </div>
+                  <div>
+                    <p>上限數量</p>
+                    <p>20</p>
+                  </div>
+                  <div>
+                    <p>複價</p>
+                    <p>複價</p>
+                  </div>
+                  <div>
+                    <p>附註</p>
+                    <p>附註附註附註附註附註附註附註附註附註</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="row flex">
             <div class="btn blue comfirm">確認</div>
           </div>

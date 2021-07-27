@@ -18,9 +18,11 @@ width:80%;margin:0 auto 6px;}
 .detailText p{width: 100%;}
 .detailText .rowText div{justify-content: space-between;width: 98%;}
 .detailText p{text-align: left;}
+.detailText a.btn{width: 90px;}
 }
 @media(max-width:414px){
   .detailText .editDelete .btn:nth-child(1){margin-right: 30px;}
+  .detailText a.btn{width: 83px;}
 }
 @media(max-width:375px){
   .detailText div{margin:0 auto 6px;}

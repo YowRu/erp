@@ -192,11 +192,21 @@ for(let i=0;i<$('.mobileTable .datePicker').length;i++){
   }
 
   $('.btn.add.orange').click(function(){
-    if(consult[number-1] === "addItem.html" || consult[number-1] === "setItemDetail.html" || consult[number-1] === "addContract.html"){
-      let newTR = $(this).parents('.btnWP.top').siblings('table').find('.copy').clone().removeClass('copy');
-      $(this).parents('.btnWP.top').siblings('table').find('tbody').append(newTR);
-      orangeWP();
-      tableNO();
+    if(consult[number-1] === "addItem.html" 
+    || consult[number-1] === "setItemDetail.html" 
+    || consult[number-1] === "addContract.html"){
+      if(W<1146){
+        $('.mobileTable.hide').hide();
+        let newTR = $(this).parents('.btnWP.top').siblings('.mobileTableWP').find('.mobileTable.copy').clone().removeClass('copy');;
+        $(this).parents('.btnWP.top').siblings('.mobileTableWP').append(newTR);
+        mobileTableNO();
+      }else{
+        let newTR = $(this).parents('.btnWP.top').siblings('table').find('.copy').clone().removeClass('copy');
+        $(this).parents('.btnWP.top').siblings('table').find('tbody').append(newTR);
+        orangeWP();
+        tableNO();
+      }
+      
     }else{
       $('.orangeWP').show();
     }
