@@ -71,7 +71,9 @@ img{cursor: pointer;}
 
 #main .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 55px;}
   .btnWP .btn.add{margin-right:100px;}
-
+@media(max-width:1230px){
+  .popUp{width:70%;}
+}
 @media(max-width:1000px){
   #main .content>.row.flex:nth-child(3):after,
   #main .content>.row.flex:nth-child(4):after,
@@ -104,4 +106,20 @@ img{cursor: pointer;}
   #main .content .row.flex .dateWP input{margin-bottom: 0;}
   #main .content .row.flex .left.margin{margin-bottom: 24px;}
   .dateWP,section .row .dateWP input{width: 100%;}
+  .popUp{width:90%;}
+}
+@media(max-width:500px){
+  .popUp{padding:48px 34px 69px}
+  .popUp .btnWP .btn {margin: 0 20px;}
+  section .dateWP:after{width: 18px;}
+}
+@media(max-width:414px){
+  .popUp{width: 95%;}
+  .popUp .row.flex input{margin-left: 10px;}
+  .popUp .row.flex p{padding-right: 0;padding-left: 10px;}
+  .btn.management {margin-right: 4px;}
+}
+@media(max-width:375px){
+.popUp .row.flex p{width: 240px;}
+.popUp .row.flex input{padding-left: 10px;}
 }

@@ -16,7 +16,8 @@ width:80%;margin:0 auto 6px;}
 .detailText .btnWP {width: 80%;}
 .detailText .editDelete .btn:nth-child(1){margin-right: 50px;}
 .detailText p{width: 100%;}
-
+.detailText .rowText div{justify-content: space-between;width: 98%;}
+.detailText p{text-align: left;}
 }
 @media(max-width:414px){
   .detailText .editDelete .btn:nth-child(1){margin-right: 30px;}

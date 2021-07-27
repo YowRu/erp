@@ -40,7 +40,7 @@
           <p>履約期限日期</p>
           <div class="dateWP"><input type="text" class='datepicker' id='date2' autocomplete="off" placeholder="" required /></div>
         </div>
-        <div class="right"></div>
+        <div class="right none"></div>
       </div>
       <div class="row flex day">
         <div class="left">
@@ -53,16 +53,16 @@
               <span class="inputWP">總共天數<input type="text" required />天</span>
             </div>
         </div>
-        <div class="right"></div>
+        <div class="right none"></div>
       </div>
       <div class="row flex top">
         <div class="left">
           <p>決標金額</p>
-          <span class="dollar">總決標金額</span><input type="text" class="dollar"><span>元</span>
+          <span class="dollar">總決標金額<input type="text" class="dollar">元</span>
         </div>
         <div class="right">
           <p>預算金額</p>
-          <span class="dollar">預算金額</span><input type="text" class="dollar"><span>元</span>
+          <span class="dollar">預算金額<input type="text" class="dollar">元</span>
         </div>
       </div>
       <div class="row blue">各批次請購資料</div>
@@ -603,8 +603,12 @@
   <footer></footer>
   <script>
   $(document).ready(function() {
-    let w = $('#main .content>.row.flex .left p').width();
-    $('#main .content .row.flex.day .left p').width(w);
+    let windowWidth = $(window).width();
+    if(windowWidth>700){
+      let w = $('#main .content>.row.flex .left p').width();
+      $('#main .content .row.flex.day .left p').width(w);
+    }
+    
   });
   </script>
 </body>
