@@ -12,14 +12,11 @@
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/requisition.css">
   <link rel="stylesheet" href="css/pagination.css">
+  <link rel="stylesheet" href="css/rwd.css" type="text/css">
+  <link rel="stylesheet" href="css/mobileTable.css">
+  <link rel="stylesheet" href="css/setItem.css">
   <title>設定開口契約物料品項</title>
 </head>
-<style>
-  .btnWP.top{justify-content: space-between;}
-  #main .content .row.flex{justify-content: flex-start;}
-  #main .content .row.flex .left p, #main .content .row.flex .right p{text-align:left;}
-  table{margin-bottom: 54px;}
-</style>
 <body>
   <header></header>
   <div id="main">
@@ -27,8 +24,8 @@
     <div class="content">
       <div class="title">物料品項維護</div>
       <section>
-        <div class="row flex">
-          <div class="left">
+        <div class="row flex margin12">
+          <div class="left margin0">
             <p>年度</p>
             <select name="" id="">
               <option value="">請選擇</option>
@@ -51,7 +48,7 @@
             <a href="setItemDetail.html" class="btn add orange">新增</a>
             <a href="" class="btn blue">查詢</a>
         </div>
-        <table>
+        <table class="pcTable">
           <tr>
             <th width="5%">序號</th>
             <th>年度</th>
@@ -94,6 +91,80 @@
             </td>
           </tr>
         </table>
+        <div class="mobileTableWP">
+          <div class="mobileTable">
+            <table>
+              <tr>
+                <th>序號</th>
+                <th>年度</th>
+                <th>館別</th>
+              </tr>
+              <tr>
+                <td class="number">01</td>
+                <td>110</td>
+                <td>機械館</td>
+              </tr>
+            </table>
+            <div class="detailText">
+              <div class="rowText">
+                <div>
+                  <p>倉別</p>
+                  <p>倉別</p>
+                </div>
+                <div>
+                  <p>開口契約</p>
+                  <p>開口契約</p>
+                </div>
+                <div class="editDelete">
+                  <a class="btn blue editVendor" href="setItemDetail.html">
+                    <img src="img/white/edit.svg" alt="">
+                    <span>編輯</span>
+                  </a>
+                  <a class="btn orangeDeep deleteImg">
+                    <img src="img/white/delete.svg" alt="" class="deleteImg">
+                    <span>刪除</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mobileTable">
+            <table>
+              <tr>
+                <th>序號</th>
+                <th>年度</th>
+                <th>館別</th>
+              </tr>
+              <tr>
+                <td class="number">02</td>
+                <td>110</td>
+                <td>機械館</td>
+              </tr>
+            </table>
+            <div class="detailText">
+              <div class="rowText">
+                <div>
+                  <p>倉別</p>
+                  <p>倉別</p>
+                </div>
+                <div>
+                  <p>開口契約</p>
+                  <p>開口契約</p>
+                </div>
+                <div class="editDelete">
+                  <a class="btn blue editVendor" href="setItemDetail.html">
+                    <img src="img/white/edit.svg" alt="">
+                    <span>編輯</span>
+                  </a>
+                  <a class="btn orangeDeep deleteImg">
+                    <img src="img/white/delete.svg" alt="" class="deleteImg">
+                    <span>刪除</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <ul class="pagination" id="pagination"></ul>
       </section>
     </div>

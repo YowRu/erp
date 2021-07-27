@@ -1,0 +1,20 @@
+.btnWP.top{justify-content: space-between;}
+  #main .content .row.flex{justify-content: flex-start;}
+  #main .content .row.flex .left p,
+  #main .content .row.flex .right p{text-align:left;}
+  #main .content .row.flex .left.margin0{margin-bottom: 0;}
+  #main .content .row.flex.margin12{margin-bottom: 12px;}
+  table{margin-bottom: 54px;}
+  @media(max-width:1145px){
+    table{margin: 0;}
+  }
+  @media(max-width:600px){
+    #main .content .row.flex .left p,
+    #main .content .row.flex .right p{width:80px;}
+    #main .content .row.flex select, 
+    #main .content .row.flex input{width:240px;}
+    #main .content .row.flex .left, #main .content .row.flex .right{height: 36px;}
+  }
+  @media(max-width:414px){
+    #main .content .row.flex select, #main .content .row.flex input{width: 210px;}
+  }
