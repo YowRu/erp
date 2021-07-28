@@ -52,6 +52,7 @@
 }
 @media(max-width:1110px){
   #main .content .row.flex{flex-direction: column;margin-bottom:24px;height: auto;}
+  #main .content .row.flex.bottom0{margin-bottom: 0;}
   #main .content .row.flex .left,
   #main .content .row.flex .right{width: 100%;margin-bottom: 12px;}
   #main .content .row.flex .left {margin-right: 0}
@@ -63,12 +64,11 @@
 
 @media(max-width:700px){
 #main .content {padding: 39px 28px 0;}
+#main .content .row.flex .left, 
+  #main .content .row.flex .right{flex-direction: column;height: auto;margin:0 auto 12px;width:100%;}
+  
 }
 
-@media(max-width:600px){
-  #main .content .row.flex .left,
-   #main .content .row.flex .right{flex-direction: row;}
-}
 @media(max-width:500px){
   header .wrapper nav{left: 85%;top: 34%;width:30px;}
   header .wrapper nav span{height:3px;}

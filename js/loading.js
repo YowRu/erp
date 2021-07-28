@@ -7,7 +7,9 @@ $(document).ready(function(){
     $('section.detail').load('detail.html');
     $('section.auditDetail').load('auditDetail.html');
     $('.inputAmount').load('inputAmount.html');
-    
+    $('.mobileTableWP').load('mobileTableWP.html');
+    $('.mobileTableWP.save').load('mobileTableWP_save.html');
+
     let n = $('body').find('.datePicker').length
     for(let i=0;i<n;i++){
         $('body').find('.datepicker').eq(i).prop('id','date'+i);

@@ -25,9 +25,9 @@ function mobileTableNO() {
       let n = $(this).find('.mobileTable').length;
       for(let i =0;i<n;i++){
         if(i<10){
-          $(this).find('.mobileTable').eq(i).find('.number').text('0'+(i+1));
+          $(this).find('.mobileTable').eq(i).find('.number').text('0'+(i));
         }else{
-          $(this).find('.mobileTable').eq(i).find('.number').text(i+1);
+          $(this).find('.mobileTable').eq(i).find('.number').text(i);
         }
       }
     });
@@ -53,9 +53,9 @@ for(let i=0;i<$('.mobileTable .datePicker').length;i++){
 
    //contractManagement
    $('.btn.add.table').click(function(){
-     if($('.pcTable').hide()){
-        let newRow = $(this).siblings('.mobileTableWP').find('.mobileTable').last().clone();
-        $(this).siblings('.mobileTableWP').append(newRow);
+     if(W<1146){
+        let newRow = $(this).parents('section').find('.mobileTableWP').find('.mobileTable').last().clone().removeClass('copy');
+        $(this).parents('section').find('.mobileTableWP').append(newRow);
         mobileTableNO();
      }else{
         let n = $(this).siblings('table').find('tr').length;

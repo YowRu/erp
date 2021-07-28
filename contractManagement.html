@@ -14,9 +14,9 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
-  <link rel="stylesheet" href="css/contractManagement.css">
   <link rel="stylesheet" href="css/rwd.css" type="text/css">
   <link rel="stylesheet" href="css/mobileTable.css">
+  <link rel="stylesheet" href="css/contractManagement.css">
   <title>開口契約履約管理</title>
 </head>
 <body>
@@ -35,14 +35,14 @@
           <div class="dateWP"><input type="text" class='datepicker' id='date1' autocomplete="off" placeholder="" required /></div>
         </div>
       </div>
-      <div class="row flex top">
+      <div class="row flex top bottom0">
         <div class="left">
           <p>履約期限日期</p>
           <div class="dateWP"><input type="text" class='datepicker' id='date2' autocomplete="off" placeholder="" required /></div>
         </div>
         <div class="right none"></div>
       </div>
-      <div class="row flex day">
+      <div class="row flex day bottom0">
         <div class="left">
             <p>交貨天數</p>
             <div class="dayWP">
@@ -214,7 +214,7 @@
             </td>
           </tr>
         </table>
-        <div class="mobileTableWP">
+        <!-- <div class="mobileTableWP">
           <div class="mobileTable">
             <table>
               <tr>
@@ -255,7 +255,8 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+        <div class="mobileTableWP save"></div>
       </section>
       <div class="row flex">
         <div class="left">
@@ -317,7 +318,7 @@
             </td>
           </tr>
         </table>
-        <div class="mobileTableWP">
+        <!-- <div class="mobileTableWP">
           <div class="mobileTable">
             <table>
               <tr>
@@ -370,9 +371,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+        <div class="mobileTableWP save"></div>
       </section>
-      <div class="row flex">
+      <div class="row flex bottom0">
         <div class="left">
           <p class="deep">驗收合格日</p>
           <div class="dateWP"><input type="text" class='datepicker' id='date6' autocomplete="off" placeholder="" required /></div>

@@ -1,0 +1,100 @@
+<div class="mobileTable copy">
+    <table>
+      <tr>
+        <th>項次</th>
+        <th>標案案號</th>
+        <th>標案名稱</th>
+      </tr>
+      <tr>
+        <td class="number">00</td>
+        <td>1100809</td>
+        <td>標案名稱</td>
+      </tr>
+    </table>
+    <div class="detailText">
+      <div class="rowText">
+        <div>
+          <p>預算金額(元)</p>
+          <p>5,000</p>
+        </div>
+        <div>
+          <p>採購單位</p>
+          <p>電機館</p>
+        </div>
+        <div>
+          <p>採購人員</p>
+          <p>OOO</p>
+        </div>
+        <div>
+          <p>狀態</p>
+          <p>標案履約作業</p>
+        </div>
+        <div class="editDelete">
+          <a class="btn blue">
+            <img src="img/white/edit.svg" alt="" class="edit">
+            <span>編輯</span>
+          </a>
+          <a class="btn orangeDeep deleteImg">
+            <img src="img/white/delete.svg" alt="" class="deleteImg">
+            <span>刪除</span>
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="mobileTable">
+  <table>
+    <tr>
+      <th>項次</th>
+      <th>標案案號</th>
+      <th>標案名稱</th>
+    </tr>
+    <tr>
+      <td class="number">01</td>
+      <td>1100809</td>
+      <td>標案名稱</td>
+    </tr>
+  </table>
+  <div class="detailText">
+    <div class="rowText">
+      <div>
+        <p>預算金額(元)</p>
+        <p>5,000</p>
+      </div>
+      <div>
+        <p>採購單位</p>
+        <p>電機館</p>
+      </div>
+      <div>
+        <p>採購人員</p>
+        <p>OOO</p>
+      </div>
+      <div>
+        <p>狀態</p>
+        <p>標案履約作業</p>
+      </div>
+      <div class="editDelete">
+        <a class="btn blue">
+          <img src="img/white/edit.svg" alt="" class="edit">
+          <span>編輯</span>
+        </a>
+        <a class="btn orangeDeep deleteImg">
+          <img src="img/white/delete.svg" alt="" class="deleteImg">
+          <span>刪除</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    let pathname = window.location.pathname;
+    let consult = pathname.split("/");
+    let number = consult.length
+    if(consult[number-1] ==="contractList.html"){
+      $('.editDelete .btn.blue').prop('href','contractEdit.html');
+    }else if(consult[number-1] ==="contractEdit.html"){
+      $('.editDelete .btn.blue').addClass('editVendor');
+    }
+  });
+</script>

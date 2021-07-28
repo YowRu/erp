@@ -40,6 +40,7 @@ img,.deleteImg{cursor: pointer;}
 }
 @media(max-width:1110px){
   #main .content .row.flex{margin-bottom: 0;}
+  #main .content>.row.flex:nth-child(5) .right:after{content: '';}
 }
 @media(max-width:800px){
   #main .content .row.flex.day .left .dayWP .inputWP input {width: 70%;}
@@ -52,17 +53,34 @@ img,.deleteImg{cursor: pointer;}
 }
 @media(max-width:700px){
   #main .content .row.flex.day .left .dayWP {margin-left: 0;}
-  #main .content .row.flex.day .left .dayWP .inputWP{padding: 2px 0 2px 10px;width: 200px;}
-  #main .content .row.flex.day .dayWP>span:nth-child(1){width: 170px;}
+  #main .content .row.flex.day .left .dayWP .inputWP{padding: 2px 0 2px 10px;width: 57%;}
+  #main .content .row.flex.day .left .dayWP .inputWP input,
+  #main .content .row.flex input.dollar {
+    width: 70%;
 }
-@media(max-width:600px){
+  #main .content .row.flex .left, 
+  #main .content .row.flex .right{flex-direction: column;height: auto;margin:0 auto 12px;width:100%;}
+  #main .content .row.flex .left p, 
+  #main .content .row.flex .right p, 
+  .content .row.flex .labelWP,
+  #main .content .row.flex input,
+   #main .content .row.flex select,
+   #main .content .row.flex .dateWP,
+   #main .content .row.flex.day .left .dayWP{margin-right: 0;width: 100%;margin:0 auto 12px;}
+   #main .content .row.flex.day .dayWP>span:nth-child(1) {width:65%;}
+}
+@media(max-width:630px){
   #main .content .row.flex.day .left .dayWP{margin-top: -18px;width: 100%;}
   #main .content .row.flex.day input[type=radio]{margin-bottom: 0;}
   #main .content .row.flex.day .left .dayWP .inputWP{width: 100%;}
-  #main .content .row.flex.day .left .dayWP .inputWP input{width: 70%;}
+  #main .content .row.flex.day .left .dayWP .inputWP input{width:60%;}
   #main .content .row.flex .left{height: auto;}
   #main .content .row.flex .left.flex,
   #main .content .row.flex .right.flex{display: flex;justify-content: flex-start;height: auto;}
+  #main .content .row.flex.day .dayWP>span:nth-child(1) {
+    width: 59%;
+    margin-right: 10px;
+}
 }
 @media(max-width:500px){
   #main .content .row.flex.day .left .dayWP .inputWP{margin-top: 10px;}
@@ -71,6 +89,11 @@ img,.deleteImg{cursor: pointer;}
   section .dateWP:after{width: 18px;}
   section .dateWP{width:90%;}
 }
+@media (max-width: 414px){
+#main .content .row.flex.day .left .dayWP .inputWP input,
+ #main .content .row.flex input.dollar {
+    width: 50%;
+}}
 @media(max-width:375px){
 section .dateWP{width:95%;}
 }
