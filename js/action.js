@@ -193,10 +193,9 @@ for(let i=0;i<$('.mobileTable .datePicker').length;i++){
 
   $('.btn.add.orange').click(function(){
     if(consult[number-1] === "addItem.html" 
-    || consult[number-1] === "setItemDetail.html" 
     || consult[number-1] === "addContract.html"){
       if(W<1146){
-        $('.mobileTable.hide').hide();
+        
         let newTR = $(this).parents('.btnWP.top').siblings('.mobileTableWP').find('.mobileTable.copy').clone().removeClass('copy');;
         $(this).parents('.btnWP.top').siblings('.mobileTableWP').append(newTR);
         mobileTableNO();
@@ -207,14 +206,32 @@ for(let i=0;i<$('.mobileTable .datePicker').length;i++){
         tableNO();
       }
       
+    }else if(consult[number-1] === "setItemDetail.html" ){
+      return
     }else{
       $('.orangeWP').show();
     }
   });
 //addItem
   $('.btn.blue').click(function(){
-    $('.orangeWP').addClass('show');
-    orangeWP();
+    if(consult[number-1] === "setItemDetail.html"){
+      if(W<1146){
+        
+        let newTR = $(this).parents('.pop').prev('section').find('.mobileTable.copy').clone().removeClass('copy');;
+        $(this).parents('.pop').prev('section').find('.mobileTableWP').append(newTR);
+        mobileTableNO();
+      }else{
+        let newTR = $(this).parents('.pop').prev('section').find('.pcTable tr.copy').clone().removeClass('copy');
+        $(this).parents('.pop').prev('section').find('.pcTable tbody').append(newTR);
+        orangeWP();
+        tableNO();
+      }
+      $('.pop').hide();
+    }else{
+      $('.orangeWP').addClass('show');
+      orangeWP();
+    }
+    
   });
 
   $('.btn.confirm').click(function(){
