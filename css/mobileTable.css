@@ -18,6 +18,7 @@ width:80%;margin:0 auto 6px;}
 .detailText p{width: 100%;word-break: break-all;}
 .detailText .rowText div{justify-content: space-between;width: 98%;}
 .detailText .rowText div.one{justify-content: center;}
+.detailText .editDelete.one .btn:nth-child(1){margin-right:0;}
 .detailText p{text-align: left;}
 .detailText a.btn{width: 90px;}
 }

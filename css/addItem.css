@@ -4,9 +4,9 @@
 #main .content .row.flex.white{margin:0 49px 16px;width: 60%;}
 #main .content .row.flex.white p{background-color: #fff;color: #2D3142;width: 109px;padding: 6px 0;}
 #main .content .row.flex.white select,#main .content .row.flex.white input{width: 80%;border:1px solid #2D3142;color: #BFC0C0;}
-.btnWP.top{display: flex;justify-content: flex-start;align-items: center;}
-.btnWP.top .left{display: flex;justify-content: flex-start;align-items: center;}
-.btnWP.top .btn.yellow{margin:0 24px 16px 0;}
+#main .btnWP.top{display: flex;justify-content: flex-start;align-items: center;}
+#main .btnWP.top .left{display: flex;justify-content: flex-start;align-items: center;}
+#main .btnWP.top .btn.yellow{margin:0 24px 16px 0;}
 table{margin:0 auto 31px;}
 .row.orange{background-color:#EF8354;}
 table input{width:90%;margin:0 auto;border: 1px solid #BFC0C0;height: 36px;border-radius: 5px;color: #2D3142;padding-left: 5px;box-sizing: border-box;}
