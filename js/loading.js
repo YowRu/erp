@@ -8,7 +8,7 @@ $(document).ready(function(){
     $('section.auditDetail').load('auditDetail.html');
     $('.inputAmount').load('inputAmount.html');
     $('.mobileTableWP.look').load('mobileTableWP_look.html');
-    
+
     let n = $('body').find('.datePicker').length
     for(let i=0;i<n;i++){
         $('body').find('.datepicker').eq(i).prop('id','date'+i);
@@ -31,6 +31,9 @@ $(document).ready(function(){
         }else if($(this).hasClass('checkDelete')){
           $( '<div class="mobileTableWP checkDelete"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
           $('.mobileTableWP.checkDelete').load('mobileTableWP_checkDelete.html');
+        }else if($(this).hasClass('print')){
+          $( '<div class="mobileTableWP print"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+          $('.mobileTableWP.print').load('mobileTableWP_print.html');
         }
       });
     }  

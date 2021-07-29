@@ -65,7 +65,8 @@ background-color: #4973BB;position: absolute;right:-24px;top:40%}
   -o-transform:scaleX(1);
   transform:scaleX(1);
 }
-header .side,#main .side{width: 100%;}
+#main .side{width: 100%;}
+header .side{width: 86%;margin: 0 auto;}
 header .side>li.border,
 #main .side>li.border{border-top: 1px solid #2D3142;}
 header .side>li .two li,

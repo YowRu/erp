@@ -1,0 +1,32 @@
+.btnWP.top{justify-content:space-between;}
+  #main .content .row.flex{justify-content:space-between;}
+  #main .content .row.flex .left p
+  ,#main .content .row.flex .right p{text-align:left;width: 100px;}
+  #main .content .row.flex .left {margin-right:0;}
+  table{margin-bottom: 54px;}
+  .btnWP.start{justify-content: flex-start;}
+  .btnWP.start .btn{margin-right:43px;}
+  .btn.blue{margin-bottom:0;margin-left:10px;}
+@media(max-width:1145px){
+  #main .content .row.flex select,
+  #main .content .row.flex input{width:74% ;}
+}
+@media(max-width:720px){
+  #main .content .row.flex .left,
+   #main .content .row.flex .right{flex-direction: row;}
+   #main .content .row.flex select,
+  #main .content .row.flex input{width:54% ;}
+  #main .content .row.flex .left p,
+   #main .content .row.flex .right p,
+     #main .content .row.flex input,
+      #main .content .row.flex select{margin-bottom: 0;}
+      #main .content .row.flex .right p,
+      #main .content .row.flex .left p{margin-left: 0;}
+}
+@media(max-width:430px){
+  #main .content .row.flex input,
+   #main .content .row.flex select{padding: 6px 10px;}
+}
+@media(max-width:375px){
+   #main .content .row.flex.search p{width: 60px;}
+}

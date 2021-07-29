@@ -14,8 +14,11 @@
   .side>li>a::after,
   .side>li .two>li.hasChild .open.text,
   .side>li>a.symbol::after{width: 20px;height: 20px;top:7px;right:2px;}
+  .side li {padding: 10px 38px;}
+  header .side li, #main .side li{padding: 5px 18px;}
 }
 @media(max-width:1300px){
+ header .side li, #main .side li {padding: 5px 0 5px 18px;}
 .side>li .two li{padding-left: 9px;}
 .side li {padding: 5px 10px;}
 .side>li .two>li.hasChild .open,
@@ -26,29 +29,25 @@
   .sideWP{width:20%;}
 }
 @media(max-width:1260px){
-#main .content{padding-top: 39px;}
-}
-@media(max-width:1408px){
-  /* header .wrapper {padding: 46px 39px;}
-  header .wrapper .logoImg,
-  header .btnWP, */
   #main .sideWP{display: none;}
   #main .content{width: 100%;}
-  .side li {padding: 10px 38px;}
+#main .content{padding-top: 39px;}
+header .btnWP,header .wrapper .logoImg{display: none;}
+  header .wrapper nav{display: block;position: absolute;left:90%;z-index: 2;}
+  header .wrapper .menu{overflow: hidden;height: 100vh;}
+  header .wrapper .menu .side{overflow: scroll;height: 400px;}
+  header .wrapper .menu .one{background-color: transparent;padding-left:0;}
+  header .wrapper .menu .bottom{flex-direction: column;margin-top: 30px;}
 }
+
 @media(max-width:1145px){
 .pcTable{display: none;}
 .mobileTable{display: block;}
 }
 @media(max-width:1120px){
   header .wrapper {padding: 46px 39px;}
-  header .wrapper .logoImg,
-  header .btnWP{display: none;}
-  header .wrapper nav{display: block;position: absolute;left:90%;z-index: 2;}
-  header .wrapper .menu{overflow: hidden;height: 100vh;}
-  header .wrapper .menu .side{overflow: scroll;height: 400px;}
-  header .wrapper .menu .one{background-color: transparent;padding-left:0;}
-  header .wrapper .menu .bottom{flex-direction: column;margin-top: 30px;}
+  
+  
 }
 @media(max-width:1110px){
   #main .content .row.flex{flex-direction: column;margin-bottom:24px;height: auto;}

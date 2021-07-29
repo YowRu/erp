@@ -15,6 +15,7 @@ width:80%;margin:0 auto 6px;}
 .detailText .btnWP{width: 300px;margin:16px auto 0;}
 .detailText .editDelete .btn:nth-child(1){margin-right: 100px;}
 .mobileTable input{width:100%;padding: 2px 8px;box-sizing: border-box;}
+table{margin: 0;}
 @media(max-width:500px){
 .detailText .btnWP {width: 80%;}
 .detailText .editDelete .btn:nth-child(1){margin-right: 50px;}
