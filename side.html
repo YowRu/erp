@@ -95,24 +95,12 @@
     let sideNo = $('.sideNo').text();
     let itemNo = $('.itemNo').text();
     let child =$('#main>.childNo').text();
-   
-    if(consult[number-1] === "index.html"){
-      // $('header .side ,#main .side').find('li').removeClass('current');
-      // $('header .side>li.current .two ,#main .side>li.current .two').css({'display':'none'});
+    if(consult[number-1] === "index.html" || consult[number-1] == ""){
       $('header .side ').find('li').removeClass('current');
       $('#main .side').find('li').removeClass('current');
       $('header .side>li.current .two ').css({'display':'none'});
       $('#main .side>li.current .two').css({'display':'none'});
     }else{
-      // $('header .side>li,#main .side>li').eq(sideNo).addClass('current');
-      // $('header .side>li.current .two,#main .side>li.current .two').css({'display':'block'});
-      // $('header .side>li.current .two li,#main .side>li.current .two li').eq(itemNo).addClass('current');
-      // $('header .side>li.current,#main .side>li.current').children('.one').addClass('symbol');
-      // $('header .side>li').add('#main .side>li').eq(sideNo).addClass('current');
-      // $('header .side>li.current .two').add('#main .side>li.current .two').css({'display':'block'});
-      // $('header .side>li.current .two li').add('#main .side>li.current .two li').eq(itemNo).addClass('current');
-      // $('header .side>li.current').add('#main .side>li.current').children('.one').addClass('symbol');
-
       $('header .side>li').eq(sideNo).addClass('current');
       $('#main .side>li').eq(sideNo).addClass('current');
       $('header .side>li.current .two').css({'display':'block'});

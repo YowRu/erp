@@ -6,7 +6,7 @@ width:80%;margin:0 auto 6px;}
   min-width: 100px;
   width: 45%;text-align: center;
 }
-.detailText p.td{color: #6D6D6D;}
+.detailText p.td{color: #6D6D6D;word-break: break-all;}
 .detailText a.btn{display: flex;justify-content: space-around;align-items: center;width: 109px;padding:0 8px;cursor: pointer;}
 .detailText a.btn span{color: #fff;width:40px;}
 .detailText .btnWP{width: 300px;margin:16px auto 0;}
@@ -15,8 +15,9 @@ width:80%;margin:0 auto 6px;}
 @media(max-width:500px){
 .detailText .btnWP {width: 80%;}
 .detailText .editDelete .btn:nth-child(1){margin-right: 50px;}
-.detailText p{width: 100%;}
+.detailText p{width: 100%;word-break: break-all;}
 .detailText .rowText div{justify-content: space-between;width: 98%;}
+.detailText .rowText div.one{justify-content: center;}
 .detailText p{text-align: left;}
 .detailText a.btn{width: 90px;}
 }

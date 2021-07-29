@@ -12,19 +12,9 @@
   <link rel="stylesheet" href="css/pagination.css">
   <link rel="stylesheet" href="css/rwd.css" type="text/css">
   <link rel="stylesheet" href="css/mobileTable.css">
+  <link rel="stylesheet" href="css/itemMaintenance.css">
   <title>物料品項維護</title>
 </head>
-<style>
-#main .content .row.flex.white{margin-bottom: 33px;}
-#main .content .row.flex.white p{background-color: #fff;color: #2D3142;}
-#main .content .row.flex.white select,#main .content .row.flex.white input{width: 80%;border:1px solid #2D3142;color: #BFC0C0;}
-.btnWP.top{display: flex;justify-content: space-between;align-items: center;}
-.btnWP.top .left{display: flex;justify-content: center;align-items: center;}
-.btnWP.top .btn.yellow{margin:0 24px 16px;}
-table{margin: 52px auto;}
-#main .btnWP{justify-content: space-between;}
-
-</style>
 <body>
   <header></header>
   <div id="main">
@@ -51,7 +41,7 @@ table{margin: 52px auto;}
           </div>
           <div class="btn search">查詢</div>
         </div>
-        <table>
+        <table class="pcTable check">
           <tr>
             <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
             <th>物料編號</th>

@@ -39,6 +39,7 @@
 }
 @media(max-width:720px){
   #main .content .row.flex.long select{width: 100%;}
+  #main .content .row.flex.long{margin-bottom: 0;}
 }
 @media(max-width:600px){
   #main .content .row.flex .left p,

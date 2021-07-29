@@ -1,0 +1,19 @@
+#main .content .row.flex.white{margin-bottom: 33px;}
+#main .content .row.flex.white p{background-color: #fff;color: #2D3142;}
+#main .content .row.flex.white select,
+#main .content .row.flex.white input{width: 80%;border:1px solid #2D3142;color: #BFC0C0;}
+#main .content .row.flex.white input{margin: 0;}
+.btnWP.top{display: flex;justify-content: space-between;align-items: center;}
+.btnWP.top .left{display: flex;justify-content: center;align-items: center;}
+.btnWP.top .btn.yellow{margin:0 24px 16px;}
+table{margin: 52px auto;}
+#main .btnWP{justify-content: space-between;}
+@media(max-width:800px){
+  #main .content .row.flex.white p{width: 100px;padding: 6px 16px}
+  .btnWP .btn.add {margin-right: 5%}
+}
+@media(max-width:720px){
+  #main .content .row.flex.white select,
+   #main .content .row.flex.white input{width: 90%;}
+  #main .content .row.flex.white p {width: 90%;margin: 0 auto;padding: 6px 0;}
+}

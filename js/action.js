@@ -149,15 +149,15 @@ for(let i=0;i<$('.mobileTable .datePicker').length;i++){
   
   $('.addVendor').click(function(){
     if(W<1146){
-      let newTr = $(this).parents('section').find('.mobileTableWP .mobileTable').last().clone();
+      let newTr = $(this).parents('section').find('.mobileTableWP .mobileTable.copy').clone().removeClass('copy');
       $(this).parents('section').find('.mobileTableWP').append(newTr);
       let n = $(this).parents('section').find('.mobileTableWP .mobileTable').length;
       
       for(let i=0;i<n;i++){
         if(n<10){
-          $('.mobileTable').eq(i).find('.number').text('0'+(i+1));
+          $('.mobileTable').eq(i).find('.number').text('0'+(i));
         }else{
-          $('.mobileTable').eq(i).find('.number').text(i+1);
+          $('.mobileTable').eq(i).find('.number').text(i);
         }
       } 
     }else{
@@ -193,9 +193,10 @@ for(let i=0;i<$('.mobileTable .datePicker').length;i++){
 
   $('.btn.add.orange').click(function(){
     if(consult[number-1] === "addItem.html" 
+    || consult[number-1] === "setItemDetail.html"
     || consult[number-1] === "addContract.html"){
       if(W<1146){
-        
+        $('.mobileTable.hide').hide();
         let newTR = $(this).parents('.btnWP.top').siblings('.mobileTableWP').find('.mobileTable.copy').clone().removeClass('copy');;
         $(this).parents('.btnWP.top').siblings('.mobileTableWP').append(newTR);
         mobileTableNO();
@@ -205,7 +206,6 @@ for(let i=0;i<$('.mobileTable .datePicker').length;i++){
         orangeWP();
         tableNO();
       }
-      
     }else if(consult[number-1] === "setItemDetail.html" ){
       return
     }else{
@@ -213,10 +213,11 @@ for(let i=0;i<$('.mobileTable .datePicker').length;i++){
     }
   });
 //addItem
+
+
   $('.btn.blue').click(function(){
     if(consult[number-1] === "setItemDetail.html"){
-      if(W<1146){
-        
+      if(W<1146){  
         let newTR = $(this).parents('.pop').prev('section').find('.mobileTable.copy').clone().removeClass('copy');;
         $(this).parents('.pop').prev('section').find('.mobileTableWP').append(newTR);
         mobileTableNO();
@@ -231,8 +232,21 @@ for(let i=0;i<$('.mobileTable .datePicker').length;i++){
       $('.orangeWP').addClass('show');
       orangeWP();
     }
-    
   });
+
+$('.btn.blue.comfirm').click(function(){
+  if(W<1146){
+    $('.mobileTable.hide').hide();
+    let newTR = $(this).parents('.btnWP.top').siblings('.mobileTableWP').find('.mobileTable.copy').clone().removeClass('copy');;
+    $(this).parents('.btnWP.top').siblings('.mobileTableWP').append(newTR);
+    mobileTableNO();
+  }else{
+    let newTR = $(this).parents('.btnWP.top').siblings('table').find('.copy').clone().removeClass('copy');
+    $(this).parents('.btnWP.top').siblings('table').find('tbody').append(newTR);
+    orangeWP();
+    tableNO();
+  }
+});
 
   $('.btn.confirm').click(function(){
     $('.orangeWP').hide();
