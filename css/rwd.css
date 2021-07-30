@@ -3,18 +3,17 @@
   .titleImg{width: 300px;}
 }
 @media(max-width:1600px){
-  .side li{padding: 5px 28px;}
+  #main .side li{padding: 5px 28px;}
 }
 @media(max-width:1500px){
-  .side li{padding: 5px 18px;}
+  #main .side li{padding: 5px 18px;}
 }
 @media(max-width:1450px){
-  .side>li a{font-size: 1.2rem;}
-  .side>li .two>li.hasChild .open,
-  .side>li>a::after,
-  .side>li .two>li.hasChild .open.text,
-  .side>li>a.symbol::after{width: 20px;height: 20px;top:7px;right:2px;}
-  .side li {padding: 10px 38px;}
+  #main .side>li a{font-size: 1.2rem;}
+  #main .side>li .two>li.hasChild .open,
+  #main .side>li>a::after,
+  #main .side>li .two>li.hasChild .open.text,
+  #main .side>li>a.symbol::after{width: 20px;height: 20px;top:7px;right:2px;}
   header .side li, #main .side li{padding: 5px 18px;}
 }
 @media(max-width:1300px){
@@ -46,8 +45,6 @@ header .btnWP,header .wrapper .logoImg{display: none;}
 }
 @media(max-width:1120px){
   header .wrapper {padding: 46px 39px;}
-  
-  
 }
 @media(max-width:1110px){
   #main .content .row.flex{flex-direction: column;margin-bottom:24px;height: auto;}

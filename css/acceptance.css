@@ -1,0 +1,22 @@
+#main .content .row.flex p{width: 100px;}
+  #main .btn.blue{margin:10px 0 ;}
+  #main .content .row.flex .keyWordWP{display: flex;justify-content: flex-start;align-items: center;}
+  #main .content .row.flex .keyWordWP,
+  #main .content .row.flex input.keyWord{width:70%;}
+  #main .content .row.flex input.keyWord{margin-right: 10px;}
+  #main .btnWP.top{display: flex;justify-content: flex-start;align-items: center;}
+  .pagination{margin-top: 48px;}
+  @media(max-width:1110px){
+    #main .content .row.flex{margin-bottom: 0;}
+  }
+  @media(max-width:720px){
+    #main .content .row.flex p{text-align: left;}
+    #main .content .row.flex select,
+    #main .content .row.flex input,
+    #main .content .row.flex .keyWordWP,
+    #main .content .row.flex input.keyWord{width: 100%;}
+    #main .content .row.flex .left p,
+    #main .content .row.flex .right p,
+    .content .row.flex .labelWP{margin-bottom: 0;}
+    #main .btnWP.top{margin-top: 20px;}
+  }

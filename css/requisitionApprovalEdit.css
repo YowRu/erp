@@ -1,0 +1,41 @@
+#main .content>.row.flex:nth-child(4):after,
+#main .content>.row.flex:nth-child(5):after{content:'';}
+#main .content .row.flex p.blue{background-color: #8196BB;color: #fff;}
+.row.orange{background-color:#EF8354;}
+#main .content .row.flex.long{width: 100%;justify-content: flex-start;}
+#main .content .row.flex.long .blue{padding-left: 26px;width: 23%;margin-right: 22px;}
+#main .content .row.flex.long select{width:76%;}
+#main .content .btnWP{display: flex;justify-content: center;align-items: center;}
+#main .content .btnWP .btn{margin:0 50px;}
+#main .content{margin-bottom: 60px;}
+.flex.between{display: flex;justify-content: space-between;align-items: center;}
+#main .content .row.flex.long p{width:30%;}
+#main .content .row.flex .dateWP input{padding-left:0;color:#2D3142;margin-left: 0;}
+#main .content>.row.flex:nth-child(3),
+#main .content>.row.flex:nth-child(4),
+#main .content>.row.flex:nth-child(5){padding-bottom: 0;}
+#main .content .dayWP,
+#main .content .dayWP label{display: flex;justify-content: flex-start;align-items: center;}
+#main .content .dayWP,
+#main .content .dayWP label{width:49%;}
+#main .content .row.flex input[type="radio"]{width: 20px;}
+#main .content .row.flex.day .right select:nth-child(1){width: 35%;margin-right:3%;}
+#main .content .row.flex.day .right select:nth-child(2){width: 62%;}
+#main .content .row.flex input{margin: 0 5px;}
+@media(max-width:1110px){
+  #main .content>.row.flex:nth-child(3) .right:after,
+  #main .content>.row.flex:nth-child(4) .right:after,
+  #main .content>.row.flex:nth-child(5) .right:after{content: '';}
+  #main .content .row.flex,
+  #main .content>.row.flex:nth-child(3) .right,
+   #main .content>.row.flex:nth-child(4) .right,
+    #main .content>.row.flex:nth-child(5) .right{margin-bottom:10px;}
+}
+@media(max-width:720px){
+  #main .content .row.flex .left div,
+  #main .content .row.flex .right div{width:100%}
+  #main .content .btnWP .btn{margin:0 auto;}
+  #main .content .row.flex.day .right{flex-direction: column;}
+  #main .content .row.flex.day .right select:nth-child(1),
+  #main .content .row.flex.day .right select:nth-child(2){width: 100%;}
+}

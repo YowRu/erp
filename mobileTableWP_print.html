@@ -86,15 +86,3 @@
     </div>
   </div>
 </div>
-<script>
-  $(document).ready(function(){
-    let pathname = window.location.pathname;
-    let consult = pathname.split("/");
-    let number = consult.length
-    if(consult[number-1] ==="contractList.html"){
-      $('.editDelete .btn.blue').prop('href','contractEdit.html');
-    }else if(consult[number-1] ==="contractEdit.html"){
-      $('.editDelete .btn.blue').addClass('editVendor');
-    }
-  });
-</script>
