@@ -12,23 +12,11 @@
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/requisition.css">
   <link rel="stylesheet" href="css/pagination.css">
+  <link rel="stylesheet" href="css/rwd.css" type="text/css">
+  <link rel="stylesheet" href="css/mobileTable.css">
+  <link rel="stylesheet" href="css/requisitionApproval.css">
   <title>請購單核准</title>
 </head>
-<style>
-  .btnWP.top{justify-content:space-between;}
-  #main .content .row.flex{justify-content:flex-start;}
-  #main .content .row.flex.long{width:100%;}
-  #main .content .row.flex.long .left{width:82%;}
-  #main .content .row.flex.long .left input{width:90%;}
-  #main .content .row.flex .left p
-  ,#main .content .row.flex .right p{text-align:left;width: 100px;}
-  #main .content .row.flex .left {margin-right:0;}
-  table{margin-bottom: 54px;}
-  .btnWP.start{justify-content: flex-start;}
-  .btnWP.start .btn{margin-left:0;}
-  .btn.blue{margin-bottom:0;margin-left:10px;}
-
-</style>
 <body>
   <header></header>
   <div id="main">
@@ -71,7 +59,7 @@
           </div>
           <a href="" class="btn blue">查詢</a>
         </div>
-        <table>
+        <table class="pcTable print">
           <tr>
             <th width="5%">項次</th>
             <th>請購單號</th>
