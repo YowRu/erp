@@ -4,4 +4,16 @@ border: 1px solid #4F5D75;height: 31px;background-color: #fff;border-radius: 5px
    height: 31px;line-height: 29px;cursor: pointer;}
 .inputAmount .plus{font-size: 1.5rem;}
 .inputAmount .less{line-height: 23px;}
-.inputControl{width: 48px;border:0;border-right: 1px solid #4F5D75;border-left: 1px solid #4F5D75;height: 31px;text-align: center;}
+.inputControl{width: 48px;border:0;
+   border-right: 1px solid #4F5D75;border-left: 1px solid #4F5D75;
+   height: 31px;text-align: center;}
+@media(max-width:1619px){
+   #main .content section.flex .listWP .list li .info .down{flex-direction: column;align-items: flex-start;}
+   #main .content section.flex .listWP .list li .info .down .left,
+   #main .content section.flex .listWP .list li .info .down .right{width:100%;margin-top: 10px;}
+}
+@media(max-width:1325px){
+   section.flex .listWP .list input[type="checkbox"] {
+      margin-right: 5px;
+  }
+}

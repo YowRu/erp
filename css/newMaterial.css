@@ -41,3 +41,15 @@
     box-shadow: 0 8px 8px #bfc0c080;padding: 20px 27px;margin-bottom: 19px;}
   .btnWP.top{justify-content: flex-start;}
   table{border-collapse:collapse;width: 100%;}
+  @media(max-width:1280px){
+    #main .content section.flex .listWP {padding: 25px 20px;}
+  }
+  @media(max-width:1110px){
+    #main .content .row.flex .right {
+      margin-left: 0
+  }
+    #main .content .bottom .row.flex .right {margin-left:0;flex-direction: column;}
+    #main .content .bottom .row.flex .right input,
+    #main .content .bottom .row.flex.searchBar input{margin-right: 0;width: 100%;margin-bottom: 10px;}
+    #main .content section.flex .listWP .btn.search{width:100%;}
+  }
