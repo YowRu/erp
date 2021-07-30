@@ -16,15 +16,17 @@
     #main .content .row.flex.long{margin:10px auto;}
     #main .content>.row.flex:nth-child(3) .right:after{content: '';}
     #main .content>.row.flex:nth-child(3) .right{margin-bottom:0;}
+    #main .content .bottom .row.flex .right.row{flex-direction: row;}
   }
   @media(max-width:1000px){
     section.flex{flex-direction: column;}
-    #main .content .bottom .row.flex .left,
-    #main .content .bottom .row.flex.long{display: none;}
+    #main .content .bottom .row.flex.none .left,
+    #main .content .bottom .row.flex.long.none{display: none;}
     
   }
   @media(max-width:720px){
     #main .content .row.flex .left div,
      #main .content .row.flex .right div{width: 100%;}
      #main .content .btnWP .btn{margin: 0 auto;}
+     #main .content .bottom .row.flex .right.row{flex-direction: column;}
   }

@@ -59,6 +59,7 @@ header .btnWP,header .wrapper .logoImg{display: none;}
   #main .content>.row.flex:nth-child(3), 
   #main .content>.row.flex:nth-child(4), 
   #main .content>.row.flex:nth-child(5){padding-bottom: 0;}
+  header .wrapper .menu{top: 131px;}
 }
 
 @media(max-width:700px){
