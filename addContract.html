@@ -15,23 +15,11 @@
   <link rel="stylesheet" href="css/depotPermissions.css">
   <link rel="stylesheet" href="css/newMaterial.css">
   <link rel="stylesheet" href="css/addItem.css">
+  <link rel="stylesheet" href="css/rwd.css" type="text/css">
+  <link rel="stylesheet" href="css/mobileTable.css">
+  <link rel="stylesheet" href="css/addContract.css">
   <title>新增開口契約請購單</title>
 </head>
-<style>
-  #main .content>.row.flex:nth-child(4):after,
-  #main .content>.row.flex:nth-child(5):after{content:'';}
-  #main .content .row.flex p.blue{background-color: #8196BB;color: #fff;}
-  .row.orange{background-color:#EF8354;}
-  #main .content .row.flex.long{width: 100%;justify-content: flex-start;}
-  #main .content .row.flex.long .blue{padding-left: 26px;width: 23%;margin-right: 22px;}
-  #main .content .row.flex.long select{width:76%;}
-  #main .content .btnWP{display: flex;justify-content: center;align-items: center;}
-  #main .content .btnWP.top{justify-content: flex-start;margin: 10px 0 20px 0;}
-  #main .content .btnWP .btn{margin:0 50px;}
-  #main .content .btnWP.top .btn{margin:0;}
-  #main .content{margin-bottom: 60px;}
-  .flex.between{display: flex;justify-content: space-between;align-items: center;}
-</style>
 <body>
   <header></header>
   <div id="main">
@@ -70,16 +58,16 @@
           <div class="btnWP top">
             <a class="btn add orange">新增</a>
           </div>
-          <table>
+          <table class="pcTable edit">
             <tr>
               <th width="5%">項次</th>
-              <th width="10%">物料編號</th>
+              <th width="5%">物料編號</th>
               <th width="5%">項目</th>
-              <th width="15%">規格說明</th>
+              <th width="10%">規格說明</th>
               <th width="5%">單位</th>
               <th width="5%">單價</th>
               <th width="5%">庫存</th>
-              <th width="10%">申請數量</th>
+              <th width="5%">申請數量</th>
               <th width="5%">總計</th>
               <th width="5%">編輯 刪除</th>
             </tr>

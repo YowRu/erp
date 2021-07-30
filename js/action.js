@@ -197,7 +197,7 @@ for(let i=0;i<$('.mobileTable .datePicker').length;i++){
     || consult[number-1] === "addContract.html"){
       if(W<1146){
         $('.mobileTable.hide').hide();
-        let newTR = $(this).parents('.btnWP.top').siblings('.mobileTableWP').find('.mobileTable.copy').clone().removeClass('copy');;
+        let newTR = $(this).parents('.btnWP.top').siblings('.mobileTableWP').find('.mobileTable.copy').clone().removeClass('copy');
         $(this).parents('.btnWP.top').siblings('.mobileTableWP').append(newTR);
         mobileTableNO();
       }else{
