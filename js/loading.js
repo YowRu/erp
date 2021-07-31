@@ -55,11 +55,13 @@ $(document).ready(function(){
         }else if($(this).hasClass('audit')){
           $('<div class="mobileTableWP audit"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
           $('.mobileTableWP.audit').load('mobileTableWP_audit.html');
+        }else if($(this).hasClass('auditDelete')){
+          $('<div class="mobileTableWP auditDelete"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+          $('.mobileTableWP.auditDelete').load('mobileTableWP_auditDelete.html');
+        }else if($(this).hasClass('inputTwo')){
+          $('<div class="mobileTableWP inputTwo"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+          $('.mobileTableWP.inputTwo').load('mobileTableWP_inputTwo.html');
         }
-        // else if($(this).hasClass('inputAmount')){
-        //   $('<div class="mobileTableWP inputAmount"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
-        //   $('.mobileTableWP.inputAmount').load('mobileTableWP_inputAmount.html');
-        // }
 
       });
     }  

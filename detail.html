@@ -29,7 +29,7 @@
     <span>倉庫1</span>
   </div>
 </div>
-<table class="yellow">
+<table class="yellow pcTable inputTwo">
   <tr>
     <th width="6%">項次</th>
     <th width="8%">品號</th>
@@ -50,10 +50,6 @@
     <td>5</td>
     <td>5</td>
     <td class="reason">
-      <!-- <div class="flex">
-        <label for=""><input type="radio" name="approve1" >批准</label>
-        <label for=""><input type="radio" name="approve1" checked>退回</label>
-      </div> -->
       <div class="textReason">備註原因</div>
     </td>
     <td><div class="inputAmount"></div></td>
@@ -67,10 +63,6 @@
     <td>5</td>
     <td>5</td>
     <td class="reason">
-      <!-- <div class="flex">
-        <label for=""><input type="radio" name="approve2" checked>批准</label>
-        <label for=""><input type="radio" name="approve2">退回</label>
-      </div> -->
       <div class="textReason">備註原因</div>
     </td>
     <td><div class="inputAmount"></div></td>
@@ -84,15 +76,12 @@
     <td>5</td>
     <td>5</td>
     <td class="reason">
-      <!-- <div class="flex">
-        <label for=""><input type="radio" name="approve3" checked>批准</label>
-        <label for=""><input type="radio" name="approve3">退回</label>
-      </div> -->
       <div class="textReason">備註原因</div>
     </td>
     <td><div class="inputAmount"></div></td>
   </tr>
 </table>
+<div class="mobileTableWP inputTwo"></div>
 <div class="btnWP">
   <div class="btn cancel yellow margin">退回</div> 
   <div class="btn confirm blue">核發</div>
@@ -100,6 +89,7 @@
 <script>
   $(document).ready(function(){
     $('.inputAmount').load('inputAmount.html');
+    $('.mobileTableWP.inputTwo').load('mobileTableWP_inputTwo.html');
 
     $('input[type="radio"]').attr('disabled','disabled');
 

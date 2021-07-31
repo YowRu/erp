@@ -1,7 +1,7 @@
 section{padding: 54px 35px;}
 #main .content .row.flex p{width:70px;padding:0;background-color:#fff;color:#2D3142;line-height:36px;text-align: right;}
 #main .content .row.flex select,
-#main .content .row.flex input{border:1px solid #2D3142;border-radius:5px;width:400px;}
+#main .content .row.flex input{border:1px solid #2D3142;border-radius:5px;width:253px;}
 #main .content .row.flex input{margin: 0;}
 .btn.search.blue{margin-bottom: 0;}
 table{margin-top: 35px;}
@@ -24,3 +24,15 @@ table.yellow td{padding:17px 18px;}
 .btnWP .btn.margin{margin-right: 100px;}
 .btnWP .btn.yellow{color:#fff ;background-color:#FCA311 ;}
 input[type="radio"]{margin-right: 4px;}
+@media(max-width:1145px){
+  .reason .textReason{width: 100%;display: block;}
+}
+@media(max-width:1110px){
+  #main .content .row.flex select, #main .content .row.flex input{width: 85%;}
+  #main .content .row.flex:nth-child(1) .left{margin-bottom: 0;}
+}
+@media(max-width:720px){
+  #main .content .row.flex .left p,
+  #main .content .row.flex .right p{text-align: left;}
+  #main .content .row.flex select, #main .content .row.flex input{width: 100%;}
+}

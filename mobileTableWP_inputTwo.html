@@ -1,0 +1,39 @@
+<div class="mobileTable">
+    <table class="yellow">
+      <tr>
+        <th>項次</th>
+        <th>標案案號</th>
+        <th>標案名稱</th>
+      </tr>
+      <tr>
+        <td class="number">01</td>
+        <td>1100809</td>
+        <td>標案名稱</td>
+      </tr>
+    </table>
+    <div class="detailText">
+      <div class="rowText border gray">
+        <div>
+          <p>預算金額(元)</p>
+          <p>5,000</p>
+        </div>
+        <div>
+          <p>採購單位</p>
+          <p>電機館</p>
+        </div>
+        <div>
+          <p>批准請示</p>
+          <p class="reason"><span class="textReason">備註原因</span></p>
+        </div>
+        <div>
+          <p>核准量</p>
+          <p class="inputAmount"></p>
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $('.inputAmount').load('inputAmount.html');
+  });
+</script>
