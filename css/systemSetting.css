@@ -12,8 +12,8 @@ background-color:#fff;border-radius:10px;margin-right: 27px;padding-top: 25px;}
   position: absolute;top:2px;right:-20px;}
 .two{display: none;padding-top: 10px;padding-left:17px;}
 #main .content .left{width: 82%;}
-.btnWP{display: flex;justify-content: center;align-items: center;margin-top: 236px;}
-.btnWP .btn.cancel{margin-right: 100px;}
+/* #main .btnWP{display: flex;justify-content: center;align-items: center;margin-top: 236px;} */
+#main .btnWP .btn.cancel{margin-right: 100px;}
 section{padding:32px 29px;border-radius: 10px;box-shadow: 0 8px 8px #BFC0C080;}
 section .btn.add{color: #fff;background-color:#EF8354;border:0;}
 #main .content .systemSide ul li.current{color: #FCA311;}

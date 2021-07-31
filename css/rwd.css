@@ -42,6 +42,15 @@ header .btnWP,header .wrapper .logoImg{display: none;}
 @media(max-width:1145px){
 .pcTable{display: none;}
 .mobileTable{display: block;}
+#main .content{flex-direction: column;}
+#main .content .systemSide{width: 100%;}
+#main .content>.left{width: 100%;margin-top: 87px;}
+#main .content .systemSide{height:100px;padding: 5px 0;}
+#main .content .systemSide>p{margin:0;}
+#main .content .systemSide ul{display: flex;justify-content: space-around;align-items: flex-start;
+margin-top: 10px;background-color: #fff;flex-wrap: wrap;}
+#main .content .systemSide ul.two{flex-direction: column;margin-top: 0;padding-top: 0;}
+#main .content .systemSide ul.two li{margin: 10px 0 0;}
 }
 @media(max-width:1120px){
   header .wrapper {padding: 46px 39px;}
@@ -63,7 +72,8 @@ header .btnWP,header .wrapper .logoImg{display: none;}
 #main .content {padding: 39px 28px 0;}
 #main .content .row.flex .left, 
   #main .content .row.flex .right{flex-direction: column;height: auto;margin:0 auto 12px;width:100%;}
-  
+  #main .content .systemSide ul li{width: 33%;}
+  #main .content .systemSide ul.two li{width: 100%;}
 }
 
 @media(max-width:500px){
@@ -75,6 +85,8 @@ header .btnWP,header .wrapper .logoImg{display: none;}
   header .wrapper .menu{top:70px}
   #main section{padding: 29px 10px;}
   #main .content {padding: 39px 18px 0;}
+  #main .content .systemSide ul li{width: 50%;}
+  #main .content>.left{margin-top: 124px;}
 }
 @media(max-width:414px){
   .btn{width: 79px;overflow: hidden;}
