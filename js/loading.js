@@ -64,7 +64,11 @@ $(document).ready(function(){
         }else if($(this).hasClass('inputTwo')){
           $('<div class="mobileTableWP inputTwo"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
           $('.mobileTableWP.inputTwo').load('mobileTableWP_inputTwo.html');
+        }else if($(this).hasClass('user')){
+          $('<div class="mobileTableWP user"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+          $('.mobileTableWP.user').load('mobileTableWP_user.html');
         }
+        
 
       });
     }  
