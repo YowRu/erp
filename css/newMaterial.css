@@ -50,7 +50,11 @@
     #main .content .bottom .row.flex .right {margin-left:0;flex-direction: column;}
     #main .content .bottom .row.flex .right input,
     #main .content .bottom .row.flex.searchBar input{margin-right: 0;width: 100%;margin-bottom: 10px;}
-    #main .content section.flex .listWP .btn.search{width:100%;}
+    #main .content section.flex .listWP .btn.search,
+    #main .content section.flex .listWP .keyWords{width:100%;margin: 0;}
+    #main .content>.row.flex:nth-child(3) .right:after{content: '';}
+    #main .content .row.flex{margin-bottom: 12px;}
+    #main .content section.flex .listWP .btn.orange{margin-top: 10px;}
   }
   /* @media(max-width:1000px){
     section.flex{flex-direction: column;}

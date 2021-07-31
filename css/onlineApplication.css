@@ -1,0 +1,16 @@
+section{padding:32px 29px;border-radius:10px;box-shadow:0 8px 8px #BFC0C080;}
+#main .content .row.flex p{background-color:#fff;width:auto;padding:6px 0;color:#2D3142;}
+#main .content .row.flex select{width:75%;border:1px solid #2D3142;}
+#main .btnWP.top{margin: 46px auto 38px;display: flex;justify-content: flex-start;align-items: center;}
+#main .btnWP.top .btn.yellow{margin-right: 24px;}
+table th{background-color: #EEF3FB;color: #4973BB;}
+.pagination{margin-top: 41px;}
+@media(max-width:1110px){
+  #main .content .row.flex .left p,
+  #main .content .row.flex .right p{width: 100px;}
+}
+@media(max-width:720px){
+  #main .content .row.flex .left p,
+  #main .content .row.flex .right p,
+  #main .content .row.flex select{width: 100%;}
+}
