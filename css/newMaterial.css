@@ -44,12 +44,17 @@
   @media(max-width:1280px){
     #main .content section.flex .listWP {padding: 25px 20px;}
   }
+  
   @media(max-width:1110px){
-    #main .content .row.flex .right {
-      margin-left: 0
-  }
+    #main .content .row.flex .right {margin-left: 0}
     #main .content .bottom .row.flex .right {margin-left:0;flex-direction: column;}
     #main .content .bottom .row.flex .right input,
     #main .content .bottom .row.flex.searchBar input{margin-right: 0;width: 100%;margin-bottom: 10px;}
     #main .content section.flex .listWP .btn.search{width:100%;}
   }
+  /* @media(max-width:1000px){
+    section.flex{flex-direction: column;}
+    #main .content .bottom .row.flex.none .left,
+    #main .content .bottom .row.flex.long.none{display: none;}
+    
+  } */

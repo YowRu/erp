@@ -8,29 +8,17 @@
   <script src="js/loading.js"></script>
   <script src="js/action.js"></script>
   <link rel="stylesheet" href="css/layout.css" type="text/css">
-  <link rel="stylesheet" href="css/inputAmount.css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/depotPermissions.css">
   <link rel="stylesheet" href="css/newMaterial.css">
   <link rel="stylesheet" href="css/addRequistion.css">
+  <link rel="stylesheet" href="css/inputAmount.css">
   <link rel="stylesheet" href="css/pagination.css">
+  <link rel="stylesheet" href="css/rwd.css" type="text/css">
+  <link rel="stylesheet" href="css/mobileTable.css">
+  <link rel="stylesheet" href="css/materialAllocation.css">
   <title>物料調撥管理</title>
 </head>
-<style>
-  #main .content>.row.flex:nth-child(3),
-  #main .content>.row.flex:nth-child(4),
-  #main .content>.row.flex:nth-child(5){padding-bottom: 0;}
-#main .content .row.flex.long{justify-content: flex-start;}
-#main .content .row.flex.start .left{width:100%;}
-#main .content .row.flex.start .left p{width:20%;}
-#main .content .row.flex.start .left input{width: 80%;margin-right: 0;}
- #main .content .row.flex.long p{background-color: #fff;width:140px;color: #2D3142;}
- #main .content .row.flex.long select,
- #main .content .row.flex.long input{width:80%;border: 1px solid #2D3142;}
- #main .content .row.flex.long select{margin-left: 15px;}
- .btn.orange,.btn.deepBlue{margin:0 5px;}
- .flex.between p{margin-bottom: 12px;padding-bottom: 8px;}
-</style>
 <body>
   <header></header>
   <div id="main">
@@ -50,7 +38,7 @@
             <div class="btn search deepBlue">查詢</div>
           <div class="btn add orange">新增</div>
         </div>
-        <table>
+        <table class="pcTable checkEdit">
           <tr>
             <th width="5%"class="checkbox"><input type="checkbox" name="all" value="all" class="all"></th>
             <th>年度</th>
@@ -249,8 +237,11 @@
             <div class="btn deleteAll">全部移除</div>
             <ul class="pagination yellow" id="pagination2"></ul>
           </div>
-          <div class="imgWP">
+          <div class="imgWP pc">
             <img src="img/arrowRight.svg" class="arrowRight"alt=""><img src="img/arrowLeft.svg" class="arrowLeft"alt="">
+          </div>
+          <div class="imgWP mobile">
+            <img src="img/down.svg" class="arrowDown"alt=""><img src="img/up.svg" class="arrowUp"alt="">
           </div>
         </section>
         <div class="btnWP">

@@ -5,9 +5,6 @@
 
   $('.plus').click(function() {
       let num =  $(this).parents('.inputAmount').find('.inputControl').val();
-      //  if (num >= 5) {
-      //   return;
-      //  }
       num++;
       $(this).parents('.inputAmount').find('.inputControl').val(num);
   });

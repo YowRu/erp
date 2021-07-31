@@ -31,6 +31,9 @@ $(document).ready(function(){
         }else if($(this).hasClass('check')){
           $('<div class="mobileTableWP check"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
           $('.mobileTableWP.check').load('mobileTableWP_check.html');
+        }else if($(this).hasClass('checkEdit')){
+          $('<div class="mobileTableWP checkEdit"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+          $('.mobileTableWP.checkEdit').load('mobileTableWP_checkEdit.html');
         }else if($(this).hasClass('checkDelete')){
           $( '<div class="mobileTableWP checkDelete"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
           $('.mobileTableWP.checkDelete').load('mobileTableWP_checkDelete.html');
