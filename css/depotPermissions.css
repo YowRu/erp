@@ -21,6 +21,11 @@ margin-bottom: 12px;padding:17px 23px;}
 #main .content section.flex .title.orange{color: #E85110;}
 #main .content section.flex .title.yellow{color:#FCA311;}
 .btnWP{margin-top: 31px;}
+@media(max-width:1110px){
+  #main .content .row.flex.long p,
+  #main .content .row.flex.long input,
+  #main .content .row.flex.long .btn.search{width: 100%;margin-bottom:5px;}
+}
 
 @media(max-width:1000px){
   #main .content section.flex .listWP{width: 100%;}
