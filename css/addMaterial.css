@@ -1,0 +1,40 @@
+#main .content .row.flex p{background-color:transparent;color:#2D3142;width:27%;text-align:right;padding:6px 0;}
+  #main .content .row.flex .left p,
+  #main .content .row.flex .right p{margin-right:40px;}
+  #main .content .row.flex .left div,
+  #main .content .row.flex .right div{background-color:#F6F6F6;width:73%;color:#6D6D6D;
+  border:1px solid #6D6D6D;height:36px;border-radius:5px;padding:6px 27px;box-sizing:border-box;}
+  #main table .flex,
+  #main table .flex .right{display: flex;justify-content: center;align-items: center;}
+  #main table .flex.wrap.start{align-items: flex-start;}
+  #main table td .flex.margin .right li{margin-right: 14px;}
+  #main table td .flex.wrap .right li{width:100%;}
+  #main table .flex.wrap.start .right li{width:28%;margin-right: 7px;}
+  #main table .flex.wrap.start .right{width: 85%;justify-content: flex-start;}
+  #main table .flex.wrap.start .all{width: 14%;margin-left: 43px;}
+  #main table td .flex.wrap .right{flex-wrap: wrap;width: 78%;justify-content: flex-start;}
+  #main table .flex.wrap.start .all::after
+  ,#main table td .all:after{content: '|';margin-right:14px}
+  #main table td .flex.wrap .all{width:19%;}
+  #main table td .flex.wrap .all:after{content: '';}
+  #main table td .flex.wrap.width .all{width: 31%;}
+  #main table td .flex.wrap.width .right{width: 58%;}
+  @media(max-width:1320px){
+    #main .content .row.flex p{width: 30%;}
+    #main .content .row.flex .right div{width:69%}
+  }
+  @media(max-width:1260px){
+    #main .content .row.flex p{width: 35%;}
+    #main .content .row.flex .right div{width:65%}
+  }
+  @media(max-width:800px){
+    #main .content .row.flex p{width:100px;text-align: left;}
+    #main .content .row.flex .left div,
+    #main .content .row.flex .right div{width:80%}
+  }
+  @media(max-width:720px){
+    #main .content .row.flex .left div,
+    #main .content .row.flex .right div{width:100%}
+    .tableWP{overflow: scroll;}
+    .tableWP table{overflow: scroll;width:800px;}
+  }

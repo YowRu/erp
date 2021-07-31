@@ -9,32 +9,12 @@
   <link rel="stylesheet" href="css/layout.css" type="text/css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/systemSetting.css">
+  <link rel="stylesheet" href="css/rwd.css" type="text/css">
+  <link rel="stylesheet" href="css/mobileTable.css">
   <link rel="stylesheet" href="css/userManagement.css">
+  <link rel="stylesheet" href="css/addMaterial.css">
   <title>使用者權限設定</title>
 </head>
-<style>
-  #main .content .row.flex p{background-color:transparent;color:#2D3142;width:83px;text-align:right;padding:6px 0;}
-  #main .content .row.flex .left p,
-  #main .content .row.flex .right p{margin-right:40px;}
-  #main .content .row.flex .left div,
-  #main .content .row.flex .right div{background-color:#F6F6F6;width:348px;color:#6D6D6D;
-  border:1px solid #6D6D6D;height:36px;border-radius:5px;padding:6px 27px;box-sizing:border-box;}
-  #main table .flex,
-  #main table .flex .right{display: flex;justify-content: center;align-items: center;}
-  #main table .flex.wrap.start{align-items: flex-start;}
-  #main table td .flex.margin .right li{margin-right: 14px;}
-  #main table td .flex.wrap .right li{width:65px;}
-  #main table .flex.wrap.start .right li{width:28%;margin-right: 7px;}
-  #main table .flex.wrap.start .right{width: 85%;justify-content: flex-start;}
-  #main table .flex.wrap.start .all{width: 14%;margin-left: 43px;}
-  #main table td .flex.wrap .right{flex-wrap: wrap;width: 78%;justify-content: flex-start;}
-  #main table .flex.wrap.start .all::after
-  ,#main table td .all:after{content: '|';margin-right:14px}
-  #main table td .flex.wrap .all{width:19%;}
-  #main table td .flex.wrap .all:after{content: '';}
-  #main table td .flex.wrap.width .all{width: 31%;}
-  #main table td .flex.wrap.width .right{width: 58%;}
-</style>
 <body>
   <header></header>
   <div id="main">
@@ -64,18 +44,19 @@
               <div>OOO</div> 
             </div>
           </div>
+        <div class="tableWP"> 
           <table>
             <tr>
-              <th width="5%"><input type="checkbox" class="all" name="all" value="all" ></th>
-              <th width="12%">功能</th>
-              <th width="55%">子功能</th>
-              <th width="23%">權限</th>
+              <th width="8%"><input type="checkbox" class="all" name="all" value="all" ></th>
+              <th width="22%">功能</th>
+              <th width="40%">子功能</th>
+              <th width="30%">權限</th>
             </tr>
             <tr>
               <td><input type="checkbox"></td>
               <td>開口契約管理</td>
               <td>
-                <div class="flex margin">
+                <div class="flex wrap width">
                   <div class="all">
                     <input type="checkbox" name="all_1">
                     <label for="all_1" >全選</label>
@@ -127,7 +108,7 @@
               <td><input type="checkbox"></td>
               <td>倉庫物料管理</td>
               <td>
-                <div class="flex wrap start">
+                <div class="flex wrap width">
                   <div class="all">
                     <input type="checkbox" name="all_1">
                     <label for="all_1" >全選</label>
@@ -188,6 +169,7 @@
               </td>
             </tr>
           </table>
+        </div>
         </section> 
         <div class="btnWP">
           <div class="btn cancel"><a href="userPermissions.html">取消</a></div> 
