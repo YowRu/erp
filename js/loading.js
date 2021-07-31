@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  let pathname = window.location.pathname;
+  let consult = pathname.split("/");
+  let number = consult.length
+
     $("header").load("header.html");
     $("footer").load("footer.html");
     $('.sideWP').load("side.html");
@@ -17,7 +21,12 @@ $(document).ready(function(){
     if($('body').find('.pcTable')){
       $('.pcTable').each(function(){
         if($(this).hasClass('edit')){
-          $('<div class="mobileTableWP edit"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+          if(consult[number-1] ==="newMaterial.html"){
+            $('<div class="mobileTableWP edit"></div>' ).insertAfter( $(this).parents('.nextContent').find('.pcTable') );
+          }else{
+            $('<div class="mobileTableWP edit"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+          }
+
           $('.mobileTableWP.edit').load('mobileTableWP.html');
         }else if($(this).hasClass('save')){
           $('<div class="mobileTableWP save"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
