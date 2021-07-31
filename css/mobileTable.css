@@ -14,6 +14,9 @@ width:80%;margin:0 auto 6px;}
 }
 .detailText p.flex{display: flex;justify-content:flex-start;align-items: center;}
 .detailText p.td{color: #6D6D6D;word-break: break-all;}
+.detailText .rowText .editDelete .border{border: 1px solid #4973BB;
+  color: #4973BB;margin: 2.5px;padding: 2px 15px;
+  height: 32px;line-height: 32px;border-radius: 5px;}
 .detailText a.btn{display: flex;justify-content: space-around;align-items: center;width: 109px;padding:0 8px;cursor: pointer;}
 .detailText a.btn span{color: #fff;width:40px;}
 .detailText .btnWP{width: 300px;margin:16px auto 0;}

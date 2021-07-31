@@ -52,6 +52,9 @@ $(document).ready(function(){
         }else if($(this).hasClass('checkUpload')){
           $( '<div class="mobileTableWP checkUpload"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
           $('.mobileTableWP.checkUpload').load('mobileTableWP_checkUpload.html');
+        }else if($(this).hasClass('checkUser')){
+          $( '<div class="mobileTableWP checkUser"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+          $('.mobileTableWP.checkUser').load('mobileTableWP_checkUser.html');
         }else if($(this).hasClass('audit')){
           $('<div class="mobileTableWP audit"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
           $('.mobileTableWP.audit').load('mobileTableWP_audit.html');

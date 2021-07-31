@@ -19,6 +19,5 @@ section .btn.add{color: #fff;background-color:#EF8354;border:0;}
 #main .content .systemSide ul li.current{color: #FCA311;}
 #main .content .row.flex.day input[type=checkbox]{width: 20px;height: 20px;border: 1px solid #6D6D6D;border-radius: 5px;} 
 table th{background-color:#EEF3FB;border:1px solid #4973BB;color: #4973BB;}
-table th.checkbox,table td.checkbox{padding:5px 15px 0px;width:50px;box-sizing: border-box;}
 table td a.border{border:1px solid #4973BB;color: #4973BB;margin:2.5px;padding:2px 25px;height:32px;border-radius: 5px;}
-input[type="checkbox"]{border: 1px solid #6D6D6D;}
+input[type="checkbox"]{border: 1px solid #6D6D6D;height: 13px;}

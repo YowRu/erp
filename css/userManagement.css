@@ -9,11 +9,44 @@ padding:2px 16px;box-sizing: border-box;height:36px;color: #BFC0C0;width:50%;}
 #main .content .row.flex.top .left input{width:65%;}
 #main .content .row.flex input{width: 47%;}
 section .btn.add, section .btn.delete, .btn{margin-bottom: 0;background-color: #4973BB;color: #fff;}
-.btnWP.top{margin:30px 0 28px;justify-content: flex-start;padding-left: 15px;box-sizing: border-box;}
-.btnWP.top .btn{margin-right: 24px;}
-.btnWP.top .btn.deleteAll{background-color:#FCA311;border: 1px solid #FCA311;}
+#main .btnWP.top{margin:30px 0 28px;justify-content: flex-start;padding-left: 15px;box-sizing: border-box;}
+#main .btnWP.top .btn{margin-right: 24px;}
+#main .btnWP.top .btn.deleteAll{background-color:#FCA311;border: 1px solid #FCA311;}
 .btnWP{margin-top: 53px;}
 #main .content .row.flex .left input[type=radio] {border: 1px solid #2D3142;width: 20px;height: 20px;margin-right: 5px;}
 #main .content .row.flex .left span,
 #main .content .row.flex label{width:inherit;display: flex;align-items: center;justify-content: flex-start;}
 #main .content .row.flex label{margin-right:50px;}
+@media(max-width:1500px){
+  table td a.border{padding:2px 15px ;}
+}
+@media(max-width:1320px){
+  table td a.border{padding:2px 5px ;}
+  .detailText .rowText .editDelete{width:60%;}
+}
+@media(max-width:1110px){
+#main .content .row.flex{flex-direction: row;}
+#main .content .row.flex.top .left{width:60%;}
+#main .content .row.flex.top .right{width: 40%;}
+}
+@media(max-width:800px){
+  .detailText .rowText .editDelete{width:70%;}
+  #main .content .row.flex{flex-direction: column;}
+#main .content .row.flex.top .left,
+#main .content .row.flex.top .right,
+#main .content .row.flex.top .right .btn,
+#main .content .row.flex.top .left p,
+#main .content .row.flex.top .left input{width:100%}
+  }
+@media(max-width:700px){
+  .detailText .rowText .editDelete{width:80%;}
+  }
+@media(max-width:600px){
+  .detailText .rowText .editDelete{width:100%;}
+  }
+@media(max-width:414px){
+  .detailText .rowText .editDelete .border{padding: 2px 5px;}
+  }
+@media(max-width:350px){
+  .detailText .rowText .editDelete .border{padding: 2px;}
+  }
