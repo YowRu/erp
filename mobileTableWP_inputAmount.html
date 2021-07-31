@@ -1,0 +1,57 @@
+<div class="mobileTable">
+    <table class="yellow">
+      <tr>
+        <th>項次</th>
+        <th>標案案號</th>
+        <th>標案名稱</th>
+      </tr>
+      <tr>
+        <td class="number">01</td>
+        <td>1100809</td>
+        <td>標案名稱</td>
+      </tr>
+    </table>
+    <div class="detailText">
+      <div class="rowText border gray">
+        <div>
+          <p>預算金額(元)</p>
+          <p>5,000</p>
+        </div>
+        <div>
+          <p>採購單位</p>
+          <p>電機館</p>
+        </div>
+        <div>
+          <p>採購人員</p>
+          <p>OOO</p>
+        </div>
+        <div>
+          <p>核准量</p>
+          <p class="inputAmount"></p>
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $('.inputAmount').load('inputAmount.html');
+    $('.editDelete').click(function(){
+      //btn css
+      $(this).find('.btn').css({'background-color':'#E85110'});
+      $(this).parents('.mobileTable').siblings('.mobileTable').find('.editDelete .btn').css({'background-color':'#4973BB'});
+      //detailText & tr
+      $(this).parents('.mobileTable').find('td').css({'background-color':'#FFF2DC'});
+      $(this).parents('.mobileTable').find('.detailText').css({'background-color':'#FFF2DC'});
+      $(this).parents('.mobileTable').siblings('.mobileTable').find('td').css({'background-color':'#fff'});
+      $(this).parents('.mobileTable').siblings('.mobileTable').find('.detailText').css({'background-color':'#fff'});
+      $('.auditDetail').show();
+    });
+   
+    $('.auditDetail .btnWP .btn.cancel').click(function(){
+      $('.auditDetail').hide();
+      $('.detailText').css({'background-color':'#fff'});
+      $('table td').css({'background-color':'#fff'});
+      $('.editDelete .btn').css({'background-color':'#4973BB'});
+    });
+  });
+</script>

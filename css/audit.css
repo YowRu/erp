@@ -1,0 +1,15 @@
+#main .content .row.flex{justify-content: flex-start;}
+  #main .content .row.flex.long .left{width: 82%;}
+  #main .content .row.flex.long .left input{width:100%;}
+  .auditDetail{display: none;}
+  @media(max-width:1110px){
+    #main .content .row.flex.long .left{width: 100%;}
+  }
+  @media(max-width:720px){
+    #main .content .row.flex p{text-align: left;}
+    #main .content .row.flex select,
+    #main .content .row.flex input{width: 100%;}
+    #main .content .row.flex{margin-bottom: 0;}
+    .btn.search.blue{margin-bottom: 10px;}
+    .row.text>div{width:80%;margin:0 auto;}
+  }

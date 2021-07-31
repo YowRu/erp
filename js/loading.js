@@ -12,6 +12,7 @@ $(document).ready(function(){
     $('section.auditDetail').load('auditDetail.html');
     $('.inputAmount').load('inputAmount.html');
     $('.mobileTableWP.checkLook').load('mobileTableWP_checkLook.html');
+    
 //datePicker
     let n = $('body').find('.datePicker').length
     for(let i=0;i<n;i++){
@@ -26,7 +27,6 @@ $(document).ready(function(){
           }else{
             $('<div class="mobileTableWP edit"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
           }
-
           $('.mobileTableWP.edit').load('mobileTableWP.html');
         }else if($(this).hasClass('save')){
           $('<div class="mobileTableWP save"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
@@ -52,7 +52,15 @@ $(document).ready(function(){
         }else if($(this).hasClass('checkUpload')){
           $( '<div class="mobileTableWP checkUpload"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
           $('.mobileTableWP.checkUpload').load('mobileTableWP_checkUpload.html');
+        }else if($(this).hasClass('audit')){
+          $('<div class="mobileTableWP audit"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+          $('.mobileTableWP.audit').load('mobileTableWP_audit.html');
         }
+        // else if($(this).hasClass('inputAmount')){
+        //   $('<div class="mobileTableWP inputAmount"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+        //   $('.mobileTableWP.inputAmount').load('mobileTableWP_inputAmount.html');
+        // }
+
       });
     }  
 
