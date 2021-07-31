@@ -1,10 +1,16 @@
-.inputAmount{display: flex;justify-content: center;align-items: center;width: 108px;margin-right: 22px;
-border: 1px solid #4F5D75;height: 31px;background-color: #fff;border-radius: 5px;}
-.inputAmount>div{color:#4F5D75;font-size: 2rem;text-align: center;width: 30px;
+.inputAmount,
+.detailText .inputAmount{display: flex;justify-content: center;align-items: center;width: 108px;margin-right: 22px;
+border: 1px solid #4F5D75;min-height: 31px;background-color: #fff;border-radius: 5px;}
+.detailText .inputAmount{margin:0;}
+.inputAmount>div,
+.detailText .inputAmount>div{color:#4F5D75;font-size: 2rem;text-align: center;width: 30px;
    height: 31px;line-height: 29px;cursor: pointer;}
-.inputAmount .plus{font-size: 1.5rem;}
-.inputAmount .less{line-height: 23px;}
-.inputControl{width: 48px;border:0;
+.inputAmount .plus,
+.detailText .inputAmount .plus{font-size: 1.5rem;margin-bottom: 0;}
+.inputAmount .less,
+.detailText .inputAmount .less{line-height: 23px;margin-bottom: 0;}
+.inputControl,
+.detailText .inputControl{width: 48px;border-radius:0;border:0;
    border-right: 1px solid #4F5D75;border-left: 1px solid #4F5D75;
    height: 31px;text-align: center;}
 @media(max-width:1619px){

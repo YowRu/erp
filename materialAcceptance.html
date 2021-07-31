@@ -10,48 +10,18 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/date/jquery-ui-timepicker-addon.js"></script>
   <script src="js/datepicker.js"></script>
+  <script src="js/viewImg.js"></script>
   <link rel="stylesheet" href="js/date/jquery-ui-timepicker-addon.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/layout.css" type="text/css">
-  <link rel="stylesheet" href="css/inputAmount.css">
   <link rel="stylesheet" href="css/contractEdit.css" type="text/css">
   <link rel="stylesheet" href="css/newMaterial.css">
+  <link rel="stylesheet" href="css/rwd.css" type="text/css">
+  <link rel="stylesheet" href="css/mobileTable.css">
+  <link rel="stylesheet" href="css/inputAmount.css">
+  <link rel="stylesheet" href="css/materialAcceptance.css">
   <title>物料進貨驗收</title>
 </head>
-<style>
-#main .content>.row.flex:nth-child(4):after,
-#main .content>.row.flex:nth-child(5):after{content:'';}
-#main .content>.row.flex:nth-child(3),
-#main .content>.row.flex:nth-child(4),
-#main .content>.row.flex:nth-child(5){padding-bottom:0;}
-#main .content span.span.flex{display:flex;justify-content:flex-start;align-items:center;width:49%;}
-#main .content span.span.flex label{display: inline-block;width:48%;display:flex;justify-content:flex-start;align-items:center;}
-#main .content span.span.flex input[type=radio] {border:1px solid #2D3142;width:20px;height:20px;margin-right:5px;}
-#main .content .row.flex select.margin{margin-right:20px;}
-#main .content .row.flex .rigth.margin select{border:1px solid #2D3142;}
-#main .content .row.flex .dateWP input{width:100%;}
-textarea{padding-left:26px;width:100%;height:105px;resize:none;box-sizing:border-box;}
-.inputAmount{margin:0 auto;}
-.height31,input[type="file"]
-{height:31px;border-radius:5px;border:1px solid #4F5D75;}
-td.space-around{text-align: left;}
-td.space-around span{display:inline-block;width:10%;padding-left: 16px;box-sizing:border-box;vertical-align:middle;}
-.btn.border{margin-bottom: 0;vertical-align:middle;}
-table td .right{display: inline-block;position: relative;width:89%;}
-input[type="file"]{width:100%;vertical-align:middle;position: absolute;top: 0;left: 0;
-  opacity: 0;border: 0;cursor: pointer;height:36px;z-index: 2;}
-.right.hasImg{width:76%;}
-table td{padding: 5px 0;}
-table td img{vertical-align:middle;width: 115px;height: 115px;object-fit: contain;display: none;}
-label[for="file-upload"]{
-    width:85%;border: 1px solid #4F5D75;vertical-align: middle;
-    border-radius: 5px;display: inline-block;cursor: pointer;padding-left: 26px;
-    box-sizing: border-box;height:36px;line-height: 36px;
-}
-.view{display: inline-block;}
-.btnWP{display: flex;justify-content: center;align-items: center;margin-bottom: 55px;}
-.btnWP .cancel{margin-right:100px;}
-</style>
 <body>
   <header></header>
   <div id="main">
@@ -102,7 +72,7 @@ label[for="file-upload"]{
       <textarea name="" id="">A倉庫有開口與小額(不用標案)的物料 故若選標案則帶出開口的物料清單</textarea>
       <div class="row blue">物料清單</div>
       <section>
-        <table>
+        <table class="pcTable checkUpload">
           <tr>
             <th>項次</th>
             <th>物料編號</th>
@@ -179,17 +149,5 @@ label[for="file-upload"]{
     <div class="itemNo">0</div>
   </div>
   <footer></footer>
-  <script>
-$('input[type="file"]').change(function(){
-    const [file] = this.files
-  if (file) {
-    let val = URL.createObjectURL(file);
-    $(this).parents('.right').addClass('hasImg');
-        $(this).siblings('label').text(val);
-        $(this).parents('.right').siblings('img').addClass('view');
-    $(this).parents('.right').siblings('img').attr({'src':val});
-  }
-});
-  </script>
 </body>
 </html>

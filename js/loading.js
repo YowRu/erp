@@ -8,12 +8,12 @@ $(document).ready(function(){
     $('section.auditDetail').load('auditDetail.html');
     $('.inputAmount').load('inputAmount.html');
     $('.mobileTableWP.checkLook').load('mobileTableWP_checkLook.html');
-
+//datePicker
     let n = $('body').find('.datePicker').length
     for(let i=0;i<n;i++){
         $('body').find('.datepicker').eq(i).prop('id','date'+i);
     }
-
+//mobile table load
     if($('body').find('.pcTable')){
       $('.pcTable').each(function(){
         if($(this).hasClass('edit')){
@@ -37,6 +37,9 @@ $(document).ready(function(){
         }else if($(this).hasClass('print')){
           $( '<div class="mobileTableWP print"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
           $('.mobileTableWP.print').load('mobileTableWP_print.html');
+        }else if($(this).hasClass('checkUpload')){
+          $( '<div class="mobileTableWP checkUpload"></div>' ).insertAfter( $(this).parents('section').find('.pcTable') );
+          $('.mobileTableWP.checkUpload').load('mobileTableWP_checkUpload.html');
         }
       });
     }  

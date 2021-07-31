@@ -1,0 +1,58 @@
+#main .content>.row.flex:nth-child(4):after,
+#main .content>.row.flex:nth-child(5):after{content:'';}
+#main .content>.row.flex:nth-child(3),
+#main .content>.row.flex:nth-child(4),
+#main .content>.row.flex:nth-child(5){padding-bottom:0;}
+#main .content span.span.flex{display:flex;justify-content:flex-start;align-items:center;width:49%;}
+#main .content span.span.flex label{display: inline-block;width:48%;display:flex;justify-content:flex-start;align-items:center;}
+#main .content span.span.flex input[type=radio] {border:1px solid #2D3142;width:20px;height:20px;margin-right:5px;}
+#main .content .row.flex select.margin{margin-right:20px;}
+#main .content .row.flex .rigth.margin select{border:1px solid #2D3142;}
+#main .content .row.flex .dateWP input{width:100%;}
+textarea{padding-left:26px;width:100%;height:105px;resize:none;box-sizing:border-box;}
+.inputAmount{margin:0 auto;}
+.height31,input[type="file"]
+{height:31px;border-radius:5px;border:1px solid #4F5D75;}
+td.space-around{text-align: left;}
+td.space-around span{display:inline-block;width:10%;padding-left: 16px;box-sizing:border-box;vertical-align:middle;}
+.btn.border{margin-bottom: 0;vertical-align:middle;}
+table td .right{display: inline-block;position: relative;width:89%;}
+input[type="file"]{width:100%;vertical-align:middle;position: absolute;top: 0;left: 0;
+  opacity: 0;border: 0;cursor: pointer;height:36px;z-index: 2;}
+.right.hasImg{width:76%;}
+table td{padding: 5px 0;}
+table td img{vertical-align:middle;width: 115px;height: 115px;object-fit: contain;display: none;}
+label[for="file-upload"]{
+    width:85%;border: 1px solid #4F5D75;vertical-align: middle;
+    border-radius: 5px;display: inline-block;cursor: pointer;padding-left: 26px;
+    box-sizing: border-box;height:36px;line-height: 36px;
+}
+.view{display: inline-block;}
+.btnWP{display: flex;justify-content: center;align-items: center;margin-bottom: 55px;}
+.btnWP .cancel{margin-right:100px;}
+@media(max-width:1600px){
+  label[for="file-upload"] {width: 83%;}
+}
+@media(max-width:1400px){
+  label[for="file-upload"] {width: 82%;}
+}
+@media(max-width:1300px){
+  td.space-around span{width: 11%;}
+}
+
+@media(max-width:1110px){
+  #main .content>.row.flex:nth-child(3) .right:after{content: '';}
+  #main .content .row.flex{margin-bottom: 0;}
+}
+@media(max-width:720px){
+#main .content .row.flex .left div,
+#main .content .row.flex .right div,
+#main .content span.span.flex,
+.detailText p.flex input,
+.detailText p.flex label,
+.detailText p.flex span{width: 100%;}
+#main .content span.span.flex input[type=radio]{margin-left: 0;margin-bottom: 0;}
+.detailText p.flex{flex-direction: column;}
+.detailText p.flex span{margin-top: 5px;}
+.detailText p.flex input{height:76px;}
+}
