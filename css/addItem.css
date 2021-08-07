@@ -13,3 +13,7 @@ table input{width:90%;margin:0 auto;border: 1px solid #BFC0C0;height: 36px;borde
 input[type="checkbox"]{width:13px;height:13px;border: 1px solid #6D6D6D;}
 .orangeWP{display: none;}
 .orangeWP.show{display: block;}
+::placeholder {color: #000;}
+:-ms-input-placeholder { color: #000;}
+::-ms-input-placeholder {color: #000;}
+#main .content .row.flex.white select,#main .content .row.flex.white input{color: #000;}
