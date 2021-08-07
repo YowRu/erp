@@ -7,6 +7,10 @@
 color: #fff;border-radius:5px;width:49%;padding:6px 26px;box-sizing: border-box; display:inline-block;}
 #main .content .row.flex input,
 #main .content .row.flex select,#main .content .row.flex .dateWP{background-color: #fff;color: #BFC0C0;}
+::placeholder {color: #BFC0C0;}
+:-ms-input-placeholder { color: #BFC0C0;}
+::-ms-input-placeholder {color: #BFC0C0;}
+#main .content .row.flex input{color: #000;}
 #main .content .row.flex .dateWP{width: 49%;border-radius: 5px;}
 #main .content .row.flex .dateWP input{padding-left: 22px;background: transparent;width:80%;box-sizing: border-box; }
 #main .content>.row.flex:nth-child(3),

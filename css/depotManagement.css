@@ -1,0 +1,7 @@
+#main .content .row.flex.width .left{width:100%;margin-right:0;}
+#main .content .row.flex.width .left p{width:207px;}
+#main .content .row.flex.width .left input{width: 100%;}
+#main .content .row.flex .right.none{display: none;}
+@media(max-width:720px){
+  #main .content .row.flex.width .left p{width:100%;}
+}
